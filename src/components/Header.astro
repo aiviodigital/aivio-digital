@@ -63,12 +63,11 @@ const isActive = (href: string) => {
           {Object.entries(languages).map(([code, name]) => (
             <button
               data-lang={code}
-              class={`px-3 py-1 rounded text-sm font-medium transition ${
+              class={`lang-switch-btn px-3 py-1 rounded text-sm font-medium transition ${
                 currentLang === code
                   ? 'bg-white text-secondary shadow-sm'
                   : 'text-gray-600 hover:text-gray-900'
               }`}
-              onclick={`switchLanguage('${code}')`}
             >
               {name}
             </button>
@@ -85,7 +84,6 @@ const isActive = (href: string) => {
         id="mobile-menu-button"
         class="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition"
         aria-label="Toggle menu"
-        onclick="toggleMobileMenu()"
       >
         <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -100,12 +98,11 @@ const isActive = (href: string) => {
           <li>
             <a
               href={item.href}
-              class={`block px-4 py-3 rounded-lg font-medium text-sm transition border-l-4 ${
+              class={`mobile-menu-link block px-4 py-3 rounded-lg font-medium text-sm transition border-l-4 ${
                 isActive(item.href)
                   ? 'text-secondary bg-secondary/5 border-secondary'
                   : 'text-gray-700 border-transparent hover:text-secondary hover:bg-gray-50'
               }`}
-              onclick="closeMobileMenu()"
             >
               {t.nav[item.key as keyof typeof t.nav]}
             </a>
@@ -118,12 +115,11 @@ const isActive = (href: string) => {
           {Object.entries(languages).map(([code, name]) => (
             <button
               data-lang={code}
-              class={`flex-1 px-3 py-2 rounded text-sm font-medium transition ${
+              class={`mobile-lang-switch-btn flex-1 px-3 py-2 rounded text-sm font-medium transition ${
                 currentLang === code
                   ? 'bg-white text-secondary shadow-sm'
                   : 'text-gray-600 hover:text-gray-900'
               }`}
-              onclick={`switchLanguage('${code}'); closeMobileMenu();`}
             >
               {name}
             </button>
@@ -132,8 +128,7 @@ const isActive = (href: string) => {
 
         <a
           href={getMenuLink('contact', currentLang)}
-          class="bg-secondary text-white font-semibold py-3 px-5 rounded-lg hover:bg-secondaryDark transition text-sm shadow-md hover:shadow-lg text-center"
-          onclick="closeMobileMenu()"
+          class="mobile-menu-link bg-secondary text-white font-semibold py-3 px-5 rounded-lg hover:bg-secondaryDark transition text-sm shadow-md hover:shadow-lg text-center"
         >
           {t.nav.getAudit}
         </a>
@@ -145,10 +140,16 @@ const isActive = (href: string) => {
 <!-- Mobile Menu Overlay -->
 <div id="mobile-menu-overlay" class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
 
-<script>
-  function switchLanguage(lang: string) {
+<script define:vars={{ currentPath }}>
+  const currentPathValue = currentPath || '/';
+
+  function switchLanguage(lang) {
     localStorage.setItem('lang', lang);
-    const newPath = lang === 'en' ? '/' : `/${lang}`;
+
+    // Preserve the current path when switching languages
+    const pathWithoutLang = currentPathValue.replace(/^\/?(en|zh)?\//, '');
+    const newPath = `/${lang}/${pathWithoutLang}`;
+
     window.location.href = newPath;
   }
 
@@ -180,10 +181,44 @@ const isActive = (href: string) => {
     }
   }
 
-  // Expose to window for onclick handlers
-  (window as any).switchLanguage = switchLanguage;
-  (window as any).toggleMobileMenu = toggleMobileMenu;
-  (window as any).closeMobileMenu = closeMobileMenu;
+  // Mobile menu button
+  const menuButton = document.getElementById('mobile-menu-button');
+  if (menuButton) {
+    menuButton.addEventListener('click', toggleMobileMenu);
+  }
+
+  // Desktop language switch buttons
+  const langButtons = document.querySelectorAll('.lang-switch-btn');
+  langButtons.forEach(btn => {
+    const lang = btn.getAttribute('data-lang');
+    if (lang) {
+      btn.addEventListener('click', () => switchLanguage(lang));
+    }
+  });
+
+  // Mobile menu links
+  const mobileLinks = document.querySelectorAll('.mobile-menu-link');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  // Mobile language switch buttons
+  const mobileLangButtons = document.querySelectorAll('.mobile-lang-switch-btn');
+  mobileLangButtons.forEach(btn => {
+    const lang = btn.getAttribute('data-lang');
+    if (lang) {
+      btn.addEventListener('click', () => {
+        switchLanguage(lang);
+        closeMobileMenu();
+      });
+    }
+  });
+
+  // Overlay
+  const overlay = document.getElementById('mobile-menu-overlay');
+  if (overlay) {
+    overlay.addEventListener('click', closeMobileMenu);
+  }
 </script>
 
 <style>

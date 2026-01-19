@@ -10,6 +10,7 @@ import ShareButtons from '../../../components/blog-post/ShareButtons.astro';
 import AuthorBoxSidebar from '../../../components/blog-post/AuthorBoxSidebar.astro';
 import RelatedPosts from '../../../components/blog-post/RelatedPosts.astro';
 import BlogCTA from '../../../components/blog-post/BlogCTA.astro';
+import { translations } from '../../../i18n/index';
 
 export const prerender = true;
 
@@ -84,6 +85,10 @@ const extractHeadings = (html: string) => {
 };
 
 const headings = blogContent?.content ? extractHeadings(blogContent.content) : [];
+
+// Get translations for current language
+const t = translations[lang as keyof typeof translations];
+const readMoreText = t.blogs.readMore;
 ---
 
 <Layout
@@ -135,7 +140,12 @@ const headings = blogContent?.content ? extractHeadings(blogContent.content) : [
     </div>
   </section>
 
-  <RelatedPosts posts={relatedPosts} title="Related Articles" />
+  <RelatedPosts
+    posts={relatedPosts}
+    title={t.blogs.related}
+    currentLang={lang as 'en' | 'zh'}
+    readMoreText={readMoreText}
+  />
 
   <BlogCTA />
 </Layout>

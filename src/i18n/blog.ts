@@ -1,6 +1,14 @@
 // Blog posts data - metadata only
 // Full content is stored in /src/content/blog/[lang]/[id].md files
 
+// Helper function to get image URL
+export function getImageUrl(image: string): string {
+  if (image.startsWith('/') || image.startsWith('http')) {
+    return image;
+  }
+  return `/assets/blogs/${image}.png`;
+}
+
 export const blogPosts = {
   en: [
     {

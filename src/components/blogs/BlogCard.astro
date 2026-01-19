@@ -1,4 +1,6 @@
 ---
+import { getImageUrl } from '../../i18n/blog';
+
 interface BlogPost {
   id: string;
   title: string;
@@ -16,15 +18,6 @@ interface Props {
 
 const { post, currentLang, readMoreText } = Astro.props;
 const postUrl = `/${currentLang}/blog/${post.id}`;
-
-// Helper function to get image URL
-const getImageUrl = (image: string): string => {
-  if (image.startsWith('/') || image.startsWith('http')) {
-    return image;
-  }
-  return `/assets/blogs/${image}.png`;
-};
-
 const imageUrl = getImageUrl(post.image);
 ---
 

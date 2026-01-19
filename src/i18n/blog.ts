@@ -9,7 +9,7 @@ export const blogPosts = {
       excerpt: 'Responsive web design allows your site to adapt to different screen sizes, providing an optimal user experience whether your audience is on a desktop, tablet, or smartphone. One of the most powerful tools for creating responsive designs is Bootstrap.',
       date: 'August 14, 2024',
       category: 'Web Development',
-      image: 'responsive-design',
+      image: '/assets/blogs/responsive-design.png',
     },
     {
       id: 'customer-persona',
@@ -83,7 +83,7 @@ export const blogPosts = {
       excerpt: '响应式网页设计允许您的网站适应不同的屏幕尺寸，为桌面、平板电脑或智能手机上的用户提供最佳用户体验。',
       date: '2024年8月14日',
       category: 'Web 开发',
-      image: 'responsive-design',
+      image: '/assets/blogs/responsive-design.png',
     },
     {
       id: 'customer-persona',

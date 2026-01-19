@@ -16,15 +16,28 @@ interface Props {
 
 const { post, currentLang, readMoreText } = Astro.props;
 const postUrl = `/${currentLang}/blog/${post.id}`;
+
+// Helper function to get image URL
+const getImageUrl = (image: string): string => {
+  if (image.startsWith('/') || image.startsWith('http')) {
+    return image;
+  }
+  return `/assets/blogs/${image}.png`;
+};
+
+const imageUrl = getImageUrl(post.image);
 ---
 
 <a href={postUrl} class="group block bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
-  <!-- Image placeholder with gradient -->
+  <!-- Blog Image -->
   <div class="h-52 bg-gradient-to-br from-primary to-secondaryDark flex items-center justify-center relative overflow-hidden">
+    <img
+      src={imageUrl}
+      alt={post.title}
+      class="absolute inset-0 w-full h-full object-cover"
+      loading="lazy"
+    />
     <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
-    <svg class="w-16 h-16 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
-    </svg>
   </div>
 
   <div class="p-6">

@@ -21,13 +21,13 @@ const { title, description, items, note } = Astro.props;
     </div>
     <div class="space-y-6 mb-12">
       {items.map((item) => (
-        <div class="bg-white p-6 rounded-xl border-l-4 border-secondary shadow-sm hover:shadow-md transition-shadow">
+        <div class="bg-white p-6 rounded border-l-4 border-secondary shadow-sm hover:shadow-md transition-shadow">
           <p class="text-gray-700 leading-relaxed">{item}</p>
         </div>
       ))}
     </div>
     {note && (
-      <div class="bg-gradient-to-r from-primary/10 to-secondary/10 p-6 rounded-xl text-center">
+      <div class="bg-gradient-to-r from-primary/10 to-secondary/10 p-6 rounded text-center">
         <p class="text-lg text-gray-600 italic">
           {note}
         </p>

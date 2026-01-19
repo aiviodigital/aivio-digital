@@ -28,9 +28,9 @@ const { title, subtitle, steps, options, note } = Astro.props;
     </div>
     <div class="grid md:grid-cols-3 gap-8">
       {steps.map((step, index) => (
-        <div class="relative bg-gradient-to-br from-secondary/5 to-white p-8 rounded-xl border-2 border-secondary/20 hover:border-secondary transition-all duration-300">
+        <div class="relative bg-gradient-to-br from-secondary/5 to-white p-8 rounded border-2 border-secondary/20 hover:border-secondary transition-all duration-300">
           <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
-            <div class="w-10 h-10 bg-gradient-to-br from-secondary to-secondaryDark rounded-full flex items-center justify-center shadow-lg">
+            <div class="w-10 h-10 bg-gradient-to-br from-secondary to-secondaryDark rounded flex items-center justify-center shadow-lg">
               <span class="text-white font-bold text-lg">{step.step}</span>
             </div>
           </div>
@@ -51,7 +51,7 @@ const { title, subtitle, steps, options, note } = Astro.props;
       ))}
     </div>
     {note && (
-      <div class="mt-12 bg-gradient-to-r from-primary/10 to-secondary/10 p-8 rounded-xl text-center">
+      <div class="mt-12 bg-gradient-to-r from-primary/10 to-secondary/10 p-8 rounded text-center">
         <p class="text-lg text-gray-600 italic">
           {note}
         </p>

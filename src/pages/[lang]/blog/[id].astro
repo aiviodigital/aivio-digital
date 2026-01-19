@@ -104,26 +104,26 @@ const headings = blogContent?.content ? extractHeadings(blogContent.content) : [
     alt={post.title}
   />
 
-  <section class="article-wrapper">
-    <div class="container">
-      <div class="article-layout">
-        <div class="main-content">
+  <section class="bg-gray-50 py-16 sm:py-20">
+    <div class="max-w-[1200px] mx-auto px-5">
+      <div class="grid lg:grid-cols-[1fr_340px] gap-10 items-start">
+        <div class="min-w-0">
           <BlogContent content={blogContent?.content || `<p>Content not found for this post.</p>`} />
         </div>
 
-        <aside class="sidebar">
-          <div class="sidebar-section">
-            <h4 class="sidebar-title">Table of Contents</h4>
+        <aside class="lg:sticky lg:top-5">
+          <div class="bg-white rounded-xl p-6 mb-6 shadow-sm">
+            <h4 class="text-base font-bold text-gray-900 mb-4 pb-3 border-b-2 border-gray-200">Table of Contents</h4>
             <TableOfContentsInline headings={headings} />
           </div>
 
-          <div class="sidebar-section">
-            <h4 class="sidebar-title">Share This Article</h4>
+          <div class="bg-white rounded-xl p-6 mb-6 shadow-sm">
+            <h4 class="text-base font-bold text-gray-900 mb-4 pb-3 border-b-2 border-gray-200">Share This Article</h4>
             <ShareButtons url={blogUrl} title={post.title} />
           </div>
 
-          <div class="sidebar-section">
-            <h4 class="sidebar-title">About the Author</h4>
+          <div class="bg-white rounded-xl p-6 mb-6 shadow-sm">
+            <h4 class="text-base font-bold text-gray-900 mb-4 pb-3 border-b-2 border-gray-200">About the Author</h4>
             <AuthorBoxSidebar
               name={authorName}
               role="Digital Marketing Expert"
@@ -139,65 +139,3 @@ const headings = blogContent?.content ? extractHeadings(blogContent.content) : [
 
   <BlogCTA />
 </Layout>
-
-<style>
-  .article-wrapper {
-    background: #f8f9fa;
-    padding: 60px 0;
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  .article-layout {
-    display: grid;
-    grid-template-columns: 1fr 340px;
-    gap: 40px;
-    align-items: start;
-  }
-
-  .main-content {
-    min-width: 0;
-  }
-
-  .sidebar {
-    position: sticky;
-    top: 20px;
-  }
-
-  .sidebar-section {
-    background: white;
-    border-radius: 12px;
-    padding: 24px;
-    margin-bottom: 24px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-  }
-
-  .sidebar-title {
-    font-size: 16px;
-    font-weight: 700;
-    color: #111827;
-    margin: 0 0 16px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid #e5e7eb;
-  }
-
-  @media (max-width: 1024px) {
-    .article-layout {
-      grid-template-columns: 1fr;
-    }
-
-    .sidebar {
-      position: static;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .article-wrapper {
-      padding: 40px 0;
-    }
-  }
-</style>

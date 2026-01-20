@@ -23,19 +23,7 @@ export function getStaticPaths() {
 
 <Layout title={pageTitle} description={pageMeta.description} keywords={pageMeta.keywords} lang={currentLang} currentLang={currentLang} currentPath={currentPath}>
   <main class="min-h-screen">
-    <Hero title={content.hero.title} description={content.hero.description} />
-
-    <!-- Hero Image -->
-    <section class="px-4 bg-white pb-12">
-      <div class="max-w-4xl mx-auto">
-        <img
-          src="/assets/contact.png"
-          alt="Contact Us"
-          class="w-full h-auto rounded-lg shadow-lg"
-        />
-      </div>
-    </section>
-
+    <Hero title={content.hero.title} description={content.hero.description} image='/assets/contact.png' />
     <!-- How It Works -->
     <section class="py-16 px-4 bg-white">
       <div class="max-w-4xl mx-auto">

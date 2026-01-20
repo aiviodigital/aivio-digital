@@ -1,8 +1,9 @@
 ---
-import { languages, translations } from '../i18n/index';
+import { translations } from '../i18n/index';
 import { getHeaderMenuItems, getMenuLink } from '../utils/menuItems';
 import Button from './Button.astro';
 import { EMAIL, PHONE } from '../constants/contact';
+import LangSwitch from './LangSwitch.astro';
 
 interface Props {
   currentLang: string;
@@ -61,20 +62,7 @@ const isActive = (href: string) => {
 
       <!-- Desktop Controls -->
       <div class="hidden lg:flex items-center gap-3">
-        <div class="flex gap-1 items-center bg-gray-100 rounded-md p-1">
-          {Object.entries(languages).map(([code, name]) => (
-            <button
-              data-lang={code}
-              class={`lang-switch-btn px-3 py-1 rounded text-sm font-medium transition ${
-                currentLang === code
-                  ? 'bg-white text-secondary shadow-sm'
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              {name}
-            </button>
-          ))}
-        </div>
+        <LangSwitch currentLang={currentLang} variant="desktop" />
 
         <Button href={getMenuLink('contact', currentLang)} variant="secondary" size="sm">
           {t.nav.getAudit}
@@ -113,20 +101,7 @@ const isActive = (href: string) => {
       </ul>
 
       <div class="flex flex-col gap-4 mt-6 pt-6 border-t border-gray-200">
-        <div class="flex gap-1 items-center bg-gray-100 rounded-md p-1">
-          {Object.entries(languages).map(([code, name]) => (
-            <button
-              data-lang={code}
-              class={`mobile-lang-switch-btn flex-1 px-3 py-2 rounded text-sm font-medium transition ${
-                currentLang === code
-                  ? 'bg-white text-secondary shadow-sm'
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              {name}
-            </button>
-          ))}
-        </div>
+        <LangSwitch currentLang={currentLang} variant="mobile" />
 
         <Button
           href={getMenuLink('contact', currentLang)}
@@ -144,19 +119,7 @@ const isActive = (href: string) => {
 <!-- Mobile Menu Overlay -->
 <div id="mobile-menu-overlay" class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
 
-<script define:vars={{ currentPath }}>
-  const currentPathValue = currentPath || '/';
-
-  function switchLanguage(lang) {
-    localStorage.setItem('lang', lang);
-
-    // Preserve the current path when switching languages
-    const pathWithoutLang = currentPathValue.replace(/^\/?(en|zh)?\//, '');
-    const newPath = `/${lang}/${pathWithoutLang}`;
-
-    window.location.href = newPath;
-  }
-
+<script>
   function toggleMobileMenu() {
     const menu = document.getElementById('mobile-menu');
     const overlay = document.getElementById('mobile-menu-overlay');
@@ -191,31 +154,10 @@ const isActive = (href: string) => {
     menuButton.addEventListener('click', toggleMobileMenu);
   }
 
-  // Desktop language switch buttons
-  const langButtons = document.querySelectorAll('.lang-switch-btn');
-  langButtons.forEach(btn => {
-    const lang = btn.getAttribute('data-lang');
-    if (lang) {
-      btn.addEventListener('click', () => switchLanguage(lang));
-    }
-  });
-
   // Mobile menu links
   const mobileLinks = document.querySelectorAll('.mobile-menu-link');
   mobileLinks.forEach(link => {
     link.addEventListener('click', closeMobileMenu);
-  });
-
-  // Mobile language switch buttons
-  const mobileLangButtons = document.querySelectorAll('.mobile-lang-switch-btn');
-  mobileLangButtons.forEach(btn => {
-    const lang = btn.getAttribute('data-lang');
-    if (lang) {
-      btn.addEventListener('click', () => {
-        switchLanguage(lang);
-        closeMobileMenu();
-      });
-    }
   });
 
   // Overlay

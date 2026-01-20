@@ -1,6 +1,7 @@
 ---
 import { languages, translations } from '../i18n/index';
 import { getHeaderMenuItems, getMenuLink } from '../utils/menuItems';
+import Button from './Button.astro';
 
 interface Props {
   currentLang: string;
@@ -74,9 +75,9 @@ const isActive = (href: string) => {
           ))}
         </div>
 
-        <a href={getMenuLink('contact', currentLang)} class="bg-secondary text-white font-semibold py-2 px-5 rounded-lg hover:bg-secondaryDark transition text-sm shadow-md hover:shadow-lg">
+        <Button href={getMenuLink('contact', currentLang)} variant="secondary" size="sm">
           {t.nav.getAudit}
-        </a>
+        </Button>
       </div>
 
       <!-- Mobile Menu Button -->
@@ -126,12 +127,14 @@ const isActive = (href: string) => {
           ))}
         </div>
 
-        <a
+        <Button
           href={getMenuLink('contact', currentLang)}
-          class="mobile-menu-link bg-secondary text-white font-semibold py-3 px-5 rounded-lg hover:bg-secondaryDark transition text-sm shadow-md hover:shadow-lg text-center"
+          variant="secondary"
+          size="sm"
+          class="mobile-menu-link w-full text-center"
         >
           {t.nav.getAudit}
-        </a>
+        </Button>
       </div>
     </div>
   </nav>

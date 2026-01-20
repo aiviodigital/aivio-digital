@@ -6,6 +6,8 @@ interface Props {
   bgColor?: string;
 }
 
+import Button from '../Button.astro';
+
 const { title, subtitle, buttonText, bgColor = 'from-primary to-primaryDark' } = Astro.props;
 ---
 
@@ -17,11 +19,12 @@ const { title, subtitle, buttonText, bgColor = 'from-primary to-primaryDark' } =
     <p class="text-xl text-secondaryDark/40 mb-8">
       {subtitle}
     </p>
-    <a
+    <Button
       href={`mailto:hello@aivio.digital?subject=Google Ads Audit Request`}
-      class="inline-block bg-white text-secondary font-semibold px-10 py-4 rounded-lg hover:bg-secondary/10 transition-all duration-300 text-lg shadow-lg hover:shadow-xl"
+      variant="white"
+      size="lg"
     >
       {buttonText}
-    </a>
+    </Button>
   </div>
 </section>

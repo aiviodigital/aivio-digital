@@ -2,7 +2,7 @@
 interface Props {
   href?: string;
   type?: 'button' | 'submit' | 'reset';
-  variant?: 'primary' | 'secondary' | 'outline';
+  variant?: 'primary' | 'secondary' | 'outline' | 'white';
   size?: 'sm' | 'md' | 'lg';
   class?: string;
   onclick?: string;
@@ -25,6 +25,7 @@ const variantClasses = {
   primary: 'bg-secondaryDark text-white hover:bg-secondaryDark/90 hover:scale-105 active:scale-95',
   secondary: 'bg-secondary text-white hover:bg-secondaryDark hover:scale-105 active:scale-95',
   outline: 'bg-transparent border-2 border-secondaryDark text-secondaryDark hover:bg-secondaryDark hover:text-white hover:scale-105 active:scale-95',
+  white: 'bg-white text-secondary hover:bg-secondary/10 hover:scale-105 active:scale-95',
 };
 
 const sizeClasses = {

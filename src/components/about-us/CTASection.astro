@@ -5,6 +5,8 @@ interface Props {
   buttonText: string;
 }
 
+import Button from '../Button.astro';
+
 const { title, description, buttonText } = Astro.props;
 ---
 
@@ -16,11 +18,12 @@ const { title, description, buttonText } = Astro.props;
     <p class="text-xl text-secondaryDark/40 mb-10 max-w-2xl mx-auto leading-relaxed">
       {description}
     </p>
-    <a
+    <Button
       href={`mailto:hello@aivio.digital?subject=Talk to Google Ads Expert`}
-      class="inline-block bg-white text-secondary font-semibold px-10 py-4 rounded-lg hover:bg-secondary/10 transition-all duration-300 text-lg shadow-lg hover:shadow-xl"
+      variant="white"
+      size="lg"
     >
       {buttonText}
-    </a>
+    </Button>
   </div>
 </section>

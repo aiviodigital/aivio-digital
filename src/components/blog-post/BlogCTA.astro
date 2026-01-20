@@ -6,6 +6,8 @@ interface Props {
   buttonLink?: string;
 }
 
+import Button from '../Button.astro';
+
 const {
   title = 'Ready to Grow Your Business?',
   description = 'Discover how our digital marketing services can help you achieve your goals.',
@@ -19,12 +21,12 @@ const {
     <div class="cta-content">
       <h2 class="cta-title">{title}</h2>
       <p class="cta-description">{description}</p>
-      <a href={buttonLink} class="cta-button">
+      <Button href={buttonLink} variant="outline" size="lg">
         {buttonText}
-        <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
         </svg>
-      </a>
+      </Button>
     </div>
   </div>
 </section>

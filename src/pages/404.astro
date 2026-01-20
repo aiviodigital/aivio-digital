@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Button from '../components/Button.astro';
 import { translations } from '../i18n';
+import { EMAIL } from '../constants/contact';
 
 const currentLang: 'en' | 'zh' = 'en';
 const currentPath = '/404';
@@ -40,7 +41,7 @@ const pageMeta = {
           <Button href="/en" variant="secondary" size="lg">
             Go to Homepage
           </Button>
-          <Button href="mailto:hello@aivio.digital?subject=Help finding page" variant="outline" size="lg">
+          <Button href={`mailto:${EMAIL}?subject=Help finding page`} variant="outline" size="lg">
             Contact Us
           </Button>
         </div>
@@ -135,7 +136,7 @@ const pageMeta = {
           Let's discuss how we can help grow your business with expert Google Ads management.
         </p>
         <a
-          href="mailto:hello@aivio.digital?subject=Google Ads Consultation"
+          href={`mailto:${EMAIL}?subject=Google Ads Consultation`}
           class="inline-block bg-white text-secondary font-semibold px-8 py-4 rounded-lg hover:bg-secondary/10 transition-colors text-lg shadow-md hover:shadow-lg"
         >
           Get in Touch

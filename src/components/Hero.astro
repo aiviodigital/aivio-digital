@@ -9,6 +9,7 @@ interface Props {
 
 import { translations } from '../i18n';
 import Button from './Button.astro';
+import { EMAIL } from '../constants/contact';
 
 const { title, subtitle, description, currentLang, image } = Astro.props;
 
@@ -36,7 +37,7 @@ const heroImageAlt = heroTitle || 'Google Ads Services';
         )}
         {heroCTA && (
           <Button
-            href={`mailto:hello@aivio.digital?subject=Talk to Google Ads Expert`}
+            href={`mailto:${EMAIL}?subject=Talk to Google Ads Expert`}
             variant="secondary"
             size="lg"
           >

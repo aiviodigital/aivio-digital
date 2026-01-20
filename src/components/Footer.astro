@@ -1,6 +1,7 @@
 ---
 import { translations } from '../i18n/index';
 import { getMenuItems } from '../utils/menuItems';
+import { EMAIL, PHONE_SIMPLE } from '../constants/contact';
 
 interface Props {
   currentLang: string;
@@ -31,8 +32,8 @@ const copyrightText = t.footer.copyright.replace('{year}', String(currentYear));
       </div>
       <div>
         <h3 class="text-lg font-semibold mb-4">{t.footer.contact}</h3>
-        <p class="text-gray-400">{t.footer.email}: hello@aivio.digital</p>
-        <p class="text-gray-400">{t.footer.phone}: 647-625-1375</p>
+        <p class="text-gray-400">{t.footer.email}: {EMAIL}</p>
+        <p class="text-gray-400">{t.footer.phone}: {PHONE_SIMPLE}</p>
         <div class="mt-4 flex gap-4">
           <div class="text-center">
             <img src="/assets/company_QR_code.png" alt="Company QR Code" class="w-24 h-24 rounded-lg mb-2" />

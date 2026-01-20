@@ -6,6 +6,7 @@ interface Props {
 }
 
 import Button from '../Button.astro';
+import { EMAIL } from '../../constants/contact';
 
 const { title, description, buttonText } = Astro.props;
 ---
@@ -19,7 +20,7 @@ const { title, description, buttonText } = Astro.props;
       {description}
     </p>
     <Button
-      href={`mailto:hello@aivio.digital?subject=Talk to Google Ads Expert`}
+      href={`mailto:${EMAIL}?subject=Talk to Google Ads Expert`}
       variant="white"
       size="lg"
     >

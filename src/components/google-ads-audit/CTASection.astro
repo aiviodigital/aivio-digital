@@ -7,6 +7,7 @@ interface Props {
 }
 
 import Button from '../Button.astro';
+import { EMAIL } from '../../constants/contact';
 
 const { title, subtitle, buttonText, bgColor = 'from-primary to-primaryDark' } = Astro.props;
 ---
@@ -20,7 +21,7 @@ const { title, subtitle, buttonText, bgColor = 'from-primary to-primaryDark' } =
       {subtitle}
     </p>
     <Button
-      href={`mailto:hello@aivio.digital?subject=Google Ads Audit Request`}
+      href={`mailto:${EMAIL}?subject=Google Ads Audit Request`}
       variant="white"
       size="lg"
     >

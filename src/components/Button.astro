@@ -1,0 +1,59 @@
+---
+interface Props {
+  href?: string;
+  type?: 'button' | 'submit' | 'reset';
+  variant?: 'primary' | 'secondary' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
+  class?: string;
+  onclick?: string;
+  disabled?: boolean;
+}
+
+const {
+  href,
+  type = 'button',
+  variant = 'primary',
+  size = 'md',
+  class: className = '',
+  onclick,
+  disabled = false,
+} = Astro.props;
+
+const baseClasses = 'font-semibold rounded-lg transition-all duration-300 shadow-md hover:shadow-lg inline-flex items-center justify-center';
+
+const variantClasses = {
+  primary: 'bg-secondaryDark text-white hover:bg-secondaryDark/90 hover:scale-105 active:scale-95',
+  secondary: 'bg-secondary text-white hover:bg-secondaryDark hover:scale-105 active:scale-95',
+  outline: 'bg-transparent border-2 border-secondaryDark text-secondaryDark hover:bg-secondaryDark hover:text-white hover:scale-105 active:scale-95',
+};
+
+const sizeClasses = {
+  sm: 'py-2 px-4 text-sm',
+  md: 'py-2.5 px-5 text-sm',
+  lg: 'py-3 md:py-4 px-6 md:px-8 text-lg',
+};
+
+const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed pointer-events-none' : 'cursor-pointer';
+
+const buttonClasses = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
+---
+
+{href ? (
+  <a
+    href={href}
+    class={buttonClasses}
+    class:list={disabled ? ['disabled'] : []}
+  >
+    <slot />
+  </a>
+) : (
+  <button
+    type={type}
+    class={buttonClasses}
+    class:list={disabled ? ['disabled'] : []}
+    {onclick}
+    disabled={disabled}
+  >
+    <slot />
+  </button>
+)}

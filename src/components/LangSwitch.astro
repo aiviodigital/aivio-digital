@@ -17,8 +17,8 @@ const containerClasses = variant === 'desktop'
 
 const buttonClasses = (code: string) =>
   variant === 'desktop'
-    ? `${buttonBaseClasses} ${currentLang === code ? 'bg-white text-secondary shadow-sm' : 'text-gray-600 hover:text-gray-900'}`
-    : `${buttonBaseClasses} flex-1 py-2 ${currentLang === code ? 'bg-white text-secondary shadow-sm' : 'text-gray-600 hover:text-gray-900'}`;
+    ? `${buttonBaseClasses} ${currentLang === code ? 'bg-white text-secondary shadow-sm' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200 transition-all duration-200'}`
+    : `${buttonBaseClasses} flex-1 py-2 ${currentLang === code ? 'bg-white text-secondary shadow-sm' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200 transition-all duration-200'}`;
 ---
 
 <div class={containerClasses}>

@@ -28,7 +28,7 @@ const { title, description, items } = Astro.props;
       {items.map((item, index) => (
         <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded border-2 border-secondary/20 hover:border-secondary/40 transition-all duration-300">
           <div class="flex items-start gap-4">
-            <div class="w-12 h-12 bg-gradient-to-br from-secondary to-secondaryDark rounded-lg flex items-center justify-center flex-shrink-0">
+            <div class="w-12 h-12 bg-secondaryDark rounded-lg flex items-center justify-center flex-shrink-0">
               <span class="text-white font-bold text-xl">{index + 1}</span>
             </div>
             <div class="flex-1">

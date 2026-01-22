@@ -4,15 +4,18 @@ interface Props {
   description?: string;
   buttonText?: string;
   buttonLink?: string;
+  currentLang?: string;
 }
 
 import Button from '../Button.astro';
+import { getMenuLink } from '../../utils/menuItems';
 
 const {
   title = 'Ready to Grow Your Business?',
   description = 'Discover how our digital marketing services can help you achieve your goals.',
   buttonText = 'Get Started Today',
-  buttonLink = '/contact'
+  buttonLink = 'contact',
+  currentLang = 'en'
 } = Astro.props;
 ---
 
@@ -22,7 +25,7 @@ const {
     <div class="max-w-[600px] mx-auto text-center text-white">
       <h2 class="text-[36px] font-bold mb-4 shadow-black/10 text-shadow-sm sm:text-[28px]">{title}</h2>
       <p class="text-[18px] leading-[1.6] mb-8 opacity-[0.95] sm:text-[16px]">{description}</p>
-      <Button href={buttonLink} variant="white" size="lg" class="gap-2.5 group">
+      <Button href={getMenuLink(buttonLink, currentLang)} variant="white" size="lg" class="gap-2.5 group">
         {buttonText}
         <svg class="arrow-icon w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>

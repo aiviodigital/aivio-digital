@@ -125,26 +125,28 @@ export const en = {
   },
   faq: {
     title: 'Frequently Asked Questions',
-    q1: {
-      question: 'Do I need a minimum ad budget?',
-      answer: 'No—our services work for small or large budgets. We focus on getting the best results for whatever you can invest.',
-    },
-    q2: {
-      question: 'How long until I see results?',
-      answer: 'Most clients see improvements within 4–6 weeks after we audit and optimize their campaigns, depending on budget and industry.',
-    },
-    q3: {
-      question: 'Can you manage my existing campaigns?',
-      answer: 'Yes—we can audit your current campaigns, fix issues, and optimize them for better performance, or start fresh from scratch if needed.',
-    },
-    q4: {
-      question: 'Do I have to sign a long-term contract?',
-      answer: 'No long-term contracts. You can cancel anytime, and we always provide clear, actionable recommendations.',
-    },
-    q5: {
-      question: 'How do I know my ad spend is being used effectively?',
-      answer: 'We provide transparent reporting with clear metrics, so you can see exactly how every dollar is performing and what results it\'s generating.',
-    },
+    items: [
+      {
+        question: 'Do I need a minimum ad budget?',
+        answer: 'No—our services work for small or large budgets. We focus on getting the best results for whatever you can invest.',
+      },
+      {
+        question: 'How long until I see results?',
+        answer: 'Most clients see improvements within 4–6 weeks after we audit and optimize their campaigns, depending on budget and industry.',
+      },
+      {
+        question: 'Can you manage my existing campaigns?',
+        answer: 'Yes—we can audit your current campaigns, fix issues, and optimize them for better performance, or start fresh from scratch if needed.',
+      },
+      {
+        question: 'Do I have to sign a long-term contract?',
+        answer: 'No long-term contracts. You can cancel anytime, and we always provide clear, actionable recommendations.',
+      },
+      {
+        question: 'How do I know my ad spend is being used effectively?',
+        answer: 'We provide transparent reporting with clear metrics, so you can see exactly how every dollar is performing and what results it\'s generating.',
+      },
+    ],
   },
   footer: {
     about: 'About',

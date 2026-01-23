@@ -7,9 +7,9 @@ interface Props {
   image?: string;
 }
 
-import { translations } from '../../i18n';
-import Button from '../Button.astro';
-import { EMAIL } from '../../constants/contact';
+import { translations } from '../i18n';
+import Button from './Button.astro';
+import { EMAIL } from '../constants/contact';
 
 const { title, subtitle, description, currentLang, image } = Astro.props;
 

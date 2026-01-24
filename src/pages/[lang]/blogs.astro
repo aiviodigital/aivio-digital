@@ -1,9 +1,9 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { translations } from '../../i18n';
-import { blogPosts } from '../../i18n/blog';
-import Hero from '../../components/Hero.astro';
-import BlogGrid from '../../components/blogs/BlogGrid.astro';
+import Layout from '@/layouts/Layout.astro';
+import { translations } from '@/i18n';
+import { blogPosts } from '@/i18n/blog';
+import Hero from '@/components/Hero.astro';
+import BlogGrid from '@/components/blogs/BlogGrid.astro';
 
 const { lang } = Astro.params;
 const currentLang = (lang || 'en') as 'en' | 'zh';

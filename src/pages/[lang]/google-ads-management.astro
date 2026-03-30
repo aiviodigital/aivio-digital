@@ -7,7 +7,7 @@ import ProcessCards from '../../components/google-ads-management/ProcessCards.as
 import PricingCard from '../../components/google-ads-management/PricingCard.astro';
 import BestFitFor from '../../components/google-ads-management/BestFitFor.astro';
 import CTASection from '../../components/google-ads-management/CTASection.astro';
-import FAQSection from '../../components/google-ads-management/FAQSection.astro';
+import FAQSection from '../../components/FAQSection.astro';
 
 const { lang } = Astro.params;
 const currentLang = (lang || 'en') as 'en' | 'zh';
@@ -175,6 +175,8 @@ export function getStaticPaths() {
     <FAQSection
       items={faqItems}
       title={content.faq.title}
+      variant="gradient"
+      backgroundColor="white"
     />
   </main>
 </Layout>
@@ -182,11 +184,5 @@ export function getStaticPaths() {
 <style>
   main {
     width: 100%;
-  }
-  details > summary {
-    list-style: none;
-  }
-  details > summary::-webkit-details-marker {
-    display: none;
   }
 </style>

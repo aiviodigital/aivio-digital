@@ -1,0 +1,74 @@
+---
+interface Props {
+  items: Array<{
+    question: string;
+    answer: string;
+  }>;
+  title?: string;
+  variant?: 'default' | 'gradient';
+  backgroundColor?: 'white' | 'gray';
+}
+
+const { items, title, variant = 'default', backgroundColor = 'gray' } = Astro.props;
+
+const bgClass = backgroundColor === 'gray' ? 'bg-gray-50' : 'bg-white';
+const cardClass = variant === 'gradient'
+  ? 'bg-gradient-to-r from-gray-50 to-white rounded p-6 border border-gray-200 hover:border-secondary/30 transition-all'
+  : 'bg-white rounded shadow-md group';
+---
+
+<section class="py-20 px-4 {bgClass}">
+  <div class="max-w-4xl mx-auto">
+    {title && (
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
+          {title}
+        </h2>
+      </div>
+    )}
+    <div class="space-y-4">
+      {items.map((item) => (
+        <details class="{cardClass}">
+          <summary class="p-6 cursor-pointer font-semibold text-gray-900 flex justify-between items-center hover:bg-gray-50 transition">
+            {item.question}
+            <svg class="w-5 h-5 text-secondary flex-shrink-0 ml-4 transform transition-transform duration-300 ease-out group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </summary>
+          {variant === 'gradient' ? (
+            <p class="px-6 pb-6 text-gray-600 leading-relaxed">
+              {item.answer}
+            </p>
+          ) : (
+            <div class="grid-wrapper">
+              <div class="px-6 pb-6 text-gray-600">
+                {item.answer}
+              </div>
+            </div>
+          )}
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  details .grid-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-out;
+  }
+  details[open] .grid-wrapper {
+    grid-template-rows: 1fr;
+    transition: grid-template-rows 0.5s ease-in-out;
+  }
+  details .grid-wrapper > div {
+    overflow: hidden;
+  }
+</style>

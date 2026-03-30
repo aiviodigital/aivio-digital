@@ -6,7 +6,7 @@ import HowItWorks from '@/components/home/HowItWorks.astro';
 import Testimonials from '@/components/home/Testimonials.astro';
 import CaseStudy from '@/components/home/CaseStudy.astro';
 import FinalCTA from '@/components/home/FinalCTA.astro';
-import FAQs from '@/components/home/FAQs.astro';
+import FAQSection from '@/components/FAQSection.astro';
 import { translations } from '@/i18n/index';
 
 // Get the language from the URL parameter
@@ -34,7 +34,7 @@ export function getStaticPaths() {
     <Testimonials currentLang={currentLang} />
     <CaseStudy currentLang={currentLang} />
     <FinalCTA currentLang={currentLang} />
-    <FAQs currentLang={currentLang} />
+    <FAQSection items={t.faq.items} title={t.faq.title} />
   </main>
 </Layout>
 

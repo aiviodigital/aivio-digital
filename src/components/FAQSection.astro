@@ -28,25 +28,25 @@ const cardClass = variant === 'gradient'
     )}
     <div class="space-y-4">
       {items.map((item) => (
-        <details class="{cardClass}">
-          <summary class="p-6 cursor-pointer font-semibold text-gray-900 flex justify-between items-center hover:bg-gray-50 transition">
-            {item.question}
-            <svg class="w-5 h-5 text-secondary flex-shrink-0 ml-4 transform transition-transform duration-300 ease-out group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </summary>
-          {variant === 'gradient' ? (
-            <p class="px-6 pb-6 text-gray-600 leading-relaxed">
-              {item.answer}
-            </p>
-          ) : (
-            <div class="grid-wrapper">
-              <div class="px-6 pb-6 text-gray-600">
-                {item.answer}
-              </div>
-            </div>
-          )}
-        </details>
+<details class="{cardClass} group">
+  <summary class="p-6 cursor-pointer font-semibold text-gray-900 flex justify-between items-center transition-all duration-300 ease-in-out hover:translate-x-1">
+    {item.question}
+    <svg class="w-5 h-5 text-secondary flex-shrink-0 ml-4 transform transition-transform duration-300 ease-out group-open:rotate-180 group-open:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </summary>
+  {variant === 'gradient' ? (
+    <p class="px-6 pb-6 text-gray-600 leading-relaxed animate-fade-in">
+      {item.answer}
+    </p>
+  ) : (
+    <div class="grid-wrapper">
+      <div class="px-6 pb-6 text-gray-600 animate-fade-in">
+        {item.answer}
+      </div>
+    </div>
+  )}
+</details>
       ))}
     </div>
   </div>
@@ -70,5 +70,41 @@ const cardClass = variant === 'gradient'
   }
   details .grid-wrapper > div {
     overflow: hidden;
+  }
+
+  /* Answer fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out 0.1s both;
+  }
+
+  /* Card hover effects for gradient variant */
+  details.bg-gradient-to-r {
+    transition: all 0.3s ease;
+  }
+
+  details.bg-gradient-to-r:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Card hover effects for default variant */
+  details.group {
+    transition: all 0.3s ease;
+  }
+
+  details.group:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
   }
 </style>

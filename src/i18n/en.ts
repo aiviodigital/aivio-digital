@@ -436,6 +436,50 @@ export const en = {
     },
   },
   googleAdsAudit: {
+    page: {
+      hero: {
+        title: 'Google Ads Audit Overview',
+        subtitle: 'A comprehensive evaluation of your Google Ads campaigns focusing on key performance metrics and tailored strategic recommendations.',
+      },
+      images: {
+        alt: {
+          analytics: 'Analytics Dashboard',
+          performance: 'Performance Analysis',
+          strategic: 'Strategic Planning',
+        },
+      },
+      faq: {
+        title: 'Google Ads Audit FAQs',
+        subtitle: 'Clarify your questions about our Google Ads audit process, what to expect, and how it can pinpoint opportunities for your campaigns.',
+        items: [
+          {
+            question: 'What does a Google Ads audit include?',
+            answer: 'Our audit examines campaign structure, keyword targeting, ad copy effectiveness, bidding strategies, and conversion tracking to identify performance gaps and optimization opportunities.',
+          },
+          {
+            question: 'How long does the audit take?',
+            answer: 'Most audits are completed within 5-7 business days, depending on account complexity and campaign volume.',
+          },
+          {
+            question: 'Will I receive actionable recommendations?',
+            answer: 'Yes, you will receive a detailed report with prioritized, actionable recommendations tailored to your business goals.',
+          },
+          {
+            question: 'Do you require account access?',
+            answer: 'Yes, we need read-only access to your Google Ads account to conduct a thorough audit and provide accurate recommendations.',
+          },
+          {
+            question: 'Can audits help reduce ad spend waste?',
+            answer: 'Absolutely. Our audits identify wasted budget on low-performing keywords, poor targeting, and inefficient bidding strategies, helping you optimize spending.',
+          },
+        ],
+      },
+      contact: {
+        title: 'Need More Answers?',
+        subtitle: 'Contact our team for personalized responses to your Google Ads audit questions and to discuss how we can support your campaign goals.',
+        button: 'Contact us',
+      },
+    },
     hero: {
       title: 'Find What\'s Broken. Stop Wasting Budget. Get Clarity.',
       subtitle: 'If your Google Ads are running but results feel inconsistent, unclear, or disappointing, the problem is often not the budget — it\'s the account structure. Our Google Ads Audit is a deep, structured review designed to uncover wasted spend, tracking issues, and missed opportunities.',
@@ -507,6 +551,59 @@ export const en = {
     },
   },
   googleAdsManagement: {
+    page: {
+      hero: {
+        subtitle: 'Maximize your ad spend with precision-driven Google Ads management',
+        title: 'Strategic Google Ads Management for Optimal ROI',
+        alt: 'Google Ads Management Dashboard',
+      },
+      services: {
+        cards: [
+          {
+            title: 'Precision-Driven Campaigns',
+            description: 'Data-backed targeted strategies that align with your business goals to reach to right audience effectively.',
+            button: 'Learn More',
+          },
+          {
+            title: 'Data-Backed Optimization',
+            description: 'Continuous performance tracking and adjustment ensure your ads deliver measurable results and marketing ROI.',
+            button: 'Explore Services',
+          },
+          {
+            title: 'Comprehensive Management',
+            description: 'From keyword selection to bid management, we handle every aspect of your Google Ads campaigns with expert oversight.',
+            button: 'Get Started',
+          },
+          {
+            title: 'Transparent Reporting',
+            description: 'Receive detailed insights and clear analytics to understand campaign performance and strategic decisions.',
+            button: 'Request Report',
+          },
+        ],
+      },
+      images: {
+        alt: {
+          team: 'Team collaboration',
+          analytics: 'Analytics dashboard',
+          performance: 'Performance metrics',
+        },
+        bgAlt: 'Professional working',
+      },
+      faq: {
+        title: 'Google Ads Management FAQs',
+        subtitle: 'Clear answers to common questions about managing Google Ads campaigns help you make informed decisions and optimize your advertising investment.',
+      },
+      contact: {
+        title: 'Need More Information?',
+        subtitle: 'Contact our team to discuss your specific Google Ads needs and how our management services can deliver measurable growth.',
+        button: 'Get In Touch',
+      },
+      cta: {
+        title: 'Start Optimizing Your Google Ads Campaign Today',
+        alt: 'Start optimizing',
+        button: 'Request Consultation',
+      },
+    },
     hero: {
       title: 'Google Ads Management Services',
       subtitle: 'Focused. Transparent. Built for Small Businesses.',

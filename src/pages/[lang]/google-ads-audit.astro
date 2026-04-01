@@ -11,30 +11,7 @@ const currentPath = Astro.url.pathname;
 const t = translations[currentLang];
 const pageTitle = t.pageTitle.googleAdsAudit;
 const pageMeta = t.pageMeta.googleAdsAudit;
-const content = t.googleAdsAudit;
-
-const faqItems = [
-  {
-    question: 'What does a Google Ads audit include?',
-    answer: 'Our audit examines campaign structure, keyword targeting, ad copy effectiveness, bidding strategies, and conversion tracking to identify performance gaps and optimization opportunities.',
-  },
-  {
-    question: 'How long does the audit take?',
-    answer: 'Most audits are completed within 5-7 business days, depending on account complexity and campaign volume.',
-  },
-  {
-    question: 'Will I receive actionable recommendations?',
-    answer: 'Yes, you will receive a detailed report with prioritized, actionable recommendations tailored to your business goals.',
-  },
-  {
-    question: 'Do you require account access?',
-    answer: 'Yes, we need read-only access to your Google Ads account to conduct a thorough audit and provide accurate recommendations.',
-  },
-  {
-    question: 'Can audits help reduce ad spend waste?',
-    answer: 'Absolutely. Our audits identify wasted budget on low-performing keywords, poor targeting, and inefficient bidding strategies, helping you optimize spending.',
-  },
-];
+const content = t.googleAdsAudit.page;
 
 export function getStaticPaths() {
   return [
@@ -49,11 +26,16 @@ export function getStaticPaths() {
     <!-- Hero Section with Beige Background -->
     <section class="bg-[#E8D5B7] py-20 px-4">
       <div class="max-w-4xl mx-auto text-center">
+        <img
+          src="/assets/audit/audit-hero.png"
+          alt={content.images.alt.analytics}
+          class="w-full h-auto rounded-lg shadow-2xl mb-8"
+        />
         <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-6">
-          Google Ads Audit Overview
+          {content.hero.title}
         </h1>
         <p class="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
-          A comprehensive evaluation of your Google Ads campaigns focusing on key performance metrics and tailored strategic recommendations.
+          {content.hero.subtitle}
         </p>
       </div>
     </section>
@@ -62,33 +44,33 @@ export function getStaticPaths() {
     <section class="bg-secondary py-16 px-4">
       <div class="max-w-7xl mx-auto">
         <div class="grid md:grid-cols-3 gap-6">
-          <!-- Image 1 - Analytics Dashboard -->
-          <div class="aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-xl">
+          <!-- Image 1 -->
+          <div class="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
             <img
-              src="/assets/audit/analytics-dashboard.jpg"
-              alt="Analytics Dashboard"
+              src="/assets/audit/Audit-1.png"
+              alt={content.images.alt.analytics}
               class="w-full h-full object-cover"
-              onerror="this.style.display='none'; this.parentElement.classList.add('flex', 'items-center', 'justify-center'); this.parentElement.innerHTML='<div class=\'text-white text-center p-8\'><svg class=\'w-16 h-16 mx-auto mb-4 opacity-50\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z\'></path></svg><p class=\'text-sm\'>Analytics Dashboard</p></div>';"
+              onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-700')"
             />
           </div>
 
-          <!-- Image 2 - Dual Monitors -->
-          <div class="aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-xl">
+          <!-- Image 2 -->
+          <div class="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
             <img
-              src="/assets/audit/dual-monitors.jpg"
-              alt="Performance Analysis"
+              src="/assets/audit/Audit-2.png"
+              alt={content.images.alt.performance}
               class="w-full h-full object-cover"
-              onerror="this.style.display='none'; this.parentElement.classList.add('flex', 'items-center', 'justify-center'); this.parentElement.innerHTML='<div class=\'text-white text-center p-8\'><svg class=\'w-16 h-16 mx-auto mb-4 opacity-50\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\'></path></svg><p class=\'text-sm\'>Performance Analysis</p></div>';"
+              onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-700')"
             />
           </div>
 
-          <!-- Image 3 - Team Presentation -->
-          <div class="aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-xl">
+          <!-- Image 3 -->
+          <div class="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
             <img
-              src="/assets/audit/team-presentation.jpg"
-              alt="Strategic Planning"
+              src="/assets/audit/Audit-3.png"
+              alt={content.images.alt.strategic}
               class="w-full h-full object-cover"
-              onerror="this.style.display='none'; this.parentElement.classList.add('flex', 'items-center', 'justify-center'); this.parentElement.innerHTML='<div class=\'text-white text-center p-8\'><svg class=\'w-16 h-16 mx-auto mb-4 opacity-50\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z\'></path></svg><p class=\'text-sm\'>Strategic Planning</p></div>';"
+              onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-700')"
             />
           </div>
         </div>
@@ -100,14 +82,14 @@ export function getStaticPaths() {
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Google Ads Audit FAQs
+            {content.faq.title}
           </h2>
           <p class="text-base text-gray-600 max-w-2xl mx-auto">
-            Clarify your questions about our Google Ads audit process, what to expect, and how it can pinpoint opportunities for your campaigns.
+            {content.faq.subtitle}
           </p>
         </div>
         <div class="space-y-4">
-          {faqItems.map((item) => (
+          {content.faq.items.map((item) => (
             <details class="bg-white rounded shadow-md group border border-gray-200">
               <summary class="p-6 cursor-pointer font-semibold text-gray-900 flex justify-between items-center transition-all duration-300 ease-in-out hover:translate-x-1">
                 <span class="text-base">{item.question}</span>
@@ -130,17 +112,17 @@ export function getStaticPaths() {
     <section class="py-20 px-4 bg-gray-50">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-          Need More Answers?
+          {content.contact.title}
         </h2>
         <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-          Contact our team for personalized responses to your Google Ads audit questions and to discuss how we can support your campaign goals.
+          {content.contact.subtitle}
         </p>
         <Button
           href={`mailto:${EMAIL}?subject=Google Ads Audit Inquiry`}
           variant="secondary"
           size="lg"
         >
-          Contact us
+          {content.contact.button}
         </Button>
       </div>
     </section>

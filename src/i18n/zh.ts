@@ -399,6 +399,50 @@ export const zh = {
     },
   },
   googleAdsAudit: {
+    page: {
+      hero: {
+        title: 'Google 广告审计概览',
+        subtitle: '对您的 Google 广告活动进行全面评估，专注于关键绩效指标和量身定制的战略建议。',
+      },
+      images: {
+        alt: {
+          analytics: '分析仪表板',
+          performance: '绩效分析',
+          strategic: '战略规划',
+        },
+      },
+      faq: {
+        title: 'Google 广告审计常见问题',
+        subtitle: '澄清您对我们 Google 广告审计流程的疑问，了解可以期待什么，以及它如何为您的广告活动识别机会。',
+        items: [
+          {
+            question: 'Google 广告审计包括什么？',
+            answer: '我们的审计检查广告活动结构、关键词定位、广告文案效果、出价策略和转化跟踪，以识别绩效差距和优化机会。',
+          },
+          {
+            question: '审计需要多长时间？',
+            answer: '大多数审计在 5-7 个工作日内完成，具体取决于账户复杂性和广告活动数量。',
+          },
+          {
+            question: '我会收到可操作的建议吗？',
+            answer: '是的，您将收到一份详细报告，其中包含根据您的业务目标制定的优先级可操作建议。',
+          },
+          {
+            question: '您需要账户访问权限吗？',
+            answer: '是的，我们需要对您的 Google 广告账户的只读访问权限，以进行彻底的审计并提供准确的建议。',
+          },
+          {
+            question: '审计可以帮助减少广告支出浪费吗？',
+            answer: '绝对可以。我们的审计可以识别在低绩效关键词、定位不佳和低效出价策略上浪费的预算，帮助您优化支出。',
+          },
+        ],
+      },
+      contact: {
+        title: '需要更多答案？',
+        subtitle: '联系我们的团队，获取有关您的 Google 广告审计问题的个性化答复，并讨论我们如何支持您的广告活动目标。',
+        button: '联系我们',
+      },
+    },
     hero: {
       title: '发现问题，停止浪费，获得清晰洞察',
       subtitle: '如果您的 Google 广告正在运行，但结果感觉不一致、不清楚或令人失望，问题往往不在于预算——而在于账户结构。我们的 Google 广告审计是一项深入、结构化的审查，旨在发现浪费的支出、跟踪问题和错失的机会。',
@@ -470,6 +514,59 @@ export const zh = {
     },
   },
   googleAdsManagement: {
+    page: {
+      hero: {
+        subtitle: '通过精准的 Google 广告管理最大化您的广告支出',
+        title: '战略性 Google 广告管理，实现最佳投资回报率',
+        alt: 'Google 广告管理仪表板',
+      },
+      services: {
+        cards: [
+          {
+            title: '精准驱动的广告活动',
+            description: '数据支持的定向策略与您的业务目标一致，有效地接触正确的受众。',
+            button: '了解更多',
+          },
+          {
+            title: '数据支持的优化',
+            description: '持续的绩效跟踪和调整确保您的广告产生可衡量的结果和营销投资回报率。',
+            button: '探索服务',
+          },
+          {
+            title: '全面管理',
+            description: '从关键词选择到出价管理，我们以专业监督处理您的 Google 广告活动的各个方面。',
+            button: '开始使用',
+          },
+          {
+            title: '透明报告',
+            description: '接收详细的洞察和清晰的分析，以了解广告活动绩效和战略决策。',
+            button: '请求报告',
+          },
+        ],
+      },
+      images: {
+        alt: {
+          team: '团队协作',
+          analytics: '分析仪表板',
+          performance: '绩效指标',
+        },
+        bgAlt: '专业人员工作',
+      },
+      faq: {
+        title: 'Google 广告管理常见问题',
+        subtitle: '关于管理 Google 广告活动的常见问题的清晰答案，帮助您做出明智的决定并优化您的广告投资。',
+      },
+      contact: {
+        title: '需要更多信息？',
+        subtitle: '联系我们的团队，讨论您的具体 Google 广告需求，以及我们的管理服务如何提供可衡量的增长。',
+        button: '联系我们',
+      },
+      cta: {
+        title: '今天就优化您的 Google 广告活动',
+        alt: '开始优化',
+        button: '请求咨询',
+      },
+    },
     hero: {
       title: 'Google 广告管理服务',
       subtitle: '专注。透明。专为中小企业打造。',

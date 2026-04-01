@@ -269,37 +269,48 @@ export const en = {
     },
   },
   aboutUs: {
-    hero: {
-      title: 'We Help Businesses Grow with Smart Google Ads',
-      description: 'At Aivio Digital, we specialize in Google Ads management and optimization, helping small and medium-sized businesses get more leads, better ROI, and clearer results from their ad spend. We understand that running Google Ads can be complex and confusing, and many businesses waste budget on campaigns that don\'t deliver. That\'s why we focus on data-driven strategies, clear reporting, and results that matter.',
+    label: 'ABOUT AIVIO',
+    title: 'Where Software QA Meets',
+    titleHighlight: 'Digital Marketing',
+    subtitle: 'Aivio Digital Media was founded on a simple belief: the same discipline that makes software reliable can make advertising profitable.',
+    founder: {
+      title: 'The Founder',
+      subtitle: 'Aivio Digital Media',
+      quote: 'I don\'t just \'manage\' ads; I audit the logic behind them. My background in Guangzhou\'s hardware markets and Toronto\'s IT sector allows me to bridge the gap between global manufacturing and local digital performance.',
+      bio: 'After 10 years in enterprise software QA — where a single undetected bug could cost millions — I realized that Google Ads accounts suffer from the exact same problem. Broken tracking, structural defects, and untested assumptions silently drain budgets every day. I founded Aivio to apply that engineering mindset to digital advertising.',
     },
-    ourStory: {
-      title: 'Our Story',
-      description: 'Founded by a team of digital marketing and analytics experts, Aivio Digital was built on the principle of transparency and measurable success. We\'ve worked with businesses across industries, from custom packaging to printing services, helping them turn clicks into meaningful leads.',
+    corePillars: {
+      label: 'CORE PILLARS',
+      title: 'What Sets Us Apart',
+      subtitle: 'A unique combination of technical rigor, trade experience, and bilingual capability.',
+      items: [
+        {
+          title: '10+ Years in IT & QA',
+          description: 'A decade of software quality assurance taught me one thing: every system has bugs. Ad accounts are no different. I apply the same diagnostic rigor to your campaigns.',
+          icon: 'code',
+        },
+        {
+          title: 'Supply Chain Heritage',
+          description: 'Growing up around Guangzhou\'s hardware markets and working in furniture trade gave me deep understanding of manufacturing, wholesale, and cross-border commerce.',
+          icon: 'briefcase',
+        },
+        {
+          title: 'Bilingual Advantage',
+          description: 'Fluent in English, Mandarin, and Cantonese. I bridge the gap between Chinese manufacturers and North American digital markets — no cultural context gets lost.',
+          icon: 'globe',
+        },
+        {
+          title: 'Data, Not Guesswork',
+          description: 'Every decision is backed by data. I don\'t \'manage\' ads — I audit the logic behind them, test hypotheses, and optimize based on evidence.',
+          icon: 'chart',
+        },
+      ],
     },
-    ourApproach: {
-      title: 'Our Approach',
-      description: 'We believe that every dollar in your ad budget should work for you. Our approach includes:',
-      audit: 'Audit & Analysis: Understand what\'s working, what\'s wasting budget, and where improvements can be made.',
-      strategy: 'Strategy & Setup: Optimize campaigns, ad copy, keywords, and landing pages for maximum impact.',
-      management: 'Management & Optimization: Continuously improve lead quality, conversion rates, and ROI.',
-      note: 'No long-term contracts, no hidden fees — just clear guidance and results-driven strategies.',
-    },
-    whyChooseUs: {
-      title: 'Why Clients Choose Us',
-      expertise: 'Expertise: Certified Google Ads professionals with proven results.',
-      transparency: 'Transparency: Clear reporting and recommendations every step of the way.',
-      personalized: 'Personalized Service: Campaigns tailored to your goals, industry, and budget.',
-      results: 'Results-Oriented: We focus on quality leads, not just clicks.',
-    },
-    ourMission: {
-      title: 'Our Mission',
-      description: 'To help businesses make every ad dollar count, grow sustainably, and take the guesswork out of online advertising.',
-    },
-    ready: {
-      title: 'Ready to Grow Your Business?',
-      description: 'Whether you need a Google Ads Audit or ongoing management, we\'re here to help.',
-      button: 'Talk to a Google Ads Expert',
+    cta: {
+      title: 'Let\'s Talk About Your Growth',
+      subtitle: 'Whether you\'re a local Toronto business or a global manufacturer, we\'d love to learn about your goals.',
+      button: 'Get In Touch',
+      note: 'user use green background',
     },
   },
   googleAdsAudit: {

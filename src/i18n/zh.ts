@@ -45,7 +45,6 @@ export const zh = {
     blogs: '博客',
     caseStudy: '案例分析',
     aboutUs: '关于我们',
-    blog: '博客',
     contactUs: '联系我们',
     getAudit: '预约 Google Ads 审计服务',
   },
@@ -270,37 +269,48 @@ export const zh = {
     },
   },
   aboutUs: {
-    hero: {
-      title: '我们通过智能 Google 广告帮助企业成长',
-      description: '在 Aivio Digital，我们专注于 Google 广告管理和优化，帮助中小企业从广告支出中获得更多潜在客户、更好的投资回报率和更清晰的结果。我们理解运行 Google 广告可能复杂且令人困惑，许多企业在不提供结果的广告活动上浪费预算。这就是为什么我们专注于数据驱动的策略、清晰的报告和重要的结果。',
+    label: '关于 AIVIO',
+    title: '软件质量保证遇见',
+    titleHighlight: '数字营销',
+    subtitle: 'Aivio Digital Media 的创立源于一个简单的信念：让软件可靠的同样严谨，也能让广告盈利。',
+    founder: {
+      title: '创始人',
+      subtitle: 'Aivio Digital Media',
+      quote: '我不只是"管理"广告，我审计广告背后的逻辑。我在广州五金市场和多伦多 IT 行业的背景，让我能够弥合全球制造业与本地数字营销绩效之间的差距。',
+      bio: '在企业软件质量保证领域工作了 10 年——在那里，一个未被发现的缺陷可能造成数百万损失——我意识到 Google 广告账户也存在完全相同的问题。损坏的跟踪、结构缺陷和未经验证的假设，每天都在悄悄消耗预算。我创立 Aivio，就是为了将那种工程思维方式应用于数字广告。',
     },
-    ourStory: {
-      title: '我们的故事',
-      description: '由数字营销和分析专家团队创立，Aivio Digital 建立在透明和可衡量成功的原则之上。我们与各行业的企业合作，从定制包装到印刷服务，帮助他们将点击转化为有意义的潜在客户。',
+    corePillars: {
+      label: '核心支柱',
+      title: '我们的独特之处',
+      subtitle: '技术严谨性、行业经验与双语能力的独特结合。',
+      items: [
+        {
+          title: '10+ 年 IT 与质量保证经验',
+          description: '十年软件质量保证工作教会了我一件事：每个系统都有缺陷。广告账户也不例外。我将同样的诊断严谨性应用于您的广告活动。',
+          icon: 'code',
+        },
+        {
+          title: '供应链背景',
+          description: '在广州五金市场成长，并从事家具贸易工作，让我对制造业、批发和跨境商务有深刻的理解。',
+          icon: 'briefcase',
+        },
+        {
+          title: '双语优势',
+          description: '流利掌握英语、普通话和粤语。我弥合中国制造商与北美数字市场之间的差距——不会丢失任何文化背景。',
+          icon: 'globe',
+        },
+        {
+          title: '数据，而非猜测',
+          description: '每一个决策都有数据支撑。我不"管理"广告——我审计其背后的逻辑，验证假设，并基于证据进行优化。',
+          icon: 'chart',
+        },
+      ],
     },
-    ourApproach: {
-      title: '我们的方法',
-      description: '我们相信您的广告预算中的每一美元都应该为您工作。我们的方法包括：',
-      audit: '审计与分析：了解什么有效、什么在浪费预算以及可以进行改进的地方。',
-      strategy: '策略与设置：优化广告活动、广告文案、关键词和着陆页以获得最大影响。',
-      management: '管理与优化：持续提高潜在客户质量、转化率和投资回报率。',
-      note: '无长期合同，无隐藏费用——只有清晰的指导和以结果为导向的策略。',
-    },
-    whyChooseUs: {
-      title: '客户为什么选择我们',
-      expertise: '专业知识：拥有经过验证结果的认证 Google 广告专业人士。',
-      transparency: '透明度：每一步都有清晰的报告和建议。',
-      personalized: '个性化服务：根据您的目标、行业和预算定制广告活动。',
-      results: '以结果为导向：我们专注于高质量的潜在客户，而不仅仅是点击。',
-    },
-    ourMission: {
-      title: '我们的使命',
-      description: '帮助企业让每一广告美元都有价值，可持续增长，并消除在线广告的猜测工作。',
-    },
-    ready: {
-      title: '准备好发展您的业务了吗？',
-      description: '无论您需要 Google 广告审计还是持续管理，我们都在这里为您提供帮助。',
-      button: '与 Google 广告专家交流',
+    cta: {
+      title: '让我们谈谈您的增长',
+      subtitle: '无论您是多伦多本地企业还是全球制造商，我们都希望了解您的目标。',
+      button: '立即联系',
+      note: 'user use green background',
     },
   },
   googleAdsAudit: {

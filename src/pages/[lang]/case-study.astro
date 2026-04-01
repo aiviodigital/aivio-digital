@@ -1,14 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { translations } from '../../i18n';
-import CaseStudyHero from '../../components/case-study/CaseStudyHero.astro';
-import SectionWithTitle from '../../components/case-study/SectionWithTitle.astro';
-import ChallengeSection from '../../components/case-study/ChallengeSection.astro';
-import DiagnosisSection from '../../components/case-study/DiagnosisSection.astro';
-import OptimizationSection from '../../components/case-study/OptimizationSection.astro';
-import ResultsSection from '../../components/case-study/ResultsSection.astro';
-import TakeawaySection from '../../components/case-study/TakeawaySection.astro';
-import CTASection from '../../components/case-study/CTASection.astro';
 
 const { lang } = Astro.params;
 const currentLang = (lang || 'en') as 'en' | 'zh';
@@ -16,53 +8,6 @@ const currentPath = Astro.url.pathname;
 const t = translations[currentLang];
 const pageTitle = t.pageTitle.caseStudy;
 const pageMeta = t.pageMeta.caseStudy;
-const content = t.caseStudy;
-
-const challengePoints = [
-  content.challenge.point1,
-  content.challenge.point2,
-  content.challenge.point3,
-  content.challenge.point4,
-  content.challenge.point5,
-];
-
-const diagnosisItems = [
-  {
-    title: content.diagnosis.landingPage.title,
-    description: content.diagnosis.landingPage.description,
-  },
-  {
-    title: content.diagnosis.trust.title,
-    description: content.diagnosis.trust.description,
-  },
-  {
-    title: content.diagnosis.budget.title,
-    description: content.diagnosis.budget.description,
-  },
-];
-
-const optimizationItems = [
-  {
-    title: content.optimization.landingPage.title,
-    points: [content.optimization.landingPage.point1, content.optimization.landingPage.point2],
-  },
-  {
-    title: content.optimization.faq.title,
-    description: content.optimization.faq.description,
-  },
-  {
-    title: content.optimization.alignment.title,
-    description: content.optimization.alignment.description,
-  },
-];
-
-const resultsPoints = [
-  content.results.point1,
-  content.results.point2,
-  content.results.point3,
-  content.results.point4,
-  content.results.point5,
-];
 
 export function getStaticPaths() {
   return [
@@ -73,48 +18,154 @@ export function getStaticPaths() {
 ---
 
 <Layout title={pageTitle} description={pageMeta.description} keywords={pageMeta.keywords} lang={currentLang} currentLang={currentLang} currentPath={currentPath}>
-  <main class="min-h-screen">
-    <CaseStudyHero
-      title={content.title}
-      industry={content.metadata.industry}
-      location={content.metadata.location}
-      spend={content.metadata.spend}
-      type={content.metadata.type}
-    />
+  <main class="min-h-screen bg-white">
+    <!-- Hero Section with Beige Background -->
+    <section class="bg-[#E8D5B7] py-16 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- Left: Large Hero Image -->
+          <div class="order-2 md:order-1">
+            <img
+              src="/assets/case/hero-analytics.jpg"
+              alt="Google Ads Analytics Dashboard"
+              class="w-full h-auto rounded-lg shadow-2xl"
+              onerror="this.src='/assets/google_ads_audit.png'"
+            />
+          </div>
 
-    <SectionWithTitle title={content.background.title}>
-      <p class="text-lg text-gray-700 leading-relaxed">
-        {content.background.description}
-      </p>
-    </SectionWithTitle>
+          <!-- Right: Title Text -->
+          <div class="order-1 md:order-2">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight">
+              Proven Google Ads Campaigns Driving Measurable Growth
+            </h1>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <ChallengeSection title={content.challenge.title} points={challengePoints} />
+    <!-- Dark Green Section with Multiple Images -->
+    <section class="bg-secondary py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div class="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+            <img
+              src="/assets/case/analytics-1.jpg"
+              alt="Campaign Analytics"
+              class="w-full h-full object-cover"
+              onerror="this.src='/assets/home/H-4.png'"
+            />
+          </div>
+          <div class="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+            <img
+              src="/assets/case/chart-analysis.jpg"
+              alt="Chart Analysis"
+              class="w-full h-full object-cover"
+              onerror="this.src='/assets/home/H-5.png'"
+            />
+          </div>
+          <div class="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+            <img
+              src="/assets/case/team-presentation.jpg"
+              alt="Team Presentation"
+              class="w-full h-full object-cover"
+              onerror="this.src='/assets/home/H-6.png'"
+            />
+          </div>
+          <div class="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+            <img
+              src="/assets/case/laptop-analytics.jpg"
+              alt="Laptop Analytics"
+              class="w-full h-full object-cover"
+              onerror="this.src='/assets/home/H-3.png'"
+            />
+          </div>
+          <div class="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+            <img
+              src="/assets/case/tablet-charts.jpg"
+              alt="Tablet Charts"
+              class="w-full h-full object-cover"
+              onerror="this.src='/assets/home/H-1.png'"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <DiagnosisSection
-      title={content.diagnosis.title}
-      description={content.diagnosis.description}
-      items={diagnosisItems}
-    />
+    <!-- White Section with Metrics -->
+    <section class="bg-white py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <p class="text-sm text-gray-600 uppercase tracking-wider mb-2">
+            Proven Google Ads Performance Metrics
+          </p>
+        </div>
 
-    <OptimizationSection
-      title={content.optimization.title}
-      description={content.optimization.description}
-      items={optimizationItems}
-    />
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <!-- Metric 1 -->
+          <div class="text-center">
+            <h3 class="text-4xl md:text-5xl font-bold text-secondary mb-4">326%</h3>
+            <p class="text-xl font-semibold text-gray-900 mb-2">Average ROI Increase</p>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Clients see a consistent 326% return on ad spend within six months of campaign optimization.
+            </p>
+          </div>
 
-    <ResultsSection title={content.results.title} points={resultsPoints} />
+          <!-- Metric 2 -->
+          <div class="text-center">
+            <h3 class="text-4xl md:text-5xl font-bold text-secondary mb-4">45%</h3>
+            <p class="text-xl font-semibold text-gray-900 mb-2">Reduction in Cost Per Acquisition</p>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Strategic bid adjustments and targeting refinements cut acquisition costs nearly in half.
+            </p>
+          </div>
 
-    <TakeawaySection
-      title={content.takeaway.title}
-      description={content.takeaway.description}
-    />
+          <!-- Metric 3 -->
+          <div class="text-center">
+            <h3 class="text-4xl md:text-5xl font-bold text-secondary mb-4">150+</h3>
+            <p class="text-xl font-semibold text-gray-900 mb-2">Campaigns Managed</p>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Extensive experience managing over 150 Google Ads campaigns tailored to SMEs and manufacturers.
+            </p>
+          </div>
 
-    <CTASection
-      title={content.cta.title}
-      description={content.cta.description}
-      buttonText={content.cta.button}
-      contactLink={`/${currentLang === 'en' ? 'en' : 'zh'}/contact`}
-    />
+          <!-- Metric 4 -->
+          <div class="text-center">
+            <h3 class="text-4xl md:text-5xl font-bold text-secondary mb-4">78%</h3>
+            <p class="text-xl font-semibold text-gray-900 mb-2">Client Retention Rate</p>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Long-term partnerships reflect satisfaction and sustained campaign success across diverse industries.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Section with Team Meeting Image -->
+    <section class="relative py-32 px-4">
+      <!-- Background Image -->
+      <div class="absolute inset-0">
+        <img
+          src="/assets/case/team-meeting.jpg"
+          alt="Proven Google Ads Driving Business Growth"
+          class="w-full h-full object-cover"
+          onerror="this.src='/assets/home/H-14.png'"
+        />
+        <div class="absolute inset-0 bg-black/40"></div>
+      </div>
+
+      <!-- Content Overlay -->
+      <div class="relative z-10 max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          Proven Google Ads Driving Business Growth
+        </h2>
+        <a
+          href={`/${currentLang}/contact`}
+          class="inline-block bg-white text-secondary font-semibold px-8 py-4 rounded-lg hover:bg-secondary/10 transition-colors text-lg shadow-md hover:shadow-lg"
+        >
+          Request Consultation
+        </a>
+      </div>
+    </section>
   </main>
 </Layout>
 

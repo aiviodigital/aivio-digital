@@ -49,27 +49,77 @@ export const en = {
     getAudit: 'Get a Google Ads Account Audit',
   },
   hero: {
-    title: 'Toronto Google Ads Expert for Small Business',
-    subtitle: 'Get more traffic. Acquire more customers. Turn ad spend into qualified leads, not wasted clicks.',
+    title: 'Aivio Digital Marketing Agency',
+    tagline: 'Optimized Google Ads with Precision for Measurable Growth',
+    subtitle: 'Aivio delivers precise Google Ads audits and management tailored to Toronto SMBs and Chinese manufacturers entering North America.',
     cta: 'Talk to a Google Ads Expert',
+    alt: {
+      dashboard: 'Google Ads Dashboard',
+      analytics: 'Analytics Review',
+    },
   },
   services: {
-    title: 'Google Ads Services Built for Small Businesses',
-    subtitle: 'Clear structure, disciplined optimization, and no wasted ad spend.',
-    audit: {
-      title: 'Google Ads Audit',
-      subtitle: 'Find wasted spend. Get clarity before spending more.',
-      description: 'A focused review of your Google Ads account to identify tracking issues, inefficient keywords, and structural problems that limit performance.',
-      bestFor: 'Businesses already running Google Ads but unsure what\'s working.',
-      learnMore: 'Learn More',
+    badge: 'Service',
+    title: 'Google Ads Audit & Management for Toronto SMBs and Chinese Manufacturers',
+    description: 'We know how to attract high-quality leads, optimize campaigns, and measure performance in North America.',
+    cta: 'STRUCTURED AUDIT | TRANSPARENT MANAGEMENT | MEASURABLE GROWTH',
+    cards: [
+      {
+        title: 'Comprehensive Google Ads Audits',
+        description: 'Uncover wasted budget and identify optimization opportunities. Get a detailed campaign assessment, keyword efficiency report, and conversion tracking review.',
+        cta: 'Request Audit',
+        alt: 'Comprehensive Audits',
+      },
+      {
+        title: 'Targeted Campaign Management',
+        description: 'Align ad spend with business goals. Services include keyword optimization, continuous monitoring, and customized reporting and insights.',
+        cta: 'Start Managing',
+        alt: 'Campaign Management',
+      },
+      {
+        title: 'Data-Driven Strategy Development',
+        description: 'Leverage decisions and strategy to align with your business goals. Get custom PPC strategy and budget optimization.',
+        cta: 'Explore More',
+        alt: 'Strategy Development',
+      },
+    ],
+  },
+  specialized: [
+    {
+      title: 'Customized Solutions for SMBs',
+      description: 'Tailored Google Ads strategies and budgets of small to mid-sized businesses to achieve maximum ROI.',
+      cta: 'Learn More',
+      url: '/google-ads-management',
     },
-    management: {
-      title: 'Google Ads Management',
-      subtitle: 'Turn ad spend into qualified leads.',
-      description: 'Ongoing management of Google search campaigns, from strategy and bidding to ad copy and conversion optimization.',
-      bestFor: 'Businesses that want consistent enquiries without managing ads in-house.',
-      learnMore: 'Learn More',
+    {
+      title: 'Market Entry Support for Chinese Manufacturers',
+      description: 'Have Aivio manage how to fully reach and engage North American buyers through effective Google advertising.',
+      cta: 'Learn More',
+      url: '/about-us',
     },
+    {
+      title: 'Transparent Reporting & Insights',
+      description: 'Monitor clear, actionable reports and insights to understand campaign performance and guide ongoing improvements.',
+      cta: 'Learn More',
+      url: '/contact',
+    },
+  ],
+  portfolio: {
+    title: 'Portfolio',
+    altPrefix: 'Portfolio',
+  },
+  cta: {
+    badge: 'Get Started with Aivio Today',
+    title: 'Get a Precise Google Ads Audit Today',
+    description: 'Contact Aivio Digital Marketing Agency to schedule a detailed Google Ads consultation or audit. Let data-driven strategy, execution, and optimized results move your business forward in North America.',
+    button: 'Email',
+    alt: 'Get Started Today',
+  },
+  finalCta: {
+    subtitle: 'If you\'re ready to elevate your Google Ads performance and track your goals',
+    title: 'Get a Precise Google Ads Audit Today',
+    description: 'Contact Aivio Digital Marketing Agency to schedule a detailed Google Ads consultation or audit. Let data-driven strategy, execution, and optimized results move your business forward in North America.',
+    button: 'Get Your Free Consultation',
   },
   howItWorks: {
     title: 'From Insights to Results',
@@ -116,12 +166,6 @@ export const en = {
     solution3: 'Optimized landing page content & FAQs',
     result: 'Lead quality improved by 40%, budget used more efficiently, and client gained better control over ad spend',
     keyTakeaway: 'By narrowing focus and optimizing campaigns, client gets more high-quality inquiries without increasing costs',
-  },
-  finalCta: {
-    title: 'READY TO GROW YOUR BUSINESS?',
-    subtitle: 'Partner with a Google Ads Expert at Aivio Digital and start getting more high-quality leads today!',
-    button: 'Talk to a Google Ads Expert',
-    orCall: 'Or call us: 647-625-1375',
   },
   faq: {
     title: 'Frequently Asked Questions',
@@ -233,7 +277,44 @@ export const en = {
       title: 'Get Expert Help with Google Ads',
       description: 'Whether you need a Google Ads Audit or ongoing Google Ads Management, our team will review your account and recommend a plan to improve results.',
     },
-    howItWorks: {
+    specialized: [
+    {
+      title: 'Customized Solutions for SMBs',
+      description: 'Tailored Google Ads strategies and budgets of small to mid-sized businesses to achieve maximum ROI.',
+      cta: 'Learn More',
+      url: '/google-ads-management',
+    },
+    {
+      title: 'Market Entry Support for Chinese Manufacturers',
+      description: 'Have Aivio manage how to fully reach and engage North American buyers through effective Google advertising.',
+      cta: 'Learn More',
+      url: '/about-us',
+    },
+    {
+      title: 'Transparent Reporting & Insights',
+      description: 'Monitor clear, actionable reports and insights to understand campaign performance and guide ongoing improvements.',
+      cta: 'Learn More',
+      url: '/contact',
+    },
+  ],
+  portfolio: {
+    title: 'Portfolio',
+    altPrefix: 'Portfolio',
+  },
+  cta: {
+    badge: 'Get Started with Aivio Today',
+    title: 'Get a Precise Google Ads Audit Today',
+    description: 'Contact Aivio Digital Marketing Agency to schedule a detailed Google Ads consultation or audit. Let data-driven strategy, execution, and optimized results move your business forward in North America.',
+    button: 'Email',
+    alt: 'Get Started Today',
+  },
+  finalCta: {
+    subtitle: 'If you\'re ready to elevate your Google Ads performance and track your goals',
+    title: 'Get a Precise Google Ads Audit Today',
+    description: 'Contact Aivio Digital Marketing Agency to schedule a detailed Google Ads consultation or audit. Let data-driven strategy, execution, and optimized results move your business forward in North America.',
+    button: 'Get Your Free Consultation',
+  },
+  howItWorks: {
       title: 'How It Works',
       step1: 'Submit your request – Fill out the short form below and select the service you\'re interested in.',
       step2: 'We review your account – Our team will analyze your campaigns or discuss your goals.',

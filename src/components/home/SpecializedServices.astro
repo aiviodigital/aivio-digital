@@ -1,31 +1,23 @@
 ---
-const services = [
-  {
-    title: 'Customized Solutions for SMBs',
-    description: 'Tailored Google Ads strategies and budgets of small to mid-sized businesses to achieve maximum ROI.',
-    image: '/assets/home/H-7.png',
-  },
-  {
-    title: 'Market Entry Support for Chinese Manufacturers',
-    description: 'Have Aivio manage how to fully reach and engage North American buyers through effective Google advertising.',
-    image: '/assets/home/H-8.png',
-  },
-  {
-    title: 'Transparent Reporting & Insights',
-    description: 'Monitor clear, actionable reports and insights to understand campaign performance and guide ongoing improvements.',
-    image: '/assets/home/H-9.png',
-  }
-];
+import { translations } from '../../i18n';
+import type { Language } from '../../i18n';
+
+interface Props {
+  currentLang: Language;
+}
+
+const { currentLang } = Astro.props;
+const t = translations[currentLang];
 ---
 
 <section class="py-16 px-4 bg-white">
   <div class="max-w-7xl mx-auto">
     <div class="grid md:grid-cols-3 gap-8">
-      {services.map((service, index) => (
+      {t.specialized.map((service, index) => (
         <div class="text-center group">
           <div class="mb-6 overflow-hidden rounded-lg shadow-md">
             <img
-              src={service.image}
+              src={`/assets/home/H-${7 + index}.png`}
               alt={service.title}
               class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
@@ -33,10 +25,10 @@ const services = [
           <h3 class="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
           <p class="text-gray-600 leading-relaxed mb-4">{service.description}</p>
           <a
-            href={index === 0 ? '/en/google-ads-management' : index === 1 ? '/en/about-us' : '/en/contact'}
+            href={`/${currentLang}${service.url}`}
             class="text-secondary font-semibold hover:underline inline-block"
           >
-            Learn More
+            {service.cta}
           </a>
         </div>
       ))}

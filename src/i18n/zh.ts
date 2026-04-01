@@ -49,27 +49,40 @@ export const zh = {
     getAudit: '预约 Google Ads 审计服务',
   },
   hero: {
-    title: '多伦多 Google 广告专家，服务中小企业',
-    subtitle: '获得更多流量，获取更多客户。将广告预算转化为合格的潜在客户，而不是浪费的点击。',
+    title: 'Aivio 数字营销代理公司',
+    tagline: '精准优化 Google 广告，实现可衡量的增长',
+    subtitle: 'Aivio 为多伦多中小企业和进入北美市场的中国制造商提供精准的 Google 广告审计和管理服务。',
     cta: '与 Google 广告专家交流',
+    alt: {
+      dashboard: 'Google 广告仪表板',
+      analytics: '分析审查',
+    },
   },
   services: {
-    title: '专为中小企业打造的 Google 广告服务',
-    subtitle: '清晰的结构，严格的优化，绝不浪费广告预算。',
-    audit: {
-      title: 'Google 广告审计',
-      subtitle: '发现浪费的支出。在投入更多之前获得清晰洞察。',
-      description: '对您的 Google 广告账户进行集中审查，识别跟踪问题、低效关键词和限制绩效的结构问题。',
-      bestFor: '已经在运行 Google 广告但不确定效果如何的企业。',
-      learnMore: '了解更多',
-    },
-    management: {
-      title: 'Google 广告管理',
-      subtitle: '将广告预算转化为合格的潜在客户。',
-      description: '持续管理 Google 搜索广告活动，从策略和出价到广告文案和转化优化。',
-      bestFor: '想要获得持续咨询而不需要在内部管理广告的企业。',
-      learnMore: '了解更多',
-    },
+    badge: '服务',
+    title: '为多伦多中小企业和中国制造商提供 Google 广告审计和管理',
+    description: '我们知道如何吸引高质量的潜在客户、优化广告活动并衡量北美市场的绩效。',
+    cta: '结构化审计 | 透明管理 | 可衡量增长',
+    cards: [
+      {
+        title: '全面的 Google 广告审计',
+        description: '发现浪费的预算并识别优化机会。获得详细的广告活动评估、关键词效率报告和转化跟踪审查。',
+        cta: '申请审计',
+        alt: '全面审计',
+      },
+      {
+        title: '定向广告活动管理',
+        description: '将广告支出与业务目标对齐。服务包括关键词优化、持续监控和定制报告与洞察。',
+        cta: '开始管理',
+        alt: '广告活动管理',
+      },
+      {
+        title: '数据驱动策略开发',
+        description: '利用决策和策略与您的业务目标对齐。获得定制的 PPC 策略和预算优化。',
+        cta: '了解更多',
+        alt: '策略开发',
+      },
+    ],
   },
   howItWorks: {
     title: '从洞察到结果',
@@ -90,6 +103,43 @@ export const zh = {
       description: '持续改善广告性能和潜在客户质量',
     },
     noContract: '无长期合同，无压力，每一步都清晰决策。',
+  },
+  specialized: [
+    {
+      title: '为中小企业定制的解决方案',
+      description: '针对中小型企业的 Google 广告策略和预算，实现最大投资回报率。',
+      cta: '了解更多',
+      url: '/google-ads-management',
+    },
+    {
+      title: '为进入北美的中国制造商提供市场进入支持',
+      description: '让 Aivio 通过有效的 Google 广告管理，帮助您全面接触和吸引北美买家。',
+      cta: '了解更多',
+      url: '/about-us',
+    },
+    {
+      title: '透明报告与洞察',
+      description: '监控清晰、可操作的报告和洞察，了解广告活动绩效并指导持续改进。',
+      cta: '了解更多',
+      url: '/contact',
+    },
+  ],
+  portfolio: {
+    title: '作品集',
+    altPrefix: '作品集',
+  },
+  cta: {
+    badge: '今天就开始与 Aivio 合作',
+    title: '今天获取精准的 Google 广告审计',
+    description: '联系 Aivio 数字营销代理公司，安排详细的 Google 广告咨询或审计。让数据驱动的策略、执行和优化结果推动您在北美的业务发展。',
+    button: '邮件',
+    alt: '今天开始',
+  },
+  finalCta: {
+    subtitle: '如果您准备好提升您的 Google 广告绩效并追踪您的目标',
+    title: '今天获取精准的 Google 广告审计',
+    description: '联系 Aivio 数字营销代理公司，安排详细的 Google 广告咨询或审计。让数据驱动的策略、执行和优化结果推动您在北美的业务发展。',
+    button: '获取您的免费咨询',
   },
   testimonials: {
     title: '客户评价',
@@ -116,12 +166,6 @@ export const zh = {
     solution3: '优化着陆页内容和常见问题',
     result: '潜在客户质量提高了 40%，预算使用更有效率，客户更好地控制了广告支出',
     keyTakeaway: '通过缩小重点和优化广告活动，客户在不增加成本的情况下获得了更多高质量咨询',
-  },
-  finalCta: {
-    title: '准备好发展您的业务了吗？',
-    subtitle: '与 Aivio Digital 的 Google 广告专家合作，今天就获得更多高质量的潜在客户！',
-    button: '与 Google 广告专家交流',
-    orCall: '或致电我们：647-625-1375',
   },
   faq: {
     title: '常见问题',

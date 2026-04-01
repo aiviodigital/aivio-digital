@@ -1,4 +1,13 @@
 ---
+import { translations } from '../../i18n';
+
+interface Props {
+  currentLang: 'en' | 'zh';
+}
+
+const { currentLang } = Astro.props;
+const t = translations[currentLang];
+
 const images = [
   '/assets/home/H-10.png',
   '/assets/home/H-11.png',
@@ -8,13 +17,16 @@ const images = [
 ---
 
 <section class="py-16 px-4 bg-primary">
+  <div class="max-w-7xl mx-auto text-center mb-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">{t.portfolio.title}</h2>
+  </div>
   <div class="max-w-7xl mx-auto">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
       {images.map((img, index) => (
         <div class="aspect-square overflow-hidden rounded-lg shadow-lg">
           <img
             src={img}
-            alt={`Portfolio ${index + 1}`}
+            alt={`${t.portfolio.altPrefix} ${index + 1}`}
             class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
           />
         </div>

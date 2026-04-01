@@ -1,0 +1,35 @@
+---
+import { translations } from '../../i18n';
+
+interface Props {
+  currentLang: 'en' | 'zh';
+}
+
+const { currentLang } = Astro.props;
+const t = translations[currentLang];
+---
+
+<section class="bg-primary py-12 px-4">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
+      <div>
+        <p class="text-secondary text-base md:text-lg mb-6 leading-relaxed">
+          Aivio delivers precise Google Ads audits and management tailored to Toronto SMBs and Chinese manufacturers entering North America.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <img src="/assets/home/H-1.png" alt="Google Ads Dashboard" class="w-full h-auto rounded-lg shadow-lg" />
+        <img src="/assets/home/H-2.png" alt="Analytics Review" class="w-full h-auto rounded-lg shadow-lg" />
+      </div>
+    </div>
+
+    <div class="text-center">
+      <p class="text-secondary text-sm uppercase tracking-wider mb-4">
+        Optimized Google Ads with Precision for Measurable Growth
+      </p>
+      <h1 class="text-3xl md:text-5xl font-bold text-secondary mb-4">
+        Aivio Digital Marketing Agency
+      </h1>
+    </div>
+  </div>
+</section>

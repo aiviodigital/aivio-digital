@@ -1,12 +1,11 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import Hero from '@/components/Hero.astro';
-import Services from '@/components/home/Services.astro';
-import HowItWorks from '@/components/home/HowItWorks.astro';
-import Testimonials from '@/components/home/Testimonials.astro';
-import CaseStudy from '@/components/home/CaseStudy.astro';
-import FinalCTA from '@/components/home/FinalCTA.astro';
-import FAQSection from '@/components/FAQSection.astro';
+import NewHero from '@/components/home/NewHero.astro';
+import ServicesSection from '@/components/home/ServicesSection.astro';
+import SpecializedServices from '@/components/home/SpecializedServices.astro';
+import PortfolioGallery from '@/components/home/PortfolioGallery.astro';
+import CTASection from '@/components/home/CTASection.astro';
+import FinalCTANew from '@/components/home/FinalCTANew.astro';
 import { translations } from '@/i18n/index';
 
 // Get the language from the URL parameter
@@ -28,13 +27,12 @@ export function getStaticPaths() {
 
 <Layout title={pageTitle} description={pageMeta.description} keywords={pageMeta.keywords} lang={currentLang} currentLang={currentLang} currentPath={currentPath}>
   <main>
-    <Hero currentLang={currentLang} />
-    <Services currentLang={currentLang} />
-    <HowItWorks currentLang={currentLang} />
-    <Testimonials currentLang={currentLang} />
-    <CaseStudy currentLang={currentLang} />
-    <FinalCTA currentLang={currentLang} />
-    <FAQSection items={t.faq.items} title={t.faq.title} />
+    <NewHero currentLang={currentLang} />
+    <ServicesSection currentLang={currentLang} />
+    <SpecializedServices />
+    <PortfolioGallery />
+    <CTASection currentLang={currentLang} />
+    <FinalCTANew currentLang={currentLang} />
   </main>
 </Layout>
 

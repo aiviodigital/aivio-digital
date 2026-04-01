@@ -1,0 +1,24 @@
+---
+const images = [
+  '/assets/home/H-10.png',
+  '/assets/home/H-11.png',
+  '/assets/home/H-12.png',
+  '/assets/home/H-13.png',
+];
+---
+
+<section class="py-16 px-4 bg-primary">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      {images.map((img, index) => (
+        <div class="aspect-square overflow-hidden rounded-lg shadow-lg">
+          <img
+            src={img}
+            alt={`Portfolio ${index + 1}`}
+            class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

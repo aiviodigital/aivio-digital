@@ -1,13 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { translations } from '../../i18n';
-import Hero from '../../components/Hero.astro';
-import ContentCards from '../../components/google-ads-audit/ContentCards.astro';
-import HighlightBox from '../../components/google-ads-audit/HighlightBox.astro';
-import FeatureCards from '../../components/google-ads-audit/FeatureCards.astro';
-import GridFeatures from '../../components/google-ads-audit/GridFeatures.astro';
-import StepsSection from '../../components/google-ads-audit/StepsSection.astro';
-import CTASection from '../../components/google-ads-audit/CTASection.astro';
+import Button from '../../components/Button.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import { EMAIL } from '../../constants/contact';
 
 const { lang } = Astro.params;
 const currentLang = (lang || 'en') as 'en' | 'zh';
@@ -17,37 +13,28 @@ const pageTitle = t.pageTitle.googleAdsAudit;
 const pageMeta = t.pageMeta.googleAdsAudit;
 const content = t.googleAdsAudit;
 
-const reviewItems = [
-  { key: 'structure', icon: 'M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z', title: content.whatWeReview.structure.title, description: content.whatWeReview.structure.description },
-  { key: 'keywords', icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z', title: content.whatWeReview.keywords.title, description: content.whatWeReview.keywords.description },
-  { key: 'bidding', icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 1v8m0 1v8m0 1v8m0 1v8', title: content.whatWeReview.bidding.title, description: content.whatWeReview.bidding.description },
-  { key: 'adCopy', icon: 'M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z', title: content.whatWeReview.adCopy.title, description: content.whatWeReview.adCopy.description },
-  { key: 'tracking', icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z', title: content.whatWeReview.tracking.title, description: content.whatWeReview.tracking.description },
-  { key: 'landingPage', icon: 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z', title: content.whatWeReview.landingPage.title, description: content.whatWeReview.landingPage.description },
+const faqItems = [
+  {
+    question: 'What does a Google Ads audit include?',
+    answer: 'Our audit examines campaign structure, keyword targeting, ad copy effectiveness, bidding strategies, and conversion tracking to identify performance gaps and optimization opportunities.',
+  },
+  {
+    question: 'How long does the audit take?',
+    answer: 'Most audits are completed within 5-7 business days, depending on account complexity and campaign volume.',
+  },
+  {
+    question: 'Will I receive actionable recommendations?',
+    answer: 'Yes, you will receive a detailed report with prioritized, actionable recommendations tailored to your business goals.',
+  },
+  {
+    question: 'Do you require account access?',
+    answer: 'Yes, we need read-only access to your Google Ads account to conduct a thorough audit and provide accurate recommendations.',
+  },
+  {
+    question: 'Can audits help reduce ad spend waste?',
+    answer: 'Absolutely. Our audits identify wasted budget on low-performing keywords, poor targeting, and inefficient bidding strategies, helping you optimize spending.',
+  },
 ];
-
-const receiveItems = [
-  { text: content.whatYouReceive.point1, icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' },
-  { text: content.whatYouReceive.point2, icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' },
-  { text: content.whatYouReceive.point3, icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' },
-  { text: content.whatYouReceive.point4, icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' },
-  { text: content.whatYouReceive.point5, icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' },
-];
-
-const bestFitItems = [
-  { text: content.bestFitFor.point1, icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2' },
-  { text: content.bestFitFor.point2, icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
-  { text: content.bestFitFor.point3, icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 1v8m0 1v8m0 1v8m0 1v8' },
-  { text: content.bestFitFor.point4, icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' },
-];
-
-const afterAuditSteps = [
-  { step: '1', title: 'Implement Recommendations', icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z' },
-  { step: '2', title: 'Continue Self-Management', icon: 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31 2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z' },
-  { step: '3', title: 'Partner with Us', icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' },
-];
-
-const whyAuditPoints = [content.whyAuditMatters.point1, content.whyAuditMatters.point2, content.whyAuditMatters.point3, content.whyAuditMatters.point4];
 
 export function getStaticPaths() {
   return [
@@ -59,91 +46,149 @@ export function getStaticPaths() {
 
 <Layout title={pageTitle} description={pageMeta.description} keywords={pageMeta.keywords} lang={currentLang} currentLang={currentLang} currentPath={currentPath}>
   <main class="min-h-screen">
-    <Hero title={content.hero.title} description={content.hero.subtitle} image="/assets/google_ads_audit.png" />
+    <!-- Hero Section with Beige Background -->
+    <section class="bg-[#E8D5B7] py-20 px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-6">
+          Google Ads Audit Overview
+        </h1>
+        <p class="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
+          A comprehensive evaluation of your Google Ads campaigns focusing on key performance metrics and tailored strategic recommendations.
+        </p>
+      </div>
+    </section>
 
-    <!-- Why Audit Matters -->
+    <!-- Dark Green Section with Images -->
+    <section class="bg-secondary py-16 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Image 1 - Analytics Dashboard -->
+          <div class="aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-xl">
+            <img
+              src="/assets/audit/analytics-dashboard.jpg"
+              alt="Analytics Dashboard"
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.parentElement.classList.add('flex', 'items-center', 'justify-center'); this.parentElement.innerHTML='<div class=\'text-white text-center p-8\'><svg class=\'w-16 h-16 mx-auto mb-4 opacity-50\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z\'></path></svg><p class=\'text-sm\'>Analytics Dashboard</p></div>';"
+            />
+          </div>
+
+          <!-- Image 2 - Dual Monitors -->
+          <div class="aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-xl">
+            <img
+              src="/assets/audit/dual-monitors.jpg"
+              alt="Performance Analysis"
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.parentElement.classList.add('flex', 'items-center', 'justify-center'); this.parentElement.innerHTML='<div class=\'text-white text-center p-8\'><svg class=\'w-16 h-16 mx-auto mb-4 opacity-50\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\'></path></svg><p class=\'text-sm\'>Performance Analysis</p></div>';"
+            />
+          </div>
+
+          <!-- Image 3 - Team Presentation -->
+          <div class="aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-xl">
+            <img
+              src="/assets/audit/team-presentation.jpg"
+              alt="Strategic Planning"
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.parentElement.classList.add('flex', 'items-center', 'justify-center'); this.parentElement.innerHTML='<div class=\'text-white text-center p-8\'><svg class=\'w-16 h-16 mx-auto mb-4 opacity-50\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z\'></path></svg><p class=\'text-sm\'>Strategic Planning</p></div>';"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
     <section class="py-20 px-4 bg-white">
-      <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            {content.whyAuditMatters.title}
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Google Ads Audit FAQs
           </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            {content.whyAuditMatters.subtitle}
+          <p class="text-base text-gray-600 max-w-2xl mx-auto">
+            Clarify your questions about our Google Ads audit process, what to expect, and how it can pinpoint opportunities for your campaigns.
           </p>
         </div>
-        <ContentCards points={whyAuditPoints} />
-        <div class="mt-12">
-          <HighlightBox text={content.whyAuditMatters.conclusion} />
-        </div>
-      </div>
-    </section>
-
-    <!-- What We Review -->
-    <FeatureCards
-      title={content.whatWeReview.title}
-      description="Comprehensive review of every aspect of your Google Ads account"
-      items={reviewItems}
-    />
-
-    <!-- What You Receive -->
-    <section class="py-20 px-4 bg-white">
-      <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            {content.whatYouReceive.title}
-          </h2>
-        </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {receiveItems.map((item, index) => (
-            <div class="bg-gradient-to-br from-secondary/5 to-white p-8 rounded border border-secondary/20 hover:border-secondary/40 transition-all">
-              <div class="flex items-start gap-4">
-                <div class="w-10 h-10 bg-secondary rounded flex items-center justify-center flex-shrink-0">
-                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon}></path>
-                  </svg>
+        <div class="space-y-4">
+          {faqItems.map((item) => (
+            <details class="bg-white rounded shadow-md group border border-gray-200">
+              <summary class="p-6 cursor-pointer font-semibold text-gray-900 flex justify-between items-center transition-all duration-300 ease-in-out hover:translate-x-1">
+                <span class="text-base">{item.question}</span>
+                <svg class="w-5 h-5 text-secondary flex-shrink-0 ml-4 transform transition-transform duration-300 ease-out group-open:rotate-180 group-open:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="grid-wrapper">
+                <div class="px-6 pb-6 text-gray-600 animate-fade-in">
+                  {item.answer}
                 </div>
-                <p class="text-lg text-gray-700 leading-relaxed">
-                  {item.text}
-                </p>
               </div>
-            </div>
+            </details>
           ))}
         </div>
-        <div class="mt-12">
-          <HighlightBox text={content.whatYouReceive.note} />
-        </div>
       </div>
     </section>
 
-    <!-- Best Fit For -->
-    <GridFeatures
-      title={content.bestFitFor.title}
-      items={bestFitItems}
-      bgColor="bg-gradient-to-br from-secondary/5 to-gray-50"
-    />
-
-    <!-- What Happens After -->
-    <StepsSection
-      title={content.afterAudit.title}
-      subtitle={content.afterAudit.subtitle}
-      steps={afterAuditSteps}
-      options={[content.afterAudit.option1, content.afterAudit.option2, content.afterAudit.option3]}
-      note={content.afterAudit.note}
-    />
-
-    <!-- Ready CTA -->
-    <CTASection
-      title={content.ready.title}
-      subtitle={content.ready.subtitle}
-      buttonText={content.ready.button}
-      bgColor="from-primary to-primaryDark"
-    />
+    <!-- Need More Answers Section -->
+    <section class="py-20 px-4 bg-gray-50">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          Need More Answers?
+        </h2>
+        <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+          Contact our team for personalized responses to your Google Ads audit questions and to discuss how we can support your campaign goals.
+        </p>
+        <Button
+          href={`mailto:${EMAIL}?subject=Google Ads Audit Inquiry`}
+          variant="secondary"
+          size="lg"
+        >
+          Contact us
+        </Button>
+      </div>
+    </section>
   </main>
 </Layout>
 
 <style>
   main {
     width: 100%;
+  }
+
+  /* FAQ Accordion Styles */
+  details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  details .grid-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-out;
+  }
+  details[open] .grid-wrapper {
+    grid-template-rows: 1fr;
+    transition: grid-template-rows 0.5s ease-in-out;
+  }
+  details .grid-wrapper > div {
+    overflow: hidden;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out 0.1s both;
+  }
+
+  details:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
   }
 </style>

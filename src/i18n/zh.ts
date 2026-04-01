@@ -202,6 +202,47 @@ export const zh = {
     copyright: '© {year} Aivio Digital. 版权所有。',
   },
   caseStudy: {
+    hero: {
+      title: '经过验证的 Google 广告活动推动可衡量的增长',
+      alt: {
+        heroImage: 'Google 广告分析仪表板',
+        analytics: '广告活动分析',
+        chart: '图表分析',
+        team: '团队展示',
+        laptop: '笔记本电脑分析',
+        tablet: '平板电脑图表',
+      },
+    },
+    metrics: {
+      title: '经过验证的 Google 广告绩效指标',
+      items: [
+        {
+          value: '326%',
+          title: '平均投资回报率增长',
+          description: '客户在广告活动优化后的六个月内，广告支出回报率持续达到 326%。',
+        },
+        {
+          value: '45%',
+          title: '获客成本降低',
+          description: '战略性出价调整和定向优化使获客成本几乎减半。',
+        },
+        {
+          value: '150+',
+          title: '管理的广告活动',
+          description: '拥有管理超过 150 个 Google 广告活动的丰富经验，专门针对中小企业和制造商定制。',
+        },
+        {
+          value: '78%',
+          title: '客户保留率',
+          description: '长期合作关系反映了各行业客户的满意度和持续的广告活动成功。',
+        },
+      ],
+    },
+    bottomSection: {
+      title: '经过验证的 Google 广告推动业务增长',
+      alt: '经过验证的 Google 广告推动业务增长',
+      button: '请求咨询',
+    },
     title: '案例分析：多伦多定制包装公司的 Google 广告优化',
     metadata: {
       industry: '行业：定制包装（B2B）',

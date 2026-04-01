@@ -202,6 +202,47 @@ export const en = {
     copyright: '© {year} Aivio Digital. All rights reserved.',
   },
   caseStudy: {
+    hero: {
+      title: 'Proven Google Ads Campaigns Driving Measurable Growth',
+      alt: {
+        heroImage: 'Google Ads Analytics Dashboard',
+        analytics: 'Campaign Analytics',
+        chart: 'Chart Analysis',
+        team: 'Team Presentation',
+        laptop: 'Laptop Analytics',
+        tablet: 'Tablet Charts',
+      },
+    },
+    metrics: {
+      title: 'Proven Google Ads Performance Metrics',
+      items: [
+        {
+          value: '326%',
+          title: 'Average ROI Increase',
+          description: 'Clients see a consistent 326% return on ad spend within six months of campaign optimization.',
+        },
+        {
+          value: '45%',
+          title: 'Reduction in Cost Per Acquisition',
+          description: 'Strategic bid adjustments and targeting refinements cut acquisition costs nearly in half.',
+        },
+        {
+          value: '150+',
+          title: 'Campaigns Managed',
+          description: 'Extensive experience managing over 150 Google Ads campaigns tailored to SMEs and manufacturers.',
+        },
+        {
+          value: '78%',
+          title: 'Client Retention Rate',
+          description: 'Long-term partnerships reflect satisfaction and sustained campaign success across diverse industries.',
+        },
+      ],
+    },
+    bottomSection: {
+      title: 'Proven Google Ads Driving Business Growth',
+      alt: 'Proven Google Ads Driving Business Growth',
+      button: 'Request Consultation',
+    },
     title: 'Case Study: Google Ads Optimization for a Toronto Custom Packaging Company',
     metadata: {
       industry: 'Industry: Custom Packaging (B2B)',

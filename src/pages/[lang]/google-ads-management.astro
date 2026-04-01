@@ -1,13 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { translations } from '../../i18n';
-import Hero from '../../components/Hero.astro';
-import FeatureCards from '../../components/google-ads-management/FeatureCards.astro';
-import ProcessCards from '../../components/google-ads-management/ProcessCards.astro';
-import PricingCard from '../../components/google-ads-management/PricingCard.astro';
-import BestFitFor from '../../components/google-ads-management/BestFitFor.astro';
-import CTASection from '../../components/google-ads-management/CTASection.astro';
-import FAQSection from '../../components/FAQSection.astro';
+import Button from '../../components/Button.astro';
+import { EMAIL } from '../../constants/contact';
 
 const { lang } = Astro.params;
 const currentLang = (lang || 'en') as 'en' | 'zh';
@@ -16,82 +11,6 @@ const t = translations[currentLang];
 const pageTitle = t.pageTitle.googleAdsManagement;
 const pageMeta = t.pageMeta.googleAdsManagement;
 const content = t.googleAdsManagement;
-
-const whyWorkItems = [
-  {
-    icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z',
-    title: content.whyWorkWithUs.management.title,
-    description: content.whyWorkWithUs.management.description,
-  },
-  {
-    icon: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
-    title: content.whyWorkWithUs.strategy.title,
-    description: content.whyWorkWithUs.strategy.description,
-  },
-  {
-    icon: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6',
-    title: content.whyWorkWithUs.conversion.title,
-    description: content.whyWorkWithUs.conversion.description,
-  },
-  {
-    icon: 'M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
-    title: content.whyWorkWithUs.reporting.title,
-    description: content.whyWorkWithUs.reporting.description,
-  },
-];
-
-const howWeManageItems = [
-  {
-    icon: 'M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z',
-    title: content.howWeManage.structure.title,
-    description: content.howWeManage.structure.description,
-  },
-  {
-    icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 1v8m0 1v8m0 1v8m0 1v8',
-    title: content.howWeManage.bidding.title,
-    description: content.howWeManage.bidding.description,
-  },
-  {
-    icon: 'M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z',
-    title: content.howWeManage.adCopy.title,
-    description: content.howWeManage.adCopy.description,
-  },
-  {
-    icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
-    title: content.howWeManage.monitoring.title,
-    description: content.howWeManage.monitoring.description,
-  },
-  {
-    icon: 'M13 10V3L4 14h7v7l9-11h-7z',
-    title: content.howWeManage.optimization.title,
-    description: content.howWeManage.optimization.description,
-  },
-];
-
-const oneTimeSetupItems = [
-  content.oneTimeSetup.point1,
-  content.oneTimeSetup.point2,
-  content.oneTimeSetup.point3,
-  content.oneTimeSetup.point4,
-  content.oneTimeSetup.point5,
-  content.oneTimeSetup.point6,
-];
-
-const ongoingManagementItems = [
-  content.ongoingManagement.point1,
-  content.ongoingManagement.point2,
-  content.ongoingManagement.point3,
-  content.ongoingManagement.point4,
-  content.ongoingManagement.point5,
-];
-
-const bestFitItems = [
-  content.bestFitFor.point1,
-  content.bestFitFor.point2,
-  content.bestFitFor.point3,
-  content.bestFitFor.point4,
-  content.bestFitFor.point5,
-];
 
 const faqItems = [
   { question: content.faq.q1.question, answer: content.faq.q1.answer },
@@ -112,77 +31,255 @@ export function getStaticPaths() {
 
 <Layout title={pageTitle} description={pageMeta.description} keywords={pageMeta.keywords} lang={currentLang} currentLang={currentLang} currentPath={currentPath}>
   <main class="min-h-screen">
-    <Hero
-      title={content.hero.title}
-      subtitle={content.hero.subtitle}
-      description={content.hero.description}
-      image="/assets/google.png"
-    />
-
-    <FeatureCards
-      items={whyWorkItems}
-      title={content.whyWorkWithUs.title}
-      subtitle="We're different because we focus on what actually works for your business"
-    />
-
-    <ProcessCards
-      items={howWeManageItems}
-      title={content.howWeManage.title}
-      subtitle="A systematic approach to managing your campaigns"
-    />
-
-    <section class="py-20 px-4 bg-white">
-      <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Clear Pricing Structure
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Two options depending on where you are in your Google Ads journey
+    <!-- Hero Section -->
+    <section class="grid md:grid-cols-2 min-h-[600px]">
+      <!-- Left Side - Text Content with Beige Background -->
+      <div class="bg-[#E8D5B7] flex items-center px-8 md:px-16 py-16">
+        <div class="max-w-xl">
+          <p class="text-xs md:text-sm text-gray-700 uppercase tracking-wider mb-6 font-medium">
+            Maximize your ad spend with precision-driven Google Ads management
           </p>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
+            Strategic Google Ads Management for Optimal ROI
+          </h1>
         </div>
+      </div>
+
+      <!-- Right Side - Hero Image -->
+      <div class="relative bg-gray-200 min-h-[400px] md:min-h-full">
+        <img
+          src="/assets/mgmt/hero.jpg"
+          alt="Google Ads Management Dashboard"
+          class="absolute inset-0 w-full h-full object-cover"
+          onerror="this.style.display='none'"
+        />
+      </div>
+    </section>
+
+    <!-- Service Cards Section -->
+    <section class="relative py-20 px-4 bg-gray-50">
+      <!-- Background Image -->
+      <div class="absolute inset-0 overflow-hidden">
+        <img
+          src="/assets/mgmt/services-bg.jpg"
+          alt="Professional working"
+          class="w-full h-full object-cover opacity-40"
+          onerror="this.style.display='none'"
+        />
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
         <div class="grid md:grid-cols-2 gap-8">
-          <PricingCard
-            title={content.oneTimeSetup.title}
-            subtitle={content.oneTimeSetup.description}
-            badge="For New Accounts"
-            badgeColor="primary"
-            items={oneTimeSetupItems}
-            note={content.oneTimeSetup.note}
-          />
-          <PricingCard
-            title={content.ongoingManagement.title}
-            subtitle={content.ongoingManagement.description}
-            badge="Monthly Service"
-            badgeColor="secondary"
-            items={ongoingManagementItems}
-          />
+          <!-- Card 1: Precision-Driven Campaigns -->
+          <div class="bg-white/95 backdrop-blur-sm p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Precision-Driven Campaigns
+            </h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              Data-backed targeted strategies that align with your business goals to reach the right audience effectively.
+            </p>
+            <button class="text-secondary font-semibold hover:text-secondaryDark transition-colors uppercase text-sm tracking-wider">
+              Learn More
+            </button>
+          </div>
+
+          <!-- Card 2: Data-Backed Optimization -->
+          <div class="bg-white/95 backdrop-blur-sm p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Data-Backed Optimization
+            </h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              Continuous performance tracking and adjustment ensure your ads deliver measurable results and marketing ROI.
+            </p>
+            <button class="text-secondary font-semibold hover:text-secondaryDark transition-colors uppercase text-sm tracking-wider">
+              Explore Services
+            </button>
+          </div>
+
+          <!-- Card 3: Comprehensive Management -->
+          <div class="bg-white/95 backdrop-blur-sm p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Comprehensive Management
+            </h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              From keyword selection to bid management, we handle every aspect of your Google Ads campaigns with expert oversight.
+            </p>
+            <button class="text-secondary font-semibold hover:text-secondaryDark transition-colors uppercase text-sm tracking-wider">
+              Get Started
+            </button>
+          </div>
+
+          <!-- Card 4: Transparent Reporting -->
+          <div class="bg-white/95 backdrop-blur-sm p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Transparent Reporting
+            </h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              Receive detailed insights and clear analytics to understand campaign performance and strategic decisions.
+            </p>
+            <button class="text-secondary font-semibold hover:text-secondaryDark transition-colors uppercase text-sm tracking-wider">
+              Request Report
+            </button>
+          </div>
         </div>
       </div>
     </section>
 
-    <BestFitFor
-      items={bestFitItems}
-      title={content.bestFitFor.title}
-    />
+    <!-- Image Showcase Section -->
+    <section class="bg-secondary py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Image 1 -->
+          <div class="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
+            <img
+              src="/assets/mgmt/team-meeting.jpg"
+              alt="Team collaboration"
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-700')"
+            />
+          </div>
 
-    <CTASection
-      title={content.notSure.title}
-      subtitle={content.notSure.description}
-      buttonText={content.notSure.button}
-    />
+          <!-- Image 2 -->
+          <div class="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
+            <img
+              src="/assets/mgmt/analytics-screen.jpg"
+              alt="Analytics dashboard"
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-700')"
+            />
+          </div>
 
-    <FAQSection
-      items={faqItems}
-      title={content.faq.title}
-      variant="gradient"
-      backgroundColor="white"
-    />
+          <!-- Image 3 -->
+          <div class="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
+            <img
+              src="/assets/mgmt/performance-charts.jpg"
+              alt="Performance metrics"
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-700')"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-4 bg-white">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Google Ads Management FAQs
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Clear answers to common questions about managing Google Ads campaigns help you make informed decisions and optimize your advertising investment.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          {faqItems.map((item) => (
+            <details class="bg-white rounded shadow-md group border border-gray-200">
+              <summary class="p-6 cursor-pointer font-semibold text-gray-900 flex justify-between items-center transition-all duration-300 ease-in-out hover:translate-x-1">
+                <span class="text-lg">{item.question}</span>
+                <svg class="w-5 h-5 text-secondary flex-shrink-0 ml-4 transform transition-transform duration-300 ease-out group-open:rotate-180 group-open:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="grid-wrapper">
+                <div class="px-6 pb-6 text-gray-600 animate-fade-in">
+                  {item.answer}
+                </div>
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Need More Information Section -->
+    <section class="py-16 px-4 bg-gray-50">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          Need More Information?
+        </h2>
+        <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          Contact our team to discuss your specific Google Ads needs and how our management services can deliver measurable growth.
+        </p>
+        <Button
+          href={`mailto:${EMAIL}?subject=Google Ads Management Inquiry`}
+          variant="secondary"
+          size="lg"
+        >
+          Get In Touch
+        </Button>
+      </div>
+    </section>
+
+    <!-- Final CTA Section with Background Image -->
+    <section class="relative py-32 px-4 overflow-hidden">
+      <!-- Background Image -->
+      <div class="absolute inset-0">
+        <img
+          src="/assets/mgmt/cta-bg.jpg"
+          alt="Start optimizing"
+          class="w-full h-full object-cover"
+          onerror="this.style.display='none'; this.parentElement.classList.add('bg-secondary')"
+        />
+        <div class="absolute inset-0 bg-secondary/80"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="relative z-10 max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-8">
+          Start Optimizing Your Google Ads Campaign Today
+        </h2>
+        <Button
+          href={`/${currentLang}/contact`}
+          variant="primary"
+          size="lg"
+        >
+          Request Consultation
+        </Button>
+      </div>
+    </section>
   </main>
 </Layout>
 
 <style>
-  main {
-    width: 100%;
+  details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  details .grid-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-out;
+  }
+  details[open] .grid-wrapper {
+    grid-template-rows: 1fr;
+    transition: grid-template-rows 0.5s ease-in-out;
+  }
+  details .grid-wrapper > div {
+    overflow: hidden;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out 0.1s both;
+  }
+
+  details:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
   }
 </style>

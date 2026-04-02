@@ -35,7 +35,7 @@ const t = translations[currentLang];
             <p class="text-gray-600 mb-4 leading-relaxed">
               {card.description}
             </p>
-            <a href={`/${currentLang}/${index === 2 ? 'case-study' : 'google-ads-' + (index === 0 ? 'audit' : 'management')}`} class="text-secondary font-semibold hover:underline inline-block">{card.cta}</a>
+            <a href={`/${currentLang}/${index === 2 ? 'case-study' : 'google-ads-' + (index === 0 ? 'audit' : 'management')}`} class="text-secondary border border-secondary px-3 py-2 font-semibold hover:bg-secondary hover:text-white transition duration-300 inline-block">{card.cta}</a>
           </div>
         </div>
       ))}

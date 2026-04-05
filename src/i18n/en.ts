@@ -590,6 +590,36 @@ export const en = {
         },
         bgAlt: 'Professional working',
       },
+      twoPaths: {
+        title: 'Two Paths. One Standard of Excellence.',
+        subtitle: 'Tailored packages for different markets, built on the same data-driven foundation.',
+        toronto: {
+          title: 'Toronto Focus',
+          packageTitle: 'Custom SMB Packages',
+          description: 'For local Toronto businesses looking to dominate their service area with high-intent search traffic.',
+          features: [
+            'Hyper-local geo-targeting',
+            'Service-area campaign architecture',
+            'Call & lead form optimization',
+            'Monthly ROI-focused reporting',
+            'Competitor keyword analysis',
+            'Landing page recommendations',
+          ],
+        },
+        global: {
+          title: 'Global Reach',
+          packageTitle: 'Manufacturer Launchpads',
+          description: 'For Chinese manufacturers entering North American markets. Bilingual strategy, localized messaging, and B2B lead generation.',
+          features: [
+            'North American market entry strategy',
+            'Bilingual ad copy (EN/ZH)',
+            'B2B-focused campaign structure',
+            'Trade show & wholesale targeting',
+            'Cultural localization support',
+            'Cross-border conversion tracking',
+          ],
+        },
+      },
       faq: {
         title: 'Google Ads Management FAQs',
         subtitle: 'Clear answers to common questions about managing Google Ads campaigns help you make informed decisions and optimize your advertising investment.',

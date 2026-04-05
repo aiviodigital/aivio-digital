@@ -4,6 +4,7 @@ import { translations } from '../../i18n';
 import Button from '../../components/Button.astro';
 import FAQSection from '../../components/FAQSection.astro';
 import { EMAIL } from '../../constants/contact';
+import Hero from '@/components/Hero.astro';
 
 const { lang } = Astro.params;
 const currentLang = (lang || 'en') as 'en' | 'zh';
@@ -23,22 +24,11 @@ export function getStaticPaths() {
 
 <Layout title={pageTitle} description={pageMeta.description} keywords={pageMeta.keywords} lang={currentLang} currentLang={currentLang} currentPath={currentPath}>
   <main class="min-h-screen">
-    <!-- Hero Section with Beige Background -->
-    <section class="bg-[#E8D5B7] py-20 px-4">
-      <div class="max-w-4xl mx-auto text-center">
-        <img
-          src="/assets/audit/audit-hero.png"
-          alt={content.images.alt.analytics}
-          class="w-full h-auto rounded-lg shadow-2xl mb-8"
-        />
-        <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-6">
-          {content.hero.title}
-        </h1>
-        <p class="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
-          {content.hero.subtitle}
-        </p>
-      </div>
-    </section>
+    <Hero
+      title={t.hero.title}
+      subtitle={t.hero.subtitle}
+      image="/assets/audit/audit-hero.png"
+    />
 
     <!-- Dark Green Section with Images -->
     <section class="bg-secondary py-16 px-4">

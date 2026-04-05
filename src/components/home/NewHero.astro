@@ -1,5 +1,6 @@
 ---
 import { translations } from '../../i18n';
+import Hero from '../Hero.astro';
 
 interface Props {
   currentLang: 'en' | 'zh';
@@ -9,27 +10,8 @@ const { currentLang } = Astro.props;
 const t = translations[currentLang];
 ---
 
-<section class="bg-[#E8D5B7] py-12 px-4">
-  <div class="max-w-7xl mx-auto">
-    <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
-      <div>
-        <p class="text-secondary text-base md:text-lg mb-6 leading-relaxed">
-          {t.hero.subtitle}
-        </p>
-      </div>
-      <div class="grid grid-cols-2 gap-4">
-        <img src="/assets/home/H-1.png" alt={t.hero.alt.dashboard} class="w-full h-auto rounded-lg shadow-lg" />
-        <img src="/assets/home/H-2.png" alt={t.hero.alt.analytics} class="w-full h-auto rounded-lg shadow-lg" />
-      </div>
-    </div>
-
-    <div class="text-center">
-      <p class="text-secondary text-sm uppercase tracking-wider mb-4">
-        {t.hero.tagline}
-      </p>
-      <h1 class="text-3xl md:text-5xl font-bold text-secondary mb-4">
-        {t.hero.title}
-      </h1>
-    </div>
-  </div>
-</section>
+<Hero 
+  title={t.hero.title}
+  subtitle={t.hero.subtitle}
+  image="/assets/home/H-14.png"
+/>

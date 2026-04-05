@@ -49,9 +49,9 @@ export const en = {
     getAudit: 'Get a Google Ads Account Audit',
   },
   hero: {
-    title: 'Aivio Digital Marketing Agency',
+    title: 'Precision-Engineered Google Ads for Toronto SMBs & Global Manufacturers',
     tagline: 'Optimized Google Ads with Precision for Measurable Growth',
-    subtitle: 'Aivio delivers precise Google Ads audits and management tailored to Toronto SMBs and Chinese manufacturers entering North America.',
+    subtitle: 'Stop wasting 40% of your ad spend on "system bugs". We audit your account with the rigor of a Senior Software QA — and build campaigns that scale.',
     cta: 'Talk to a Google Ads Expert',
     alt: {
       dashboard: 'Google Ads Dashboard',

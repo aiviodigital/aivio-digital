@@ -49,9 +49,9 @@ export const zh = {
     getAudit: '预约 Google Ads 审计服务',
   },
   hero: {
-    title: 'Aivio 数字营销代理公司',
+    title: '为多伦多中小企业和全球制造商精密打造的 Google 广告',
     tagline: '精准优化 Google 广告，实现可衡量的增长',
-    subtitle: 'Aivio 为多伦多中小企业和进入北美市场的中国制造商提供精准的 Google 广告审计和管理服务。',
+    subtitle: '停止将40%的广告预算浪费在"系统错误"上。我们以高级软件质量保证的严谨性审计您的账户——并构建可扩展的广告活动。',
     cta: '与 Google 广告专家交流',
     alt: {
       dashboard: 'Google 广告仪表板',

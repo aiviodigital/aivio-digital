@@ -554,7 +554,7 @@ export const en = {
   googleAdsManagement: {
     page: {
       hero: {
-        subtitle: 'Maximize your ad spend with precision-driven Google Ads management',
+        subtitle: 'Whether you\'re a Toronto plumber or a Guangzhou furniture exporter, we build and manage campaigns engineered to generate qualified leads — not just clicks.',
         title: 'Strategic Google Ads Management for Optimal ROI',
         alt: 'Google Ads Management Dashboard',
       },

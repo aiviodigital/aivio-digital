@@ -7,6 +7,8 @@ import PortfolioGallery from '@/components/home/PortfolioGallery.astro';
 import CTASection from '@/components/home/CTASection.astro';
 import FinalCTANew from '@/components/home/FinalCTANew.astro';
 import { translations } from '@/i18n/index';
+import HowItWorks from '@/components/home/HowItWorks.astro';
+import Testimonials from '@/components/home/Testimonials.astro';
 
 // Get the language from the URL parameter
 const { lang } = Astro.params;
@@ -32,6 +34,8 @@ export function getStaticPaths() {
     <SpecializedServices currentLang={currentLang} />
     <PortfolioGallery currentLang={currentLang} />
     <CTASection currentLang={currentLang} />
+    <HowItWorks currentLang={currentLang} />
+    <Testimonials currentLang={currentLang} />
     <FinalCTANew currentLang={currentLang} />
   </main>
 </Layout>

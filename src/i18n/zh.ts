@@ -442,6 +442,19 @@ export const zh = {
         subtitle: '联系我们的团队，获取有关您的 Google 广告审计问题的个性化答复，并讨论我们如何支持您的广告活动目标。',
         button: '联系我们',
       },
+      afterAudit: {
+        title: '审计后会发生什么？',
+        subtitle: '根据调查结果，您将有三个明确的选择：',
+        option1: '自己应用建议',
+        option2: '委托我们进行一次性账户设置或重组',
+        option3: '转入持续的 Google 广告管理',
+        note: '由您决定——无压力。',
+      },
+      ready: {
+        title: '准备好查看您账户的真实情况了吗？',
+        subtitle: '如果您不确定您的 Google 广告预算是否被有效使用，审计是最明智的起点。',
+        button: '申请 Google 广告审计',
+      },
     },
     hero: {
       title: '发现问题，停止浪费，获得清晰洞察',
@@ -499,19 +512,7 @@ export const zh = {
       point3: '每月广告支出 CA$300+',
       point4: '希望透明度和控制权的所有者',
     },
-    afterAudit: {
-      title: '审计后会发生什么？',
-      subtitle: '根据调查结果，您将有三个明确的选择：',
-      option1: '自己应用建议',
-      option2: '委托我们进行一次性账户设置或重组',
-      option3: '转入持续的 Google 广告管理',
-      note: '由您决定——无压力。',
-    },
-    ready: {
-      title: '准备好查看您账户的真实情况了吗？',
-      subtitle: '如果您不确定您的 Google 广告预算是否被有效使用，审计是最明智的起点。',
-      button: '申请 Google 广告审计',
-    },
+    
   },
   googleAdsManagement: {
     page: {

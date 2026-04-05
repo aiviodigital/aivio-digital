@@ -479,6 +479,19 @@ export const en = {
         subtitle: 'Contact our team for personalized responses to your Google Ads audit questions and to discuss how we can support your campaign goals.',
         button: 'Contact us',
       },
+      afterAudit: {
+        title: 'What Happens After the Audit?',
+        subtitle: 'Based on the findings, you\'ll have three clear options:',
+        option1: 'Apply the recommendations yourself',
+        option2: 'Engage us for a one-time account setup or restructuring',
+        option3: 'Move into ongoing Google Ads Management',
+        note: 'You decide — no pressure.',
+      },
+      ready: {
+        title: 'Ready to See What\'s Really Happening in Your Account?',
+        subtitle: 'If you\'re unsure whether your Google Ads budget is being used effectively, an audit is the smartest place to start.',
+        button: 'Request a Google Ads Audit',
+      },
     },
     hero: {
       title: 'Find What\'s Broken. Stop Wasting Budget. Get Clarity.',
@@ -536,19 +549,7 @@ export const en = {
       point3: 'Monthly ad spend CA$300+',
       point4: 'Owners who want transparency and control',
     },
-    afterAudit: {
-      title: 'What Happens After the Audit?',
-      subtitle: 'Based on the findings, you\'ll have three clear options:',
-      option1: 'Apply the recommendations yourself',
-      option2: 'Engage us for a one-time account setup or restructuring',
-      option3: 'Move into ongoing Google Ads Management',
-      note: 'You decide — no pressure.',
-    },
-    ready: {
-      title: 'Ready to See What\'s Really Happening in Your Account?',
-      subtitle: 'If you\'re unsure whether your Google Ads budget is being used effectively, an audit is the smartest place to start.',
-      button: 'Request a Google Ads Audit',
-    },
+
   },
   googleAdsManagement: {
     page: {

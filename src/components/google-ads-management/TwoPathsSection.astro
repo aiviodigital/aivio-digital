@@ -1,0 +1,90 @@
+---
+interface Props {
+  content: {
+    twoPaths: {
+      title: string;
+      subtitle: string;
+      toronto: {
+        title: string;
+        packageTitle: string;
+        description: string;
+        features: string[];
+      };
+      global: {
+        title: string;
+        packageTitle: string;
+        description: string;
+        features: string[];
+      };
+    };
+  };
+}
+
+const { content } = Astro.props;
+---
+
+<!-- Two Paths Section -->
+<section class="py-20 px-4 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        {content.twoPaths.title}
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        {content.twoPaths.subtitle}
+      </p>
+    </div>
+
+    <!-- Two Columns -->
+    <div class="grid md:grid-cols-2 gap-12">
+      <!-- Toronto Focus Column -->
+      <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg border border-blue-100">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+            <span class="text-blue-600 font-bold text-xl">{content.twoPaths.toronto.title.charAt(0)}</span>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900">{content.twoPaths.toronto.title}</h3>
+        </div>
+        <h4 class="text-xl font-semibold text-gray-800 mb-4">{content.twoPaths.toronto.packageTitle}</h4>
+        <p class="text-gray-600 mb-6">
+          {content.twoPaths.toronto.description}
+        </p>
+        <ul class="space-y-3">
+          {content.twoPaths.toronto.features.map((feature) => (
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">{feature}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Global Reach Column -->
+      <div class="bg-gradient-to-br from-orange-50 to-white p-8 rounded-2xl shadow-lg border border-orange-100">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center mr-4">
+            <span class="text-orange-600 font-bold text-xl">{content.twoPaths.global.title.charAt(0)}</span>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900">{content.twoPaths.global.title}</h3>
+        </div>
+        <h4 class="text-xl font-semibold text-gray-800 mb-4">{content.twoPaths.global.packageTitle}</h4>
+        <p class="text-gray-600 mb-6">
+          {content.twoPaths.global.description}
+        </p>
+        <ul class="space-y-3">
+          {content.twoPaths.global.features.map((feature) => (
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">{feature}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

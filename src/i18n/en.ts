@@ -629,6 +629,27 @@ export const en = {
         subtitle: 'Contact our team to discuss your specific Google Ads needs and how our management services can deliver measurable growth.',
         button: 'Get In Touch',
       },
+      whatsIncluded: {
+        title: "What's Included",
+        subtitle: 'Every Campaign, Continuously Optimized',
+        items: [
+          {
+            title: 'Weekly Optimization',
+            description: 'Continuous bid adjustments, keyword refinements, and budget reallocation based on real performance data.',
+            icon: 'chart',
+          },
+          {
+            title: 'ROI-Focused Reporting',
+            description: 'No vanity metrics. Every report ties back to leads generated, cost per acquisition, and actual revenue impact.',
+            icon: 'check',
+          },
+          {
+            title: 'Landing Page A/B Testing',
+            description: 'We test headlines, CTAs, and page layouts to maximize the conversion rate of every click you pay for.',
+            icon: 'edit',
+          },
+        ],
+      },
       cta: {
         title: 'Start Optimizing Your Google Ads Campaign Today',
         alt: 'Start optimizing',

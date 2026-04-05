@@ -629,6 +629,27 @@ export const zh = {
         subtitle: '联系我们的团队，讨论您的具体 Google 广告需求，以及我们的管理服务如何提供可衡量的增长。',
         button: '联系我们',
       },
+      whatsIncluded: {
+        title: '包含内容',
+        subtitle: '每个广告活动，持续优化',
+        items: [
+          {
+            title: '每周优化',
+            description: '基于真实绩效数据的持续出价调整、关键词优化和预算重新分配。',
+            icon: 'chart',
+          },
+          {
+            title: '投资回报率导向的报告',
+            description: '没有虚荣指标。每份报告都与产生的潜在客户、获客成本和实际收入影响相关联。',
+            icon: 'check',
+          },
+          {
+            title: '着陆页 A/B 测试',
+            description: '我们测试标题、行动号召和页面布局，以最大化您支付的每次点击的转化率。',
+            icon: 'edit',
+          },
+        ],
+      },
       cta: {
         title: '今天就优化您的 Google 广告活动',
         alt: '开始优化',

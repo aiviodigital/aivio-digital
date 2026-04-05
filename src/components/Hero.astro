@@ -7,51 +7,29 @@ interface Props {
   image?: string;
 }
 
-import { translations } from '../i18n';
-import Button from './Button.astro';
-import { EMAIL } from '../constants/contact';
-
-const { title, subtitle, description, currentLang, image } = Astro.props;
-
-// If currentLang is provided, use translations (for home page)
-const isHomePage = currentLang !== undefined;
-const heroTitle = isHomePage ? translations[currentLang].hero.title : title!;
-const heroSubtitle = isHomePage ? translations[currentLang].hero.subtitle : subtitle;
-const heroDescription = isHomePage ? translations[currentLang].hero.subtitle : description;
-const heroCTA = isHomePage ? translations[currentLang].hero.cta : undefined;
-const heroImage = image || '/assets/google.png';
-const heroImageAlt = heroTitle || 'Google Ads Services';
+const { title, subtitle, image } = Astro.props;
 ---
 
-<section class="bg-secondary py-16 md:py-20 px-4">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-      <div class="text-center md:text-left order-2 md:order-1">
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-white">
-          {heroTitle}
-        </h1>
-        {heroSubtitle && (
-          <h2 class="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-white/80 leading-relaxed">
-            {heroSubtitle}
-          </h2>
-        )}
-        {heroCTA && (
-          <Button
-            href={`mailto:${EMAIL}?subject=Talk to Google Ads Expert`}
-            variant="primary"
-            size="lg"
-          >
-            {heroCTA}
-          </Button>
-        )}
-      </div>
-      <div class="order-1 md:order-2">
-        <img
-          src={heroImage}
-          alt={heroImageAlt}
-          class="w-full h-auto rounded-lg shadow-xl"
-        />
-      </div>
+<section class="grid md:grid-cols-2 min-h-[600px]">
+  <!-- Left Side - Text Content with Beige Background -->
+  <div class="bg-[#E8D5B7] flex items-center px-8 md:px-16 py-16 text-secondary">
+    <div class="max-w-xl">
+      <p class="text-xs md:text-sm uppercase tracking-wider mb-6 font-medium">
+        {subtitle}
+      </p>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
+        {title}
+      </h1>
     </div>
+  </div>
+
+  <!-- Right Side - Hero Image -->
+  <div class="relative bg-gray-200 min-h-[400px] md:min-h-full">
+    <img
+      src={image}
+      alt={title}
+      class="absolute inset-0 w-full h-full object-cover"
+      onerror="this.style.display='none'"
+    />
   </div>
 </section>

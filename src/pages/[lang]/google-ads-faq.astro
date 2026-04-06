@@ -1,0 +1,222 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { translations } from '../../i18n';
+import Hero from '../../components/Hero.astro';
+import Button from '../../components/Button.astro';
+import { EMAIL } from '../../constants/contact';
+
+const { lang } = Astro.params;
+const currentLang = (lang || 'en') as 'en' | 'zh';
+const currentPath = Astro.url.pathname;
+const t = translations[currentLang];
+const content = t.googleAdsFaq;
+const pageTitle = content.pageTitle;
+const pageMeta = content.pageMeta;
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+---
+
+<Layout title={pageTitle} description={pageMeta.description} keywords={pageMeta.keywords} lang={currentLang} currentLang={currentLang} currentPath={currentPath}>
+  <main class="min-h-screen">
+    <!-- Hero Section -->
+    <Hero
+      title={content.hero.title}
+      subtitle={content.hero.description}
+      image="/assets/home/H-14.png"
+    />
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-4 bg-white">
+      <div class="max-w-4xl mx-auto">
+        <div class="space-y-6">
+          {content.faqItems.map((item, index) => (
+            <details class="bg-white rounded-lg shadow-md border border-gray-200 group" open={index === 0}>
+              <summary class="p-6 cursor-pointer font-semibold text-gray-900 flex justify-between items-start transition-all duration-300 ease-in-out hover:bg-gray-50">
+                <span class="text-base md:text-lg pr-4">{item.question}</span>
+                <svg class="w-6 h-6 text-secondary flex-shrink-0 ml-4 transform transition-transform duration-300 ease-out group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="grid-wrapper">
+                <div class="px-6 pb-6 text-gray-600 leading-relaxed animate-fade-in">
+                  {item.answer}
+                </div>
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Help Section -->
+    <section class="py-20 px-4 bg-gray-50">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          {content.helpSection.title}
+        </h2>
+        <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+          {content.helpSection.description}
+        </p>
+        <Button
+          href={`mailto:${EMAIL}?subject=Google Ads Consultation Request`}
+          variant="secondary"
+          size="lg"
+        >
+          {content.helpSection.button}
+        </Button>
+      </div>
+    </section>
+
+    <!-- Image Section with Analytics -->
+    <section class="py-0 bg-[#E8D5B7]">
+      <div class="max-w-7xl mx-auto px-4">
+        <img
+          src="/assets/home/H-14.png"
+          alt="Google Ads Analytics Dashboard"
+          class="w-full h-auto rounded-lg shadow-xl"
+          loading="lazy"
+        />
+      </div>
+    </section>
+
+    <!-- Benefits Grid Section -->
+    <section class="py-20 px-4 bg-[#E8D5B7]">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {content.benefits.map((benefit) => (
+            <div class="bg-white/90 backdrop-blur-sm p-8 rounded-lg text-center">
+              <h3 class="text-sm font-bold text-gray-900 mb-4 tracking-wider uppercase">
+                {benefit.title}
+              </h3>
+              <p class="text-gray-600 leading-relaxed text-sm">
+                {benefit.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-20 px-4 bg-[#E8D5B7]">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+          <!-- Left Column - Image -->
+          <div class="relative">
+            <img
+              src="/assets/home/H-3.png"
+              alt="Team consultation"
+              class="w-full h-auto rounded-lg shadow-xl"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Right Column - Form -->
+          <div class="bg-[#E8D5B7]">
+            <div class="mb-8">
+              <p class="text-sm text-gray-600 uppercase tracking-wider mb-4">
+                CLEAR ANSWERS. PRECISE STRATEGIES.
+              </p>
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                {content.contactForm.title}
+              </h2>
+              <p class="text-gray-600 leading-relaxed">
+                {content.contactForm.subtitle}
+              </p>
+            </div>
+
+            <form
+              action={`https://formsubmit.co/${EMAIL}`}
+              method="POST"
+              class="space-y-6"
+            >
+              <div>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  placeholder={content.contactForm.nameLabel}
+                  class="w-full px-4 py-3 bg-white border-b-2 border-gray-300 focus:border-secondary outline-none transition"
+                />
+              </div>
+
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder={content.contactForm.emailLabel}
+                  class="w-full px-4 py-3 bg-white border-b-2 border-gray-300 focus:border-secondary outline-none transition"
+                />
+              </div>
+
+              <div>
+                <textarea
+                  name="message"
+                  rows="4"
+                  placeholder={content.contactForm.messageLabel}
+                  class="w-full px-4 py-3 bg-white border-b-2 border-gray-300 focus:border-secondary outline-none transition resize-vertical"
+                ></textarea>
+              </div>
+
+              <Button type="submit" variant="secondary" size="lg" class="w-full md:w-auto">
+                {content.contactForm.submitButton}
+              </Button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: 100%;
+  }
+
+  /* FAQ Accordion Styles */
+  details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  details .grid-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-out;
+  }
+  details[open] .grid-wrapper {
+    grid-template-rows: 1fr;
+    transition: grid-template-rows 0.5s ease-in-out;
+  }
+  details .grid-wrapper > div {
+    overflow: hidden;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out 0.1s both;
+  }
+
+  details:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+</style>

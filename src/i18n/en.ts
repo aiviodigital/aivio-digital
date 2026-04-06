@@ -774,5 +774,77 @@ export const en = {
     readMore: 'Read More',
     related: 'Related Articles',
     noPosts: 'No posts found.',
-  }
+  },
+  googleAdsFaq: {
+    hero: {
+      title: 'Google Ads Services FAQ',
+      description: 'Clear answers to common questions about our Google Ads management and audit services, designed to help your business grow efficiently in the digital marketplace.',
+    },
+    pageMeta: {
+      description: 'Frequently asked questions about Google Ads services, management, and audit. Get expert answers to help your business make informed decisions.',
+      keywords: 'Google Ads FAQ, PPC Questions, Google Ads Management FAQ, Digital Marketing Questions, Google Ads Help',
+    },
+    pageTitle: 'Google Ads Services FAQ | Aivio Digital',
+    faqItems: [
+      {
+        question: 'How does Aivio approach Google Ads management?',
+        answer: 'We implement a data-driven strategy that begins with a thorough audit, followed by continuous optimization focused on maximizing ROI and aligning campaigns with your business goals.',
+      },
+      {
+        question: 'What can I expect from a Google Ads audit?',
+        answer: 'Our comprehensive audit reviews campaign structure, keyword targeting, ad copy effectiveness, bidding strategies, and conversion tracking to identify performance gaps and optimization opportunities.',
+      },
+      {
+        question: 'How do you tailor services for Toronto SMBs and Chinese manufacturers?',
+        answer: 'For Toronto SMBs, we focus on hyper-local targeting and service-area optimization. For Chinese manufacturers, we provide bilingual strategies, cultural localization, and North American market entry support.',
+      },
+      {
+        question: 'What reporting and transparency can I expect?',
+        answer: 'We provide clear, easy-to-understand reports that highlight key metrics, performance trends, and actionable insights. You\'ll always know exactly how your budget is being used and what results it\'s generating.',
+      },
+      {
+        question: 'How do I start working with Aivio Digital Marketing Agency?',
+        answer: 'Simply contact us through our website or email. We\'ll schedule a consultation to discuss your goals, review your current campaigns (if applicable), and recommend the best approach for your business.',
+      },
+    ],
+    helpSection: {
+      title: 'Questions? We\'re Here to Help',
+      description: 'If you have additional inquiries or need personalized guidance on Google Ads, our team is ready to provide precise answers and strategic guidance tailored to your business needs.',
+      button: 'Request Consultation',
+    },
+    benefits: [
+      {
+        title: 'COMPREHENSIVE AUDIT FRAMEWORK',
+        description: 'We systematically analyze your Google Ads account to identify inefficiencies and optimization opportunities through data-driven analysis.',
+      },
+      {
+        title: 'STRATEGIC CAMPAIGN STRUCTURING',
+        description: 'Our approach organizes campaigns by clear objectives and target audiences to maximize budget allocation and measurable results.',
+      },
+      {
+        title: 'TRANSPARENT REPORTING PROCESS',
+        description: 'Detailed, timely reports provide easy-to-understand reports that highlight key metrics, performance trends, and actionable insights.',
+      },
+      {
+        title: 'CONTINUOUS OPTIMIZATION CYCLE',
+        description: 'We implement ongoing performance improvements based on data analysis to continuously enhance campaign effectiveness and maximize ROI.',
+      },
+      {
+        title: 'COLLABORATIVE CLIENT ENGAGEMENT',
+        description: 'Regular consultations keep you informed and involved, allowing us to align our strategies with your evolving business goals.',
+      },
+      {
+        title: 'DEDICATED SUPPORT AND ACCOUNTABILITY',
+        description: 'Our team provides ongoing assistance and maintains strict quality controls to perform reliably and efficiently.',
+      },
+    ],
+    contactForm: {
+      title: 'Your Questions on Google Ads, Answered',
+      subtitle: 'To address common inquiries about our Google Ads audits and management, clarifying how our structured approach drives measurable growth for your campaigns.',
+      nameLabel: 'Name',
+      emailLabel: 'Email',
+      messageLabel: 'Message',
+      submitButton: 'Send Message',
+    },
+  },
 };

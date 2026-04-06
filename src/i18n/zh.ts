@@ -42,6 +42,7 @@ export const zh = {
     home: '首页',
     googleAdsAudit: 'Google 广告账户审计',
     googleAdsManagement: 'Google 广告账户管理',
+    googleAdsFaq: 'Google 广告常见问题',
     blogs: '博客',
     caseStudy: '案例分析',
     aboutUs: '关于我们',

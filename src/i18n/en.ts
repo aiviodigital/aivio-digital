@@ -42,6 +42,7 @@ export const en = {
     home: 'Home',
     googleAdsAudit: 'Google Ads Audit',
     googleAdsManagement: 'Google Ads Management',
+    googleAdsFaq: 'Google Ads FAQ',
     blogs: 'Blog',
     caseStudy: 'Case Study',
     aboutUs: 'About Us',

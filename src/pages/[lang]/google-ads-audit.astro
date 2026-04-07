@@ -85,35 +85,11 @@ export function getStaticPaths() {
     />
 
     <!-- FAQ Section -->
-    <section class="py-20 px-4 bg-white">
-      <div class="max-w-4xl mx-auto">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {content.faq.title}
-          </h2>
-          <p class="text-base text-gray-600 max-w-2xl mx-auto">
-            {content.faq.subtitle}
-          </p>
-        </div>
-        <div class="space-y-4">
-          {content.faq.items.map((item) => (
-            <details class="bg-white rounded shadow-md group border border-gray-200">
-              <summary class="p-6 cursor-pointer font-semibold text-gray-900 flex justify-between items-center transition-all duration-300 ease-in-out hover:translate-x-1">
-                <span class="text-base">{item.question}</span>
-                <svg class="w-5 h-5 text-secondary flex-shrink-0 ml-4 transform transition-transform duration-300 ease-out group-open:rotate-180 group-open:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </summary>
-              <div class="grid-wrapper">
-                <div class="px-6 pb-6 text-gray-600 animate-fade-in">
-                  {item.answer}
-                </div>
-              </div>
-            </details>
-          ))}
-        </div>
-      </div>
-    </section>
+    <FAQSection
+      items={content.faq.items}
+      title={content.faq.title}
+      backgroundColor="white"
+    />
 
     <!-- Ready CTA -->
     <CTASection
@@ -147,45 +123,5 @@ export function getStaticPaths() {
 <style>
   main {
     width: 100%;
-  }
-
-  /* FAQ Accordion Styles */
-  details > summary {
-    list-style: none;
-  }
-  details > summary::-webkit-details-marker {
-    display: none;
-  }
-  details .grid-wrapper {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.3s ease-out;
-  }
-  details[open] .grid-wrapper {
-    grid-template-rows: 1fr;
-    transition: grid-template-rows 0.5s ease-in-out;
-  }
-  details .grid-wrapper > div {
-    overflow: hidden;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .animate-fade-in {
-    animation: fadeIn 0.3s ease-out 0.1s both;
-  }
-
-  details:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
   }
 </style>

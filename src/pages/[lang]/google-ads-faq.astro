@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import { translations } from '../../i18n';
 import Hero from '../../components/Hero.astro';
 import Button from '../../components/Button.astro';
+import FAQSection from '../../components/FAQSection.astro';
 import { EMAIL } from '../../constants/contact';
 
 const { lang } = Astro.params;
@@ -31,27 +32,10 @@ export function getStaticPaths() {
     />
 
     <!-- FAQ Section -->
-    <section class="py-20 px-4 bg-white">
-      <div class="max-w-4xl mx-auto">
-        <div class="space-y-6">
-          {content.faqItems.map((item, index) => (
-            <details class="bg-white rounded-lg shadow-md border border-gray-200 group" open={index === 0}>
-              <summary class="p-6 cursor-pointer font-semibold text-gray-900 flex justify-between items-start transition-all duration-300 ease-in-out hover:bg-gray-50">
-                <span class="text-base md:text-lg pr-4">{item.question}</span>
-                <svg class="w-6 h-6 text-secondary flex-shrink-0 ml-4 transform transition-transform duration-300 ease-out group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </summary>
-              <div class="grid-wrapper">
-                <div class="px-6 pb-6 text-gray-600 leading-relaxed animate-fade-in">
-                  {item.answer}
-                </div>
-              </div>
-            </details>
-          ))}
-        </div>
-      </div>
-    </section>
+    <FAQSection
+      items={content.faqItems}
+      backgroundColor="white"
+    />
 
     <!-- Help Section -->
     <section class="py-20 px-4 bg-gray-50">
@@ -178,45 +162,5 @@ export function getStaticPaths() {
 <style>
   main {
     width: 100%;
-  }
-
-  /* FAQ Accordion Styles */
-  details > summary {
-    list-style: none;
-  }
-  details > summary::-webkit-details-marker {
-    display: none;
-  }
-  details .grid-wrapper {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.3s ease-out;
-  }
-  details[open] .grid-wrapper {
-    grid-template-rows: 1fr;
-    transition: grid-template-rows 0.5s ease-in-out;
-  }
-  details .grid-wrapper > div {
-    overflow: hidden;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .animate-fade-in {
-    animation: fadeIn 0.3s ease-out 0.1s both;
-  }
-
-  details:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
   }
 </style>

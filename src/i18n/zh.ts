@@ -656,6 +656,30 @@ export const zh = {
         alt: '开始优化',
         button: '请求咨询',
       },
+      howWeManage: {
+        title: '我们如何管理 Google 广告',
+        subtitle: '系统化管理广告活动的方法',
+        structure: {
+          title: '广告活动和账户结构',
+          description: '清晰、符合逻辑的广告活动结构，与客户的实际搜索方式一致。',
+        },
+        bidding: {
+          title: '出价和预算控制',
+          description: '预算分配给能转化的关键词——而不仅仅是产生点击的关键词。',
+        },
+        adCopy: {
+          title: '广告文案优化',
+          description: '广告的编写和细化旨在吸引合格的潜在客户，而非好奇流量。',
+        },
+        monitoring: {
+          title: '绩效监控',
+          description: '每周绩效审查和数据驱动的调整。',
+        },
+        optimization: {
+          title: '转化优化支持',
+          description: '着陆页消息、常见问题和结构建议，以提高咨询率。',
+        },
+      },
     },
     hero: {
       title: 'Google 广告管理服务',
@@ -681,29 +705,7 @@ export const zh = {
         description: '您将了解什么有效、什么无效以及预算的去向——没有营销术语。',
       },
     },
-    howWeManage: {
-      title: '我们如何管理 Google 广告',
-      structure: {
-        title: '广告活动和账户结构',
-        description: '清晰、符合逻辑的广告活动结构，与客户的实际搜索方式一致。',
-      },
-      bidding: {
-        title: '出价和预算控制',
-        description: '预算分配给能转化的关键词——而不仅仅是产生点击的关键词。',
-      },
-      adCopy: {
-        title: '广告文案优化',
-        description: '广告的编写和细化旨在吸引合格的潜在客户，而非好奇流量。',
-      },
-      monitoring: {
-        title: '绩效监控',
-        description: '每周绩效审查和数据驱动的调整。',
-      },
-      optimization: {
-        title: '转化优化支持',
-        description: '着陆页消息、常见问题和结构建议，以提高咨询率。',
-      },
-    },
+    
     oneTimeSetup: {
       title: '一次性 Google 广告账户设置',
       subtitle: '（适用于新账户）',

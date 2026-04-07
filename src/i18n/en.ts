@@ -656,6 +656,30 @@ export const en = {
         alt: 'Start optimizing',
         button: 'Request Consultation',
       },
+      howWeManage: {
+        title: 'How We Manage Google Ads',
+        subtitle: 'A systematic approach to managing your campaigns',
+        structure: {
+          title: 'Campaign & Account Structure',
+          description: 'Clean, logical campaign structure aligned with how customers actually search.',
+        },
+        bidding: {
+          title: 'Bidding & Budget Control',
+          description: 'Budgets are allocated toward keywords that convert — not those that just generate clicks.',
+        },
+        adCopy: {
+          title: 'Ad Copy Optimization',
+          description: 'Ads are written and refined to attract qualified prospects, not curiosity traffic.',
+        },
+        monitoring: {
+          title: 'Performance Monitoring',
+          description: 'Weekly performance reviews and data-driven adjustments.',
+        },
+        optimization: {
+          title: 'Conversion Optimization Support',
+          description: 'Landing page messaging, FAQs, and structure recommendations to improve enquiry rates.',
+        },
+      },
     },
     hero: {
       title: 'Google Ads Management Services',
@@ -681,29 +705,7 @@ export const en = {
         description: 'You\'ll understand what\'s working, what\'s not, and where your budget is going — without marketing jargon.',
       },
     },
-    howWeManage: {
-      title: 'How We Manage Google Ads',
-      structure: {
-        title: 'Campaign & Account Structure',
-        description: 'Clean, logical campaign structure aligned with how customers actually search.',
-      },
-      bidding: {
-        title: 'Bidding & Budget Control',
-        description: 'Budgets are allocated toward keywords that convert — not those that just generate clicks.',
-      },
-      adCopy: {
-        title: 'Ad Copy Optimization',
-        description: 'Ads are written and refined to attract qualified prospects, not curiosity traffic.',
-      },
-      monitoring: {
-        title: 'Performance Monitoring',
-        description: 'Weekly performance reviews and data-driven adjustments.',
-      },
-      optimization: {
-        title: 'Conversion Optimization Support',
-        description: 'Landing page messaging, FAQs, and structure recommendations to improve enquiry rates.',
-      },
-    },
+    
     oneTimeSetup: {
       title: 'One-Time Google Ads Account Setup',
       subtitle: '(For New Accounts)',

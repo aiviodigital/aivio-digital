@@ -7,6 +7,7 @@ import { EMAIL } from '../../constants/contact';
 import Hero from '../../components/Hero.astro';
 import TwoPathsSection from '../../components/google-ads-management/TwoPathsSection.astro';
 import WhatsIncludedSection from '../../components/google-ads-management/WhatsIncludedSection.astro';
+import ProcessCards from '@/components/google-ads-management/ProcessCards.astro';
 
 const { lang } = Astro.params;
 const currentLang = (lang || 'en') as 'en' | 'zh';
@@ -23,6 +24,34 @@ const faqItems = [
   { question: t.googleAdsManagement.faq.q4.question, answer: t.googleAdsManagement.faq.q4.answer },
   { question: t.googleAdsManagement.faq.q5.question, answer: t.googleAdsManagement.faq.q5.answer },
   { question: t.googleAdsManagement.faq.q6.question, answer: t.googleAdsManagement.faq.q6.answer },
+];
+
+const howWeManageItems = [
+  {
+    icon: 'M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z',
+    title: content.howWeManage.structure.title,
+    description: content.howWeManage.structure.description,
+  },
+  {
+    icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 1v8m0 1v8m0 1v8m0 1v8',
+    title: content.howWeManage.bidding.title,
+    description: content.howWeManage.bidding.description,
+  },
+  {
+    icon: 'M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z',
+    title: content.howWeManage.adCopy.title,
+    description: content.howWeManage.adCopy.description,
+  },
+  {
+    icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
+    title: content.howWeManage.monitoring.title,
+    description: content.howWeManage.monitoring.description,
+  },
+  {
+    icon: 'M13 10V3L4 14h7v7l9-11h-7z',
+    title: content.howWeManage.optimization.title,
+    description: content.howWeManage.optimization.description,
+  },
 ];
 
 export function getStaticPaths() {
@@ -121,6 +150,12 @@ export function getStaticPaths() {
 
     <!-- What's Included Section -->
     <WhatsIncludedSection content={content} />
+
+    <ProcessCards
+      items={howWeManageItems}
+      title={content.howWeManage.title}
+      subtitle={content.howWeManage.subtitle}
+    />
 
     <!-- FAQ Section -->
     <FAQSection items={faqItems} title={content.faq.title} variant="gradient" backgroundColor="white" />

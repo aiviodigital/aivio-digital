@@ -449,6 +449,36 @@ export const en = {
           strategic: 'Strategic Planning',
         },
       },
+      systemCheck: {
+        title: '4-Step System Check',
+        subtitle: 'Our structured audit follows a proven four-phase diagnostic process',
+        steps: [
+          {
+            step: '1',
+            icon: 'check-circle',
+            title: 'Conversion Integrity',
+            description: 'Verify tracking setup and ensure every lead is accurately counted'
+          },
+          {
+            step: '2',
+            icon: 'structure',
+            title: 'Structural Audit',
+            description: 'Evaluate campaign architecture for logical grouping and intent alignment'
+          },
+          {
+            step: '3',
+            icon: 'filter',
+            title: 'Negative Keyword Scrub',
+            description: 'Remove irrelevant search terms wasting budget on low-intent traffic'
+          },
+          {
+            step: '4',
+            icon: 'bug',
+            title: 'The Bug Report',
+            description: 'Identify technical issues, bidding errors, and optimization bottlenecks'
+          }
+        ]
+      },
       faq: {
         title: 'Google Ads Audit FAQs',
         subtitle: 'Clarify your questions about our Google Ads audit process, what to expect, and how it can pinpoint opportunities for your campaigns.',

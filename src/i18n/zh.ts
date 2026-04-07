@@ -449,6 +449,36 @@ export const zh = {
           strategic: '战略规划',
         },
       },
+      systemCheck: {
+        title: '4步系统检查',
+        subtitle: '我们的结构化审计遵循经过验证的四阶段诊断流程',
+        steps: [
+          {
+            step: '1',
+            icon: 'check-circle',
+            title: '转化完整性',
+            description: '验证跟踪设置，确保每个潜在客户都被准确计数'
+          },
+          {
+            step: '2',
+            icon: 'structure',
+            title: '结构审计',
+            description: '评估广告活动架构，确保逻辑分组和意图对齐'
+          },
+          {
+            step: '3',
+            icon: 'filter',
+            title: '负面关键词清理',
+            description: '清除无关的搜索词，避免预算浪费在低意图流量上'
+          },
+          {
+            step: '4',
+            icon: 'bug',
+            title: '错误报告',
+            description: '识别技术问题、出价错误和优化瓶颈'
+          }
+        ]
+      },
       faq: {
         title: 'Google 广告审计常见问题',
         subtitle: '澄清您对我们 Google 广告审计流程的疑问，了解可以期待什么，以及它如何为您的广告活动识别机会。',

@@ -1,0 +1,57 @@
+---
+interface Props {
+  content: {
+    systemCheck: {
+      title: string;
+      subtitle: string;
+      steps: Array<{
+        step: string;
+        icon: string;
+        title: string;
+        description: string;
+      }>;
+    };
+  };
+}
+
+const { content } = Astro.props;
+---
+
+<section class="py-16 px-4 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3">
+        {content.systemCheck.title}
+      </h2>
+      <p class="text-gray-600">
+        {content.systemCheck.subtitle}
+      </p>
+    </div>
+
+    <!-- 4 Steps -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {content.systemCheck.steps.map((step) => (
+        <div 
+          key={`system-check-${step.step}`}
+          class="text-center"
+        >
+          <!-- Step Circle -->
+          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">
+            {step.step}
+          </div>
+          
+          <!-- Title -->
+          <h3 class="text-lg font-bold text-gray-900 mb-2">
+            {step.title}
+          </h3>
+          
+          <!-- Description -->
+          <p class="text-gray-600 text-sm">
+            {step.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

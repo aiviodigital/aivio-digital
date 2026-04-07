@@ -452,6 +452,7 @@ export const zh = {
       systemCheck: {
         title: '4步系统检查',
         subtitle: '我们的结构化审计遵循经过验证的四阶段诊断流程',
+        badge: '诊断流程',
         steps: [
           {
             step: '1',

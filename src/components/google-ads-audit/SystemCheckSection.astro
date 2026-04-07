@@ -12,44 +12,114 @@ interface Props {
       }>;
     };
   };
+  badge?: string;
 }
 
-const { content } = Astro.props;
+const { content, badge = 'THE DIAGNOSTIC PROCESS' } = Astro.props;
+
+const stepIcons = {
+  'check-circle': 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
+  'structure': 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10',
+  'filter': 'M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z',
+  'bug': 'M7 8h10M7 16h10M12 2v4m0 12v4m-5-9l-3-3m3 3l-3 3m13-3l3-3m-3 3l3 3'
+};
+
+const stepDetails = [
+  {
+    items: [
+      'Google 标签验证',
+      '归因模型审查',
+      '转化操作审计',
+      '跨域跟踪检查'
+    ]
+  },
+  {
+    items: [
+      '广告活动架构映射',
+      '出价策略评估',
+      '受众重叠分析',
+      '预算分配审查'
+    ]
+  },
+  {
+    items: [
+      '搜索词分析',
+      '匹配类型优化',
+      '负面关键词列表创建',
+      '无关查询屏蔽'
+    ]
+  },
+  {
+    items: [
+      '优先级问题列表',
+      '实施时间表',
+      '预计节省估算',
+      '绩效基准'
+    ]
+  }
+];
 ---
 
-<section class="py-16 px-4 bg-white">
+<section class="py-20 px-4 bg-gray-50">
   <div class="max-w-6xl mx-auto">
     <!-- Header -->
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-gray-900 mb-3">
+    <div class="text-center mb-16">
+      <p class="text-sm font-semibold text-secondary uppercase tracking-wider mb-4">
+        {badge}
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
         {content.systemCheck.title}
       </h2>
-      <p class="text-gray-600">
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
         {content.systemCheck.subtitle}
       </p>
     </div>
 
-    <!-- 4 Steps -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      {content.systemCheck.steps.map((step) => (
-        <div 
-          key={`system-check-${step.step}`}
-          class="text-center"
-        >
-          <!-- Step Circle -->
-          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">
-            {step.step}
+    <!-- 4 Steps as Cards -->
+    <div class="space-y-6">
+      {content.systemCheck.steps.map((step, index) => (
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-8 hover:shadow-md transition-shadow">
+          <div class="flex items-start gap-6">
+            <!-- Step Number and Icon -->
+            <div class="flex-shrink-0">
+              <div class="relative">
+                <!-- Large step number background -->
+                <div class="text-7xl font-bold text-blue-50 select-none">
+                  {step.step.padStart(2, '0')}
+                </div>
+                <!-- Icon overlay -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={stepIcons[step.icon as keyof typeof stepIcons] || stepIcons['check-circle']}></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div class="flex-1 pt-2">
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                {step.title}
+              </h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                {step.description}
+              </p>
+
+              <!-- Check items in 2 columns -->
+              <div class="grid md:grid-cols-2 gap-x-8 gap-y-3">
+                {stepDetails[index].items.map((item, itemIndex) => (
+                  <div class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="text-sm text-gray-700">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-          
-          <!-- Title -->
-          <h3 class="text-lg font-bold text-gray-900 mb-2">
-            {step.title}
-          </h3>
-          
-          <!-- Description -->
-          <p class="text-gray-600 text-sm">
-            {step.description}
-          </p>
         </div>
       ))}
     </div>

@@ -452,6 +452,7 @@ export const en = {
       systemCheck: {
         title: '4-Step System Check',
         subtitle: 'Our structured audit follows a proven four-phase diagnostic process',
+        badge: 'THE DIAGNOSTIC PROCESS',
         steps: [
           {
             step: '1',

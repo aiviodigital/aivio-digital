@@ -4,9 +4,10 @@ import { translations } from '../../i18n';
 import Button from '../../components/Button.astro';
 import FAQSection from '../../components/FAQSection.astro';
 import { EMAIL } from '../../constants/contact';
-import Hero from '@/components/Hero.astro';
-import StepsSection from '@/components/google-ads-audit/StepsSection.astro';
-import CTASection from '@/components/google-ads-audit/CTASection.astro';
+import Hero from '../../components/Hero.astro';
+import StepsSection from '../../components/google-ads-audit/StepsSection.astro';
+import CTASection from '../../components/google-ads-audit/CTASection.astro';
+import SystemCheckSection from '../../components/google-ads-audit/SystemCheckSection.astro';
 
 const { lang } = Astro.params;
 const currentLang = (lang || 'en') as 'en' | 'zh';
@@ -37,6 +38,9 @@ export function getStaticPaths() {
       subtitle={content.hero.subtitle}
       image="/assets/audit/audit-hero.png"
     />
+
+    <!-- 4-Step System Check Section -->
+    <SystemCheckSection content={content} badge={content.systemCheck.badge} lang={currentLang} />
 
     <!-- Dark Green Section with Images -->
     <section class="bg-secondary py-16 px-4">

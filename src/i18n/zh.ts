@@ -205,6 +205,7 @@ export const zh = {
   caseStudy: {
     hero: {
       title: '经过验证的 Google 广告活动推动可衡量的增长',
+      subtitle: '探索精选的广告活动，突出精准定位、预算优化和数据驱动的调整，带来更多转化和市场渗透。',
       alt: {
         heroImage: 'Google 广告分析仪表板',
         analytics: '广告活动分析',

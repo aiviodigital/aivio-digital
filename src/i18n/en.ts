@@ -204,7 +204,8 @@ export const en = {
   },
   caseStudy: {
     hero: {
-      title: 'Proven Google Ads Campaigns Driving Measurable Growth',
+      title: 'Case Studies: Detailed Insights into Effective Google Ads Strategies',
+      subtitle: 'Explore selected campaigns that highlight precise targeting, budget optimization, and data-driven adjustments resulting in increased conversions and market penetration.',
       alt: {
         heroImage: 'Google Ads Analytics Dashboard',
         analytics: 'Campaign Analytics',

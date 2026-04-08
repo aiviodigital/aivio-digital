@@ -1,6 +1,7 @@
 ---
 import { translations } from '../../i18n';
 import type { Language } from '../../i18n';
+import AivioImage from '../common/AivioImage.astro';
 
 interface Props {
   currentLang: Language;
@@ -16,10 +17,10 @@ const t = translations[currentLang];
       {t.specialized.map((service, index) => (
         <div class="text-center group">
           <div class="mb-6 overflow-hidden rounded-lg shadow-md">
-            <img
+            <AivioImage
               src={`/assets/home/H-${7 + index}.png`}
               alt={service.title}
-              class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+              className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>

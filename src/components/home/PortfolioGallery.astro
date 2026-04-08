@@ -1,5 +1,6 @@
 ---
 import { translations } from '../../i18n';
+import AivioImage from '../common/AivioImage.astro';
 
 interface Props {
   currentLang: 'en' | 'zh';
@@ -24,10 +25,10 @@ const images = [
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
       {images.map((img, index) => (
         <div class="aspect-square overflow-hidden rounded-lg shadow-lg">
-          <img
+          <AivioImage
             src={img}
             alt={`${t.portfolio.altPrefix} ${index + 1}`}
-            class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+            className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
           />
         </div>
       ))}

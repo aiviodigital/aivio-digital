@@ -2,6 +2,7 @@
 import Button from '../Button.astro';
 import { EMAIL } from '../../constants/contact';
 import { translations } from '../../i18n';
+import AivioImage from '../common/AivioImage.astro';
 
 interface Props {
   currentLang: 'en' | 'zh';
@@ -31,10 +32,10 @@ const t = translations[currentLang];
         </div>
       </div>
       <div>
-        <img
+        <AivioImage
           src="/assets/home/H-14.png"
           alt={t.cta.alt}
-          class="w-full h-auto rounded-lg shadow-2xl"
+          className="w-full h-auto rounded-lg shadow-2xl"
         />
       </div>
     </div>

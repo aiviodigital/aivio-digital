@@ -8,6 +8,7 @@ import Hero from '../../components/Hero.astro';
 import StepsSection from '../../components/google-ads-audit/StepsSection.astro';
 import CTASection from '../../components/google-ads-audit/CTASection.astro';
 import SystemCheckSection from '../../components/google-ads-audit/SystemCheckSection.astro';
+import AivioImage from '@/components/common/AivioImage.astro';
 
 const { lang } = Astro.params;
 const currentLang = (lang || 'en') as 'en' | 'zh';
@@ -48,31 +49,28 @@ export function getStaticPaths() {
         <div class="grid md:grid-cols-3 gap-6">
           <!-- Image 1 -->
           <div class="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
-            <img
+            <AivioImage
               src="/assets/audit/Audit-1.png"
               alt={content.images.alt.analytics}
-              class="w-full h-full object-cover"
-              onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-700')"
+              className="w-full h-full object-cover"
             />
           </div>
 
           <!-- Image 2 -->
           <div class="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
-            <img
+            <AivioImage
               src="/assets/audit/Audit-2.png"
               alt={content.images.alt.performance}
-              class="w-full h-full object-cover"
-              onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-700')"
+              className="w-full h-full object-cover"
             />
           </div>
 
           <!-- Image 3 -->
           <div class="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
-            <img
+            <AivioImage
               src="/assets/audit/Audit-3.png"
               alt={content.images.alt.strategic}
-              class="w-full h-full object-cover"
-              onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-700')"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>

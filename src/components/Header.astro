@@ -4,6 +4,7 @@ import { getHeaderMenuItems, getMenuLink } from '../utils/menuItems';
 import Button from './Button.astro';
 import { EMAIL, PHONE } from '../constants/contact';
 import LangSwitch from './LangSwitch.astro';
+import AivioImage from './common/AivioImage.astro';
 
 interface Props {
   currentLang: string;
@@ -39,7 +40,7 @@ const isActive = (href: string) => {
   <nav class="max-w-7xl mx-auto py-3">
     <div class="flex justify-between items-center">
       <a href={getMenuLink('', currentLang)} class="flex items-center gap-2 text-2xl font-bold text-secondary hover:text-secondaryDark transition no-underline text-inherit">
-        <img src="/assets/logo.png" alt="Aivio Digital" class="w-40" />
+        <AivioImage src="/assets/logo.png" alt="Aivio Digital" className="w-40" />
       </a>
 
       <!-- Desktop Menu -->

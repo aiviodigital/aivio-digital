@@ -5,6 +5,7 @@ import Hero from '../../components/Hero.astro';
 import Button from '../../components/Button.astro';
 import FAQSection from '../../components/FAQSection.astro';
 import { EMAIL } from '../../constants/contact';
+import AivioImage from '@/components/common/AivioImage.astro';
 
 const { lang } = Astro.params;
 const currentLang = (lang || 'en') as 'en' | 'zh';
@@ -59,11 +60,10 @@ export function getStaticPaths() {
     <!-- Image Section with Analytics -->
     <section class="py-0 bg-[#E8D5B7]">
       <div class="max-w-7xl mx-auto px-4">
-        <img
+        <AivioImage
           src="/assets/faq/FAQ-1.png"
           alt="Google Ads Analytics Dashboard"
-          class="w-full h-auto rounded-lg shadow-xl"
-          loading="lazy"
+          className="w-full h-auto rounded-lg shadow-xl"
         />
       </div>
     </section>

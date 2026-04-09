@@ -8,6 +8,7 @@ import Hero from '../../components/Hero.astro';
 import TwoPathsSection from '../../components/google-ads-management/TwoPathsSection.astro';
 import WhatsIncludedSection from '../../components/google-ads-management/WhatsIncludedSection.astro';
 import ProcessCards from '@/components/google-ads-management/ProcessCards.astro';
+import AivioImage from '@/components/common/AivioImage.astro';
 
 const { lang } = Astro.params;
 const currentLang = (lang || 'en') as 'en' | 'zh';
@@ -71,12 +72,10 @@ export function getStaticPaths() {
     <section class="relative py-20 px-4 bg-gray-50">
       <!-- Background Image -->
       <div class="absolute inset-0 overflow-hidden bg-gray-100">
-        <img
+        <AivioImage
           src="/assets/mgmt/mgmt-4.png"
           alt={content.images.bgAlt}
-          class="w-full h-full object-cover opacity-40 transition-opacity duration-300"
-          loading="lazy"
-          onerror="this.style.opacity='0'"
+          className="w-full h-full object-cover opacity-40 transition-opacity duration-300"
         />
       </div>
 
@@ -111,34 +110,28 @@ export function getStaticPaths() {
         <div class="grid md:grid-cols-3 gap-8">
           <!-- Image 1 -->
           <div class="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl bg-gray-100">
-            <img
+            <AivioImage
               src="/assets/mgmt/mgmt-5.png"
               alt={content.images.alt.team}
-              class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-95"
-              loading="lazy"
-              onerror="this.style.opacity='0'"
+              className="w-full h-full object-cover transition-opacity duration-300 hover:opacity-95"
             />
           </div>
 
           <!-- Image 2 -->
           <div class="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl bg-gray-100">
-            <img
+            <AivioImage
               src="/assets/mgmt/mgmt-3.png"
               alt={content.images.alt.analytics}
-              class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-95"
-              loading="lazy"
-              onerror="this.style.opacity='0'"
+              className="w-full h-full object-cover transition-opacity duration-300 hover:opacity-95"
             />
           </div>
 
           <!-- Image 3 -->
           <div class="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl bg-gray-100">
-            <img
+            <AivioImage
               src="/assets/mgmt/mgmt-2.png"
               alt={content.images.alt.performance}
-              class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-95"
-              loading="lazy"
-              onerror="this.style.opacity='0'"
+              className="w-full h-full object-cover transition-opacity duration-300 hover:opacity-95"
             />
           </div>
         </div>
@@ -183,12 +176,10 @@ export function getStaticPaths() {
     <section class="relative py-32 px-4 overflow-hidden">
       <!-- Background Image -->
       <div class="absolute inset-0 bg-secondary">
-        <img
+        <AivioImage
           src="/assets/mgmt/mgmt-hero.png"
           alt={content.cta.alt}
-          class="w-full h-full object-cover transition-opacity duration-500"
-          loading="lazy"
-          onerror="this.style.opacity='0'"
+          className="w-full h-full object-cover transition-opacity duration-500"
         />
         <div class="absolute inset-0 bg-black/10"></div>
       </div>

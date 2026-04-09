@@ -2,6 +2,7 @@
 import { translations } from '../i18n/index';
 import { getMenuItems } from '../utils/menuItems';
 import { EMAIL, PHONE_SIMPLE } from '../constants/contact';
+import AivioImage from './common/AivioImage.astro';
 
 interface Props {
   currentLang: string;
@@ -19,7 +20,7 @@ const copyrightText = t.footer.copyright.replace('{year}', String(currentYear));
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
       <div>
-        <img src="/assets/favicon.png" alt="Aivio" class="w-auto mb-4" />
+        <AivioImage src="/assets/favicon.png" alt="Aivio" className="w-auto mb-4" />
         <h3 class="text-lg font-semibold mb-4">{t.footer.about}</h3>
         <p class="text-gray-400">{t.footer.aboutText}</p>
       </div>
@@ -37,11 +38,11 @@ const copyrightText = t.footer.copyright.replace('{year}', String(currentYear));
         <p class="text-gray-400">{t.footer.phone}: {PHONE_SIMPLE}</p>
         <div class="mt-4 flex gap-4">
           <div class="text-center">
-            <img src="/assets/company_QR_code.png" alt="Company QR Code" class="w-24 h-24 rounded-lg mb-2" />
+            <AivioImage src="/assets/company_QR_code.png" alt="Company QR Code" className="w-24 h-24 rounded-lg mb-2" />
             <p class="text-xs text-gray-500">Company</p>
           </div>
           <div class="text-center">
-            <img src="/assets/WeChat_QR_Code.jpg" alt="WeChat QR Code" class="w-24 h-24 rounded-lg mb-2" />
+            <AivioImage src="/assets/WeChat_QR_Code.jpg" alt="WeChat QR Code" className="w-24 h-24 rounded-lg mb-2" />
             <p class="text-xs text-gray-500">Wechat</p>
           </div>
         </div>

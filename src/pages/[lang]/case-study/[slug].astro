@@ -1,0 +1,360 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { translations } from '../../../i18n';
+import Hero from '../../../components/Hero.astro';
+import AivioImage from '../../../components/common/AivioImage.astro';
+
+const { lang, slug } = Astro.params;
+const currentLang = (lang || 'en') as 'en' | 'zh';
+const currentPath = Astro.url.pathname;
+const t = translations[currentLang];
+
+export function getStaticPaths() {
+  const en = translations['en'];
+  const zh = translations['zh'];
+  const slugs = en.caseStudies.list.map((cs) => cs.slug);
+  
+  return slugs.flatMap((csSlug) => [
+    { params: { lang: 'en', slug: csSlug } },
+    { params: { lang: 'zh', slug: csSlug } },
+  ]);
+}
+
+const caseStudy = t.caseStudies.list.find((cs) => cs.slug === slug);
+const isWelding = slug === 'ai-trust-gap-welding';
+const pageTitle = caseStudy?.title || t.caseStudies.listTitle;
+---
+
+<Layout title={pageTitle} lang={currentLang} currentLang={currentLang} currentPath={currentPath}>
+  <main class="min-h-screen bg-white">
+    <!-- Hero Section -->
+    <Hero
+      title={caseStudy?.title}
+      subtitle={caseStudy?.summary}
+      image="/assets/case/case-1.png"
+    />
+
+    <!-- Industry & Location Info -->
+    <section class="py-12 px-4 bg-gray-50">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex flex-wrap items-center gap-4 text-sm">
+          <span class="bg-secondary/10 text-secondary px-4 py-2 rounded-full font-medium">
+            {caseStudy?.industry}
+          </span>
+          <span class="text-gray-600">
+            <svg class="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            {caseStudy?.location}
+          </span>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-6">
+          {caseStudy?.tags.map((tag) => (
+            <span class="bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {isWelding ? (
+      <!-- Welding Case Study Content -->
+      <section class="py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+          <!-- Client Section -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">{t.caseStudies.welding.client.title}</h2>
+            <div class="bg-gray-50 rounded-lg p-6 space-y-2">
+              <p class="text-gray-700">{t.caseStudies.welding.client.industry}</p>
+              <p class="text-gray-700">{t.caseStudies.welding.client.location}</p>
+              <p class="text-gray-700">{t.caseStudies.welding.client.asset}</p>
+            </div>
+          </div>
+
+          <!-- Challenge Section -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-secondary mb-4">{t.caseStudies.welding.challenge.title}</h2>
+            <p class="text-gray-600 mb-4">{t.caseStudies.welding.challenge.description}</p>
+            <div class="space-y-4">
+              {t.caseStudies.welding.challenge.scenarios.map((scenario) => (
+                <div class="flex gap-3">
+                  <span class="text-secondary font-bold">•</span>
+                  <p class="text-gray-700">{scenario}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Diagnosis Section -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">{t.caseStudies.welding.diagnosis.title}</h2>
+            <p class="text-gray-600 mb-6">{t.caseStudies.welding.diagnosis.description}</p>
+            <div class="space-y-6">
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="font-bold text-gray-900 mb-2">{t.caseStudies.welding.diagnosis.schema.title}</h3>
+                <p class="text-gray-600">{t.caseStudies.welding.diagnosis.schema.description}</p>
+              </div>
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="font-bold text-gray-900 mb-2">{t.caseStudies.welding.diagnosis.footprint.title}</h3>
+                <p class="text-gray-600">{t.caseStudies.welding.diagnosis.footprint.description}</p>
+              </div>
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="font-bold text-gray-900 mb-2">{t.caseStudies.welding.diagnosis.semantic.title}</h3>
+                <p class="text-gray-600">{t.caseStudies.welding.diagnosis.semantic.description}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Strategy Section -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">{t.caseStudies.welding.strategy.title}</h2>
+            <p class="text-gray-600 mb-6">{t.caseStudies.welding.strategy.intro}</p>
+            <div class="space-y-6">
+              <div class="bg-secondary/5 rounded-lg p-6">
+                <h3 class="font-bold text-secondary mb-2">{t.caseStudies.welding.strategy.entity.title}</h3>
+                <p class="text-gray-700">{t.caseStudies.welding.strategy.entity.description}</p>
+              </div>
+              <div class="bg-secondary/5 rounded-lg p-6">
+                <h3 class="font-bold text-secondary mb-2">{t.caseStudies.welding.strategy.semantic.title}</h3>
+                <p class="text-gray-700">{t.caseStudies.welding.strategy.semantic.description}</p>
+              </div>
+              <div class="bg-secondary/5 rounded-lg p-6">
+                <h3 class="font-bold text-secondary mb-2">{t.caseStudies.welding.strategy.cleanup.title}</h3>
+                <p class="text-gray-700">{t.caseStudies.welding.strategy.cleanup.description}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results Section -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">{t.caseStudies.welding.results.title}</h2>
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+              <div class="text-center p-6 bg-white border border-gray-200 rounded-lg">
+                <div class="text-3xl font-bold text-secondary mb-2">5</div>
+                <p class="text-sm text-gray-600">Weeks to AI Visibility</p>
+              </div>
+              <div class="text-center p-6 bg-white border border-gray-200 rounded-lg">
+                <div class="text-3xl font-bold text-secondary mb-2">370+</div>
+                <p class="text-sm text-gray-600">5-Star Reviews Recognized</p>
+              </div>
+              <div class="text-center p-6 bg-white border border-gray-200 rounded-lg">
+                <div class="text-3xl font-bold text-secondary mb-2">20+</div>
+                <p class="text-sm text-gray-600">Citations Synchronized</p>
+              </div>
+            </div>
+            <div class="space-y-6">
+              <div class="bg-gray-50 rounded-lg p-6">
+                <h3 class="font-bold text-gray-900 mb-2">{t.caseStudies.welding.results.invisible.title}</h3>
+                <p class="text-gray-600">{t.caseStudies.welding.results.invisible.description}</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-6">
+                <h3 class="font-bold text-gray-900 mb-2">{t.caseStudies.welding.results.snippets.title}</h3>
+                <p class="text-gray-600">{t.caseStudies.welding.results.snippets.description}</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-6">
+                <h3 class="font-bold text-gray-900 mb-2">{t.caseStudies.welding.results.conversion.title}</h3>
+                <p class="text-gray-600">{t.caseStudies.welding.results.conversion.description}</p>
+              </div>
+            </div>
+            <blockquote class="mt-8 p-6 border-l-4 border-secondary bg-secondary/5 rounded-r-lg">
+              <p class="text-gray-700 italic">{t.caseStudies.welding.results.quote}</p>
+            </blockquote>
+          </div>
+
+          <!-- Takeaway Section -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">{t.caseStudies.welding.takeaway.title}</h2>
+            <p class="text-gray-600">{t.caseStudies.welding.takeaway.description}</p>
+          </div>
+
+          <!-- CTA Section -->
+          <div class="bg-secondary text-white rounded-xl p-8 text-center">
+            <h2 class="text-2xl font-bold mb-4">{t.caseStudies.welding.cta.title}</h2>
+            <p class="text-white/80 mb-6">{t.caseStudies.welding.cta.description}</p>
+            <a
+              href={`/${currentLang}/contact`}
+              class="inline-block bg-white text-secondary font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              {t.caseStudies.welding.cta.button}
+            </a>
+          </div>
+        </div>
+      </section>
+    ) : (
+      <!-- Packaging Company Case Study Content (Original) -->
+      <section class="py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+          <!-- Metadata -->
+          <div class="mb-12">
+            <div class="bg-gray-50 rounded-lg p-6 space-y-2">
+              <p class="text-gray-700">{t.caseStudy.metadata.industry}</p>
+              <p class="text-gray-700">{t.caseStudy.metadata.location}</p>
+              <p class="text-gray-700">{t.caseStudy.metadata.spend}</p>
+              <p class="text-gray-700">{t.caseStudy.metadata.type}</p>
+            </div>
+          </div>
+
+          <!-- Background -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">{t.caseStudy.background.title}</h2>
+            <p class="text-gray-600">{t.caseStudy.background.description}</p>
+          </div>
+
+          <!-- Challenge -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-secondary mb-4">{t.caseStudy.challenge.title}</h2>
+            <div class="space-y-3">
+              <div class="flex gap-3">
+                <span class="text-secondary">•</span>
+                <p class="text-gray-700">{t.caseStudy.challenge.point1}</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-secondary">•</span>
+                <p class="text-gray-700">{t.caseStudy.challenge.point2}</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-secondary">•</span>
+                <p class="text-gray-700">{t.caseStudy.challenge.point3}</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-secondary">•</span>
+                <p class="text-gray-700">{t.caseStudy.challenge.point4}</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-secondary">•</span>
+                <p class="text-gray-700">{t.caseStudy.challenge.point5}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Diagnosis -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">{t.caseStudy.diagnosis.title}</h2>
+            <p class="text-gray-600 mb-6">{t.caseStudy.diagnosis.description}</p>
+            <div class="space-y-6">
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="font-bold text-gray-900 mb-2">{t.caseStudy.diagnosis.landingPage.title}</h3>
+                <p class="text-gray-600">{t.caseStudy.diagnosis.landingPage.description}</p>
+              </div>
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="font-bold text-gray-900 mb-2">{t.caseStudy.diagnosis.trust.title}</h3>
+                <p class="text-gray-600">{t.caseStudy.diagnosis.trust.description}</p>
+              </div>
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="font-bold text-gray-900 mb-2">{t.caseStudy.diagnosis.budget.title}</h3>
+                <p class="text-gray-600">{t.caseStudy.diagnosis.budget.description}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Optimization Strategy -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">{t.caseStudy.optimization.title}</h2>
+            <p class="text-gray-600 mb-6">{t.caseStudy.optimization.description}</p>
+            <div class="space-y-6">
+              <div class="bg-secondary/5 rounded-lg p-6">
+                <h3 class="font-bold text-secondary mb-3">{t.caseStudy.optimization.landingPage.title}</h3>
+                <div class="space-y-2">
+                  <div class="flex gap-3">
+                    <span class="text-secondary">•</span>
+                    <p class="text-gray-700">{t.caseStudy.optimization.landingPage.point1}</p>
+                  </div>
+                  <div class="flex gap-3">
+                    <span class="text-secondary">•</span>
+                    <p class="text-gray-700">{t.caseStudy.optimization.landingPage.point2}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-secondary/5 rounded-lg p-6">
+                <h3 class="font-bold text-secondary mb-3">{t.caseStudy.optimization.faq.title}</h3>
+                <p class="text-gray-700">{t.caseStudy.optimization.faq.description}</p>
+              </div>
+              <div class="bg-secondary/5 rounded-lg p-6">
+                <h3 class="font-bold text-secondary mb-3">{t.caseStudy.optimization.alignment.title}</h3>
+                <p class="text-gray-700">{t.caseStudy.optimization.alignment.description}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">{t.caseStudy.results.title}</h2>
+            <div class="grid md:grid-cols-2 gap-4 mb-8">
+              <div class="text-center p-6 bg-white border border-gray-200 rounded-lg">
+                <div class="text-3xl font-bold text-secondary mb-2">326%</div>
+                <p class="text-sm text-gray-600">ROI Increase</p>
+              </div>
+              <div class="text-center p-6 bg-white border border-gray-200 rounded-lg">
+                <div class="text-3xl font-bold text-secondary mb-2">45%</div>
+                <p class="text-sm text-gray-600">Lower CPA</p>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div class="flex gap-3">
+                <span class="text-secondary">•</span>
+                <p class="text-gray-700">{t.caseStudy.results.point1}</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-secondary">•</span>
+                <p class="text-gray-700">{t.caseStudy.results.point2}</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-secondary">•</span>
+                <p class="text-gray-700">{t.caseStudy.results.point3}</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-secondary">•</span>
+                <p class="text-gray-700">{t.caseStudy.results.point4}</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-secondary">•</span>
+                <p class="text-gray-700">{t.caseStudy.results.point5}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Takeaway -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">{t.caseStudy.takeaway.title}</h2>
+            <p class="text-gray-600">{t.caseStudy.takeaway.description}</p>
+          </div>
+
+          <!-- CTA Section -->
+          <div class="bg-secondary text-white rounded-xl p-8 text-center">
+            <h2 class="text-2xl font-bold mb-4">{t.caseStudy.cta.title}</h2>
+            <p class="text-white/80 mb-6">{t.caseStudy.cta.description}</p>
+            <a
+              href={`/${currentLang}/google-ads-audit`}
+              class="inline-block bg-white text-secondary font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              {t.caseStudy.cta.button}
+            </a>
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Back to Case Studies -->
+    <section class="py-12 px-4 bg-gray-50">
+      <div class="max-w-4xl mx-auto text-center">
+        <a
+          href={`/${currentLang}/case-study`}
+          class="inline-flex items-center gap-2 text-secondary font-semibold hover:underline"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+          {currentLang === 'zh' ? '返回案例分析列表' : 'Back to Case Studies'}
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: 100%;
+  }
+</style>

@@ -315,6 +315,105 @@ export const en = {
       button: 'Start with a Google Ads Account Audit',
     },
   },
+  caseStudies: {
+    listTitle: 'Our Case Studies',
+    listSubtitle: 'Explore real results from our Google Ads and digital marketing campaigns',
+    viewDetails: 'View Details',
+    list: [
+      {
+        slug: 'toronto-packaging-company',
+        industry: 'Custom Packaging (B2B)',
+        location: 'Toronto, Canada',
+        title: 'Google Ads Optimization for a Toronto Custom Packaging Company',
+        summary: 'How we transformed inconsistent leads into higher-quality inquiries with a limited budget of CA$500/month through strategic landing page optimization and campaign alignment.',
+        results: ['326% ROI Increase', '45% Lower CPA', 'Higher Quality Leads'],
+        tags: ['Google Ads', 'Landing Page', 'B2B'],
+      },
+      {
+        slug: 'ai-trust-gap-welding',
+        industry: 'Specialized Welding & Metal Fabrication',
+        location: 'Greater Toronto Area',
+        title: 'Bridge the AI Trust Gap for a Local Service Leader',
+        summary: 'How we helped a 370+ 5-star welding company become visible to AI search engines through GEO optimization and entity authority building.',
+        results: ['AI Visibility in 5 Weeks', 'Featured in AI Overviews', 'Improved Lead Quality'],
+        tags: ['GEO', 'AI Search', 'Local SEO'],
+      },
+    ],
+    welding: {
+      title: 'Case Study: Bridge the AI Trust Gap for a Local Service Leader',
+      client: {
+        title: 'The Client',
+        industry: 'Industry: Specialized Welding & Metal Fabrication',
+        location: 'Location: GTA (Greater Toronto Area)',
+        asset: 'The Asset: A brand-new website with an impeccable reputation (370+ 5-star Google Reviews)',
+      },
+      challenge: {
+        title: 'The Challenge: "Invisible to AI"',
+        description: 'Despite being a market leader with overwhelming social proof, the client faced a modern-day crisis: AI engines (ChatGPT, Gemini, Perplexity) were not recommending them.',
+        scenarios: [
+          'When users asked, "Who is the most reliable mobile welder in Toronto?" or "Top-rated welding services with 5-star reviews near me," the AI would recommend competitors with fewer reviews and older websites.',
+          'The "Logic Bug": The AI engines couldn\'t "verify" the connection between the new website and the existing Google Reviews. To the AI, the business lacked Entity Authority. It was a "High-Quality Ghost."',
+        ],
+      },
+      diagnosis: {
+        title: 'The Diagnosis & Findings (The Audit Phase)',
+        description: 'Using our QA-structured GEO Audit, we identified three critical "Data Breaks":',
+        schema: {
+          title: '1. Schema Disconnect',
+          description: 'The brand-new website lacked the technical "Structured Data" (Schema) that tells AI, "This website belongs to this specific Google Business Profile."',
+        },
+        footprint: {
+          title: '2. Fragmented Footprint',
+          description: 'The business was mentioned on various directories (Yellow Pages, Houzz), but the info was inconsistent, confusing the AI\'s "Confidence Score."',
+        },
+        semantic: {
+          title: '3. Lack of Semantic Content',
+          description: 'The website had plenty of photos but very little "Question-and-Answer" style content that AI engines look for when citing a source.',
+        },
+      },
+      strategy: {
+        title: 'The GEO Optimization Strategy',
+        intro: 'We didn\'t just "do SEO"; we optimized for Generative Engine Recognition:',
+        entity: {
+          title: 'Entity Linking (The "Bridge")',
+          description: 'We implemented advanced JSON-LD Schema to hard-link the new domain with their 370+ Google reviews, creating a verified "Entity" in the Google Knowledge Graph.',
+        },
+        semantic: {
+          title: 'Semantic FAQ Library',
+          description: 'Based on actual customer inquiries, we built an FAQ section that answered technical welding questions, positioning the client as the "Subject Matter Expert" for AI crawlers.',
+        },
+        cleanup: {
+          title: 'Digital Footprint Cleanup',
+          description: 'We audited and synchronized 20+ local citations to ensure the Name, Address, and Phone (NAP) were 100% consistent, raising the AI\'s "Trust Score."',
+        },
+      },
+      results: {
+        title: 'The Results & Impact',
+        invisible: {
+          title: 'From Invisible to Recommended',
+          description: 'Within 5 weeks, ChatGPT and Gemini began citing the client as a "Top-Rated Welding Service" in the GTA.',
+        },
+        snippets: {
+          title: 'Featured Snippets',
+          description: 'The website started appearing in AI Overviews (SGE) for high-intent technical queries.',
+        },
+        conversion: {
+          title: 'Conversion Spike',
+          description: 'Lead quality improved because AI-referred customers already arrived with a high level of trust.',
+        },
+        quote: '"Our reputation was built on years of hard work, but we were invisible to the new generation of AI search. Aivio Digital didn\'t just fix our website; they made sure the AI actually recognized our 370+ 5-star reviews." — Owner, Welding Services',
+      },
+      takeaway: {
+        title: 'Key Takeaway for Business Owners',
+        description: 'High reviews and a new website aren\'t enough in 2026. If the "data bridge" between your reputation and your website is broken, AI engines will skip you. Don\'t let your 5-star reputation go to waste—get a GEO Audit.',
+      },
+      cta: {
+        title: 'Is Your Business Invisible to AI Search?',
+        description: 'If you have strong reviews and a quality website but aren\'t being recommended by AI engines, you may have a data bridge problem. A structured GEO Audit can reveal the gaps.',
+        button: 'Request a GEO Audit',
+      },
+    },
+  },
   contactUs: {
     hero: {
       title: 'Get Expert Help with Google Ads',

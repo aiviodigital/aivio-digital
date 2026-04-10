@@ -315,6 +315,105 @@ export const zh = {
       button: '从 Google 广告账户审计开始',
     },
   },
+  caseStudies: {
+    listTitle: '我们的案例分析',
+    listSubtitle: '探索我们 Google 广告和数字营销活动的真实成果',
+    viewDetails: '查看详情',
+    list: [
+      {
+        slug: 'toronto-packaging-company',
+        industry: '定制包装（B2B）',
+        location: '加拿大多伦多',
+        title: '多伦多定制包装公司的 Google 广告优化',
+        summary: '通过战略性的着陆页优化和广告活动一致性，将不一致的线索转化为更高质量的咨询，月预算仅 CA$500。',
+        results: ['326% 投资回报率增长', '45% 更低获客成本', '更高质量线索'],
+        tags: ['Google 广告', '着陆页', 'B2B'],
+      },
+      {
+        slug: 'ai-trust-gap-welding',
+        industry: '专业焊接与金属制造',
+        location: '大多伦多地区',
+        title: '为本地服务领导者弥合 AI 信任差距',
+        summary: '我们如何通过 GEO 优化和实体权威建设，帮助一家拥有 370+ 5星评价的焊接公司在 AI 搜索引擎中获得可见性。',
+        results: ['5周内 AI 可见', '出现在 AI 概览中', '提高线索质量'],
+        tags: ['GEO', 'AI 搜索', '本地 SEO'],
+      },
+    ],
+    welding: {
+      title: '案例分析：为本地服务领导者弥合 AI 信任差距',
+      client: {
+        title: '客户',
+        industry: '行业：专业焊接与金属制造',
+        location: '地点：大多伦多地区（GTA）',
+        asset: '资产：一个全新的网站和卓越的声誉（370+ 5星 Google 评价）',
+      },
+      challenge: {
+        title: '挑战："对 AI 不可见"',
+        description: '尽管是市场领导者，拥有压倒性的社会证明，但客户面临现代危机：AI 引擎（ChatGPT、Gemini、Perplexity）没有推荐他们。',
+        scenarios: [
+          '当用户问"多伦多最可靠的移动焊工是谁？"或"附近有 5 星评价的最佳焊接服务"时，AI 会推荐评论更少、网站更旧的竞争对手。',
+          '"逻辑错误"：AI 引擎无法"验证"新网站和现有 Google 评价之间的联系。对 AI 来说，该企业缺乏实体权威。它是一个"高质量幽灵"。',
+        ],
+      },
+      diagnosis: {
+        title: '诊断与发现（审计阶段）',
+        description: '使用我们 QA 结构化的 GEO 审计，我们识别了三个关键的"数据断裂"：',
+        schema: {
+          title: '1. Schema 断开',
+          description: '全新的网站缺少告诉 AI 的技术"结构化数据"（Schema）："这个网站属于这个特定的 Google 商家资料。"',
+        },
+        footprint: {
+          title: '2. 分散的数字足迹',
+          description: '企业在各个目录（黄页、Houzz）上被提及，但信息不一致，混淆了 AI 的"置信度分数"。',
+        },
+        semantic: {
+          title: '3. 缺乏语义内容',
+          description: '网站有很多照片，但几乎没有 AI 引擎在引用来源时寻找的"问答式"内容。',
+        },
+      },
+      strategy: {
+        title: 'GEO 优化策略',
+        intro: '我们不只是"做 SEO"；我们为生成式引擎识别进行了优化：',
+        entity: {
+          title: '实体链接（"桥梁"）',
+          description: '我们实施了高级 JSON-LD Schema，将新域名与他们的 370+ Google 评价硬链接，在 Google 知识图谱中创建一个经过验证的"实体"。',
+        },
+        semantic: {
+          title: '语义常见问题库',
+          description: '基于实际客户咨询，我们建立了一个常见问题部分，回答技术焊接问题，将客户定位为 AI 爬虫的"主题专家"。',
+        },
+        cleanup: {
+          title: '数字足迹清理',
+          description: '我们审计并同步了 20+ 个本地引用，确保名称、地址和电话（NAP）100% 一致，提高 AI 的"信任分数"。',
+        },
+      },
+      results: {
+        title: '结果与影响',
+        invisible: {
+          title: '从不可见到被推荐',
+          description: '在 5 周内，ChatGPT 和 Gemini 开始将客户引用为 GTA 的"顶级焊接服务"。',
+        },
+        snippets: {
+          title: '精选摘要',
+          description: '网站开始出现在高意向技术查询的 AI 概览（SGE）中。',
+        },
+        conversion: {
+          title: '转化激增',
+          description: '线索质量提高，因为 AI 引荐的客户到达时已经具有高度信任。',
+        },
+        quote: '"我们的声誉建立在多年的努力工作之上，但我们对新一代 AI 搜索是不可见的。Aivio Digital 不仅修复了我们的网站；他们确保 AI 真正认可我们的 370+ 5星评价。" —— 焊接服务业主',
+      },
+      takeaway: {
+        title: '给企业主的关键要点',
+        description: '高评价和新网站在 2026 年还不够。如果您的声誉和网站之间的"数据桥梁"断裂，AI 引擎将跳过您。不要让您的 5 星评价浪费——获取 GEO 审计。',
+      },
+      cta: {
+        title: '您的企业对 AI 搜索不可见吗？',
+        description: '如果您有强评价和优质网站，但没有被 AI 引擎推荐，您可能有数据桥梁问题。结构化的 GEO 审计可以揭示差距。',
+        button: '请求 GEO 审计',
+      },
+    },
+  },
   contactUs: {
     hero: {
       title: '获得 Google 广告专家帮助',

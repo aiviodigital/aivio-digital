@@ -1,0 +1,27 @@
+---
+import NewHero from '@/components/home/NewHero.astro';
+import ServicesSection from '@/components/home/ServicesSection.astro';
+import SpecializedServices from '@/components/home/SpecializedServices.astro';
+import PortfolioGallery from '@/components/home/PortfolioGallery.astro';
+import CTASection from '@/components/home/CTASection.astro';
+import FinalCTANew from '@/components/home/FinalCTANew.astro';
+import HowItWorks from '@/components/home/HowItWorks.astro';
+import Testimonials from '@/components/home/Testimonials.astro';
+
+interface Props {
+  currentLang: 'en' | 'zh';
+}
+
+const { currentLang } = Astro.props;
+---
+
+<main>
+  <NewHero currentLang={currentLang} />
+  <ServicesSection currentLang={currentLang} />
+  <SpecializedServices currentLang={currentLang} />
+  <PortfolioGallery currentLang={currentLang} />
+  <CTASection currentLang={currentLang} />
+  <HowItWorks currentLang={currentLang} />
+  <Testimonials currentLang={currentLang} />
+  <FinalCTANew currentLang={currentLang} />
+</main>

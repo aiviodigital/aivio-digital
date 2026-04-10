@@ -542,6 +542,15 @@ export const en = {
         title: 'Google Ads Audit Overview',
         subtitle: 'A comprehensive evaluation of your Google Ads campaigns focusing on key performance metrics and tailored strategic recommendations.',
       },
+      problem: {
+        headline: 'Stop Guessing. Start Growing.',
+        description: 'If your results feel inconsistent or disappointing, the problem usually isn\'t your budget—it\'s your Account Architecture. Without an audit, you may be blind to:',
+        points: [
+          'Keywords eating budget with zero intent.',
+          'Broken conversion tracking giving you "fake" success data.',
+          'Google\'s automation spending money on searches that don\'t convert.'
+        ]
+      },
       images: {
         alt: {
           analytics: 'Analytics Dashboard',

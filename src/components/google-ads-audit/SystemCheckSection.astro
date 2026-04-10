@@ -95,6 +95,10 @@ const stepDetails = {
     }
   ]
 };
+
+const steps = content.systemCheck.steps;
+const firstRow = steps.slice(0, 2);
+const secondRow = steps.slice(2, 4);
 ---
 
 <section class="py-20 px-4 bg-gray-50">
@@ -112,22 +116,22 @@ const stepDetails = {
       </p>
     </div>
 
-    <!-- 4 Steps as Cards -->
-    <div class="space-y-6">
-      {content.systemCheck.steps.map((step, index) => (
+    <!-- First Row: 2 Steps -->
+    <div class="grid md:grid-cols-2 gap-6 mb-6">
+      {firstRow.map((step, index) => (
         <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-8 hover:shadow-md transition-shadow">
           <div class="flex items-start gap-6">
             <!-- Step Number and Icon -->
             <div class="flex-shrink-0">
               <div class="relative">
                 <!-- Large step number background -->
-                <div class="text-7xl font-bold text-blue-50 select-none">
+                <div class="text-7xl font-bold text-yellow-50 select-none">
                   {step.step.padStart(2, '0')}
                 </div>
                 <!-- Icon overlay -->
                 <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center">
+                    <svg class="w-7 h-7 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={stepIcons[step.icon as keyof typeof stepIcons] || stepIcons['check-circle']}></path>
                     </svg>
                   </div>
@@ -137,7 +141,7 @@ const stepDetails = {
 
             <!-- Content -->
             <div class="flex-1 pt-2">
-              <h3 class="text-2xl font-bold text-gray-900 mb-3">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
                 {step.title}
               </h3>
               <p class="text-gray-600 mb-6 leading-relaxed">
@@ -145,10 +149,59 @@ const stepDetails = {
               </p>
 
               <!-- Check items in 2 columns -->
-              <div class="grid md:grid-cols-2 gap-x-8 gap-y-3">
-                {stepDetails[lang][index].items.map((item, itemIndex) => (
+              <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                {stepDetails[lang][index].items.map((item) => (
                   <div class="flex items-start gap-2">
-                    <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="text-sm text-gray-700">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Second Row: 2 Steps -->
+    <div class="grid md:grid-cols-2 gap-6">
+      {secondRow.map((step, index) => (
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-8 hover:shadow-md transition-shadow">
+          <div class="flex items-start gap-6">
+            <!-- Step Number and Icon -->
+            <div class="flex-shrink-0">
+              <div class="relative">
+                <!-- Large step number background -->
+                <div class="text-7xl font-bold text-yellow-50 select-none">
+                  {step.step.padStart(2, '0')}
+                </div>
+                <!-- Icon overlay -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center">
+                    <svg class="w-7 h-7 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={stepIcons[step.icon as keyof typeof stepIcons] || stepIcons['check-circle']}></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div class="flex-1 pt-2">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                {step.title}
+              </h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                {step.description}
+              </p>
+
+              <!-- Check items in 2 columns -->
+              <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                {stepDetails[lang][index + 2].items.map((item) => (
+                  <div class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                     <span class="text-sm text-gray-700">{item}</span>

@@ -29,7 +29,7 @@ const { title, description, keywords, lang = 'en', currentLang = 'en', currentPa
   <body>
     <Header currentLang={currentLang} currentPath={currentPath} />
     <slot />
-    <Footer currentLang={currentLang} currentPath={currentPath} />
+    <Footer currentLang={currentLang} />
     <ScrollToTop />
     <script>
       // Language persistence

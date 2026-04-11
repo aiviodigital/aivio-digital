@@ -1,6 +1,7 @@
 ---
 import { translations } from '../../i18n';
 import type { Language } from '../../i18n';
+import Button from '../Button.astro';
 import AivioImage from '../common/AivioImage.astro';
 
 interface Props {
@@ -25,12 +26,12 @@ const t = translations[currentLang];
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
           <p class="text-gray-600 leading-relaxed mb-4">{service.description}</p>
-          <a
+          <Button
+          variant='secondary'
             href={`/${currentLang}${service.url}`}
-            class="text-secondary border border-secondary px-3 py-2 font-semibold hover:bg-secondary hover:text-white transition duration-300 inline-block"
           >
             {service.cta}
-          </a>
+          </Button>
         </div>
       ))}
     </div>

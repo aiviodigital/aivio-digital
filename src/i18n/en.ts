@@ -113,7 +113,7 @@ export const en = {
     badge: 'Get Started with Aivio Today',
     title: 'Get a Precise Google Ads Audit Today',
     description: 'Contact Aivio Digital Marketing Agency to schedule a detailed Google Ads consultation or audit. Let data-driven strategy, execution, and optimized results move your business forward in North America.',
-    button: 'Email',
+    button: 'Get Google Ads Account Audit',
     alt: 'Get Started Today',
   },
   finalCta: {

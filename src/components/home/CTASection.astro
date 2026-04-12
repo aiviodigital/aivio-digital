@@ -2,7 +2,6 @@
 import Button from '../Button.astro';
 import { EMAIL } from '../../constants/contact';
 import { translations } from '../../i18n';
-import AivioImage from '../common/AivioImage.astro';
 
 interface Props {
   currentLang: 'en' | 'zh';
@@ -12,31 +11,28 @@ const { currentLang } = Astro.props;
 const t = translations[currentLang];
 ---
 
-<section class="py-20 px-4 bg-secondary">
-  <div class="max-w-7xl mx-auto">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
-      <div class="text-white">
-        <!-- <span class="inline-block bg-white text-secondary px-4 py-2 rounded text-sm font-semibold mb-6">
-          {t.cta.badge}
-        </span> -->
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">
-          {t.cta.title}
-        </h2>
-        <p class="text-white/90 leading-relaxed mb-8">
-          {t.cta.description}
-        </p>
-        <div class="space-y-4">
-          <Button href={`mailto:${EMAIL}?subject=Google Ads Audit Request`} variant="primary" size="lg">
-            {t.cta.button}
-          </Button>
-        </div>
-      </div>
-      <div>
-        <AivioImage
-          src="/assets/home/H-14.png"
-          alt={t.cta.alt}
-          className="w-full h-auto rounded-lg shadow-2xl"
-        />
+<section class="py-20 px-4 bg-secondary relative overflow-hidden">
+  <div class="absolute inset-0">
+    <img
+      src="/assets/home/H-14.png"
+      alt=""
+      class="w-full h-full object-cover blur-sm scale-105"
+      aria-hidden="true"
+    />
+    <div class="absolute inset-0 bg-secondary/90"></div>
+  </div>
+  <div class="max-w-7xl mx-auto relative z-10">
+    <div class="text-white max-w-4xl text-center mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        {t.cta.title}
+      </h2>
+      <p class="text-white/90 leading-relaxed mb-8">
+        {t.cta.description}
+      </p>
+      <div class="space-y-4">
+        <Button href={`mailto:${EMAIL}?subject=Google Ads Audit Request`} variant="primary" size="lg">
+          {t.cta.button}
+        </Button>
       </div>
     </div>
   </div>

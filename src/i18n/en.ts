@@ -428,7 +428,7 @@ export const en = {
       cta: {
         title: 'Want to See If Your Google Ads Budget Is Being Used Effectively?',
         description: 'If you\'re running Google Ads and not sure whether your budget is producing real business results, a structured account audit can help identify where improvements matter most.',
-        button: 'Request a Google Ads Account Audit',
+        button: 'Book Google Ads Audit',
       },
     },
   },
@@ -649,7 +649,7 @@ export const en = {
       ready: {
         title: 'Ready to See What\'s Really Happening in Your Account?',
         subtitle: 'If you\'re unsure whether your Google Ads budget is being used effectively, an audit is the smartest place to start.',
-        button: 'Request a Google Ads Audit',
+        button: 'Book Google Ads Audit',
       },
     },
     hero: {

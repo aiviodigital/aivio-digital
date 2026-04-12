@@ -70,6 +70,19 @@ const isActive = (href: string) => {
         </Button>
       </div>
 
+      <div class="lg:hidden flex flex-col border-gray-200">
+        <!-- <LangSwitch currentLang={currentLang} variant="mobile" /> -->
+
+        <Button
+          href={getMenuLink('contact', currentLang)}
+          variant="nav"
+          size="sm"
+          class="mobile-menu-link w-full text-center"
+        >
+          Book Your Audit
+        </Button>
+      </div>
+
       <!-- Mobile Menu Button -->
       <button
         id="mobile-menu-button"
@@ -100,19 +113,6 @@ const isActive = (href: string) => {
           </li>
         ))}
       </ul>
-
-      <div class="flex flex-col gap-4 mt-6 pt-6 border-t border-gray-200">
-        <LangSwitch currentLang={currentLang} variant="mobile" />
-
-        <Button
-          href={getMenuLink('contact', currentLang)}
-          variant="secondary"
-          size="sm"
-          class="mobile-menu-link w-full text-center"
-        >
-          {t.nav.getAudit}
-        </Button>
-      </div>
     </div>
   </nav>
 </header>

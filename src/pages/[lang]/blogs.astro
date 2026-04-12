@@ -24,7 +24,7 @@ export function getStaticPaths() {
 
 <Layout title={pageTitle} description={pageMeta.description} keywords={pageMeta.keywords} lang={currentLang} currentLang={currentLang} currentPath={currentPath}>
   <main class="min-h-screen">
-    <Hero title={blogContent.title} description={blogContent.subtitle} />
+    <Hero title={blogContent.title} description={blogContent.subtitle} image='' />
 
     <BlogGrid
       posts={posts}
@@ -33,9 +33,3 @@ export function getStaticPaths() {
     />
   </main>
 </Layout>
-
-<style>
-  main {
-    width: 100%;
-  }
-</style>

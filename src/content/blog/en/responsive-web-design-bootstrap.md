@@ -29,11 +29,6 @@ Bootstrap is tested across all major browsers, ensuring your responsive design w
 ### Installation
 To use Bootstrap in your project, you can either download the CSS and JavaScript files or include them via CDN:
 
-```html
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-```
-
 ### The Grid System Explained
 Bootstrap's grid system is based on a 12-column layout. You use container, row, and col classes to create responsive layouts:
 

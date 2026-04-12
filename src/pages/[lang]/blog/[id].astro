@@ -6,8 +6,6 @@ import BlogHeader from '../../../components/blog-post/BlogHeader.astro';
 import FeaturedImage from '../../../components/blog-post/FeaturedImage.astro';
 import BlogContent from '../../../components/blog-post/BlogContent.astro';
 import TableOfContentsInline from '../../../components/blog-post/TableOfContentsInline.astro';
-import ShareButtons from '../../../components/blog-post/ShareButtons.astro';
-import AuthorBoxSidebar from '../../../components/blog-post/AuthorBoxSidebar.astro';
 import RelatedPosts from '../../../components/blog-post/RelatedPosts.astro';
 import BlogCTA from '../../../components/blog-post/BlogCTA.astro';
 import { translations } from '../../../i18n/index';
@@ -63,11 +61,8 @@ const relatedPosts = posts
   }));
 
 // Get author info
-const authorName = blogContent?.metadata?.author || post.title || 'Sarah Johnson';
 const readTime = blogContent?.metadata?.readTime || '5 min read';
 const featuredImageUrl = getImageUrl(post.image);
-
-const blogUrl = `${Astro.site?.origin || ''}/blog/${post.id}`;
 
 // Extract headings from content for table of contents
 const extractHeadings = (html: string) => {
@@ -120,20 +115,6 @@ const readMoreText = t.blogs.readMore;
           <div class="bg-white rounded-xl p-6 mb-6 shadow-sm">
             <h4 class="text-base font-bold text-gray-900 mb-4 pb-3 border-b-2 border-gray-200">Table of Contents</h4>
             <TableOfContentsInline headings={headings} />
-          </div>
-
-          <div class="bg-white rounded-xl p-6 mb-6 shadow-sm">
-            <h4 class="text-base font-bold text-gray-900 mb-4 pb-3 border-b-2 border-gray-200">Share This Article</h4>
-            <ShareButtons url={blogUrl} title={post.title} />
-          </div>
-
-          <div class="bg-white rounded-xl p-6 mb-6 shadow-sm">
-            <h4 class="text-base font-bold text-gray-900 mb-4 pb-3 border-b-2 border-gray-200">About the Author</h4>
-            <AuthorBoxSidebar
-              name={authorName}
-              role="Digital Marketing Expert"
-              bio="Passionate about helping businesses grow through innovative digital strategies and data-driven decisions."
-            />
           </div>
         </aside>
       </div>

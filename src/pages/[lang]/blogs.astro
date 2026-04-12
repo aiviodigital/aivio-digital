@@ -24,7 +24,7 @@ export function getStaticPaths() {
 
 <Layout title={pageTitle} description={pageMeta.description} keywords={pageMeta.keywords} lang={currentLang} currentLang={currentLang} currentPath={currentPath}>
   <main class="min-h-screen">
-    <Hero title={blogContent.title} description={blogContent.subtitle} image='' />
+    <Hero title={blogContent.title} description={blogContent.subtitle} image='/assets/blogs/hero.png' />
 
     <BlogGrid
       posts={posts}

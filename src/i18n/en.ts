@@ -557,7 +557,7 @@ export const en = {
   googleAdsAudit: {
     page: {
       hero: {
-        title: 'Google Ads Audit Overview',
+        title: 'Technical Google Ads Audit for Eliminated Budget Waste',
         subtitle: 'Most Google Ads accounts have silent bugs — wasted spend that looks like performance. Our QA-grade audit finds every defect in your account and gives you a clear roadmap to fix them.',
       },
       problem: {

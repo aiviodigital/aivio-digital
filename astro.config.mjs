@@ -6,12 +6,15 @@ const sanitizeName = (name) => name?.replace(/[^a-zA-Z0-9_-]/g, '_') ?? 'chunk';
 export default defineConfig({
   integrations: [],
   output: 'server',
+  build: {
+    serverEntry: 'entry.mjs'
+  },
   adapter: netlify(),
   vite: {
     build: {
       rollupOptions: {
         output: {
-          entryFileNames: (chunkInfo) => `${sanitizeName(chunkInfo.name)}-[hash].mjs`,
+          entryFileNames: (chunkInfo) => `${sanitizeName(chunkInfo.name)}.mjs`,
           chunkFileNames: (chunkInfo) => `chunks/${sanitizeName(chunkInfo.name)}-[hash].mjs`,
         },
       },

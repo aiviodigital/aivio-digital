@@ -24,14 +24,14 @@ const t = translations[currentLang];
               className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+          <h3 class="text-xl font-bold text-secondary mb-3">{service.title}</h3>
           <p class="text-gray-600 leading-relaxed mb-4">{service.description}</p>
-          <Button
+          {/* <Button
           variant='secondary'
             href={`/${currentLang}${service.url}`}
           >
             {service.cta}
-          </Button>
+          </Button> */}
         </div>
       ))}
     </div>

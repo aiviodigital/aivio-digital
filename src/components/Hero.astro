@@ -5,32 +5,46 @@ interface Props {
   title?: string;
   subtitle?: string;
   description?: string;
+  label?: string;
+  titleHighlight?: string;
   currentLang?: 'en' | 'zh';
   image?: string;
 }
 
-const { title, subtitle, image='' } = Astro.props;
+const { title, subtitle, label, titleHighlight, image='' } = Astro.props;
+
+const fullTitle = titleHighlight ? `${title} ${titleHighlight}` : title;
 ---
 
 <section class="grid md:grid-cols-2 min-h-[600px]">
   <!-- Left Side - Text Content with Beige Background -->
   <div class="bg-[#E8D5B7] flex items-center px-8 md:px-16 py-16 text-secondary">
     <div class="max-w-3xl">
+      {label && (
+        <p class="text-sm font-semibold mb-6 tracking-wider uppercase">
+          {label}
+        </p>
+      )}
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
         {title}
+        {titleHighlight && <span class="text-blue-600">{titleHighlight}</span>}
       </h1>
-      <p class="text-sm capitalize tracking-wider mb-6 font-medium">
-        {subtitle}
-      </p>
+      {subtitle && (
+        <p class="text-sm capitalize tracking-wider mb-6 font-medium">
+          {subtitle}
+        </p>
+      )}
     </div>
   </div>
 
   <!-- Right Side - Hero Image -->
-  <div class="relative bg-gray-200 min-h-[400px] md:min-h-full">
-    <AivioImage
-      src={image}
-      alt={title}
-      className="absolute inset-0 w-full h-full object-cover"
-    />
-  </div>
+  {image && (
+    <div class="relative bg-gray-200 min-h-[400px] md:min-h-full">
+      <AivioImage
+        src={image}
+        alt={title}
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+    </div>
+  )}
 </section>

@@ -1,24 +1,21 @@
 ---
+import Hero from '@/components/Hero.astro';
+
 interface Props {
   label: string;
   title: string;
   titleHighlight: string;
   subtitle: string;
+  image?: string;
 }
 
-const { label, title, titleHighlight, subtitle } = Astro.props;
+const { label, title, titleHighlight, subtitle, image = '/assets/about/about-hero.png' } = Astro.props;
 ---
 
-<section class="py-20 px-4 bg-white">
-  <div class="max-w-5xl mx-auto">
-    <p class="text-sm font-semibold text-secondary mb-6 tracking-wider uppercase">
-      {label}
-    </p>
-    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-      {title} <span class="text-blue-600">{titleHighlight}</span>
-    </h1>
-    <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl">
-      {subtitle}
-    </p>
-  </div>
-</section>
+<Hero
+  title={title}
+  subtitle={subtitle}
+  label={label}
+  titleHighlight={titleHighlight}
+  image={image}
+/>

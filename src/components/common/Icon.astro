@@ -1,12 +1,13 @@
 ---
 interface Props {
   className?: string;
+  isCentered?: boolean;
 }
 
-const { className = 'w-8 h-8' } = Astro.props;
+const { className = 'w-8 h-8', isCentered = true } = Astro.props;
 ---
 
-<div class="w-16 h-16 mx-auto bg-secondaryDark text-white rounded-lg flex items-center justify-center">
+<div class={`w-16 h-16 bg-secondaryDark text-white rounded-lg flex items-center justify-center ${isCentered ? 'mx-auto' : ''}`}>
 <svg class={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <slot />
 </svg>

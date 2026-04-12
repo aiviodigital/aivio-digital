@@ -1,4 +1,6 @@
 ---
+import Icon from '../common/Icon.astro';
+
 interface Props {
   label: string;
   title: string;
@@ -23,9 +25,6 @@ const iconMap: Record<string, string> = {
 <section class="py-20 px-4 bg-white">
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-16">
-      <p class="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase">
-        {label}
-      </p>
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
         {title}
       </h2>
@@ -37,12 +36,10 @@ const iconMap: Record<string, string> = {
     <div class="grid md:grid-cols-2 gap-8">
       {items.map((item) => (
         <div class="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
-          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={iconMap[item.icon]}></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">
+          <Icon isCentered={false}>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={iconMap[item.icon]}></path>
+          </Icon>
+          <h3 class="text-xl font-bold text-secondary mb-3 mt-4">
             {item.title}
           </h3>
           <p class="text-gray-600 leading-relaxed">

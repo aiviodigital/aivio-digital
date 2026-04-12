@@ -550,7 +550,7 @@ export const en = {
     cta: {
       title: 'Let\'s Talk About Your Growth',
       subtitle: 'Whether you\'re a local Toronto business or a global manufacturer, we\'d love to learn about your goals.',
-      button: 'Get In Touch',
+      button: 'Request Consultation',
       note: 'user use green background',
     },
   },

@@ -1,42 +1,42 @@
 export const en = {
   pageMeta: {
     home: {
-      description: 'Aivio Digital helps small businesses grow with expert Google Ads management and audit services in Toronto. Get more qualified leads and improve your ROI.',
-      keywords: 'Google Ads, Google Ads Management, Google Ads Audit, Toronto Google Ads Expert, PPC Management, Small Business Marketing',
+      description: 'High-precision Google Ads audit and management in Toronto. I apply a QA-driven approach to eliminate wasted spend and scale high-quality leads for B2B and local businesses.',
+      keywords: 'Google Ads, Google Ads Management, Google Ads Audit, Toronto Google Ads Expert, PPC Management, Small Business Marketing, B2B Leads',
     },
     googleAdsAudit: {
-      description: 'Professional Google Ads Audit service. Find wasted spend, fix tracking issues, and optimize your campaigns for better performance and ROI.',
-      keywords: 'Google Ads Audit, PPC Audit, Google Ads Optimization, Campaign Audit, Ad Performance Review',
+      description: 'Stop wasting money on irrelevant clicks. My deep-dive Google Ads audit applies software testing logic to your account structure, tracking, and keywords to identify exactly where your budget is leaking.',
+      keywords: 'Google Ads Audit, PPC Audit, Google Ads Optimization, Campaign Audit, Ad Performance Review, Find Wasted Spend',
     },
     googleAdsManagement: {
-      description: 'Expert Google Ads Management services for small businesses. Turn ad spend into qualified leads with transparent reporting and data-driven strategies.',
-      keywords: 'Google Ads Management, PPC Management, Google Ads Expert, Campaign Management, Digital Advertising',
+      description: 'Expert PMax and Search Ads management tailored for Toronto SMEs. We focus on lead quality and conversion tracking, ensuring your Google Ads system is built for long-term growth and measurable results.',
+      keywords: 'Google Ads Management, PPC Management, Google Ads Expert, Campaign Management, Digital Advertising, B2B Lead Generation',
     },
     caseStudy: {
       description: 'See how Aivio Digital helped a Toronto packaging company improve lead quality by 40% with Google Ads optimization.',
       keywords: 'Google Ads Case Study, PPC Success Story, Lead Generation Case Study, Google Ads Optimization Results',
     },
     aboutUs: {
-      description: 'Learn about Aivio Digital - Google Ads experts helping small businesses in Toronto grow with transparent, data-driven advertising strategies.',
-      keywords: 'About Aivio Digital, Google Ads Agency Toronto, PPC Experts, Digital Marketing Agency',
+      description: "Meet Tina, a Toronto-based consultant blending 10+ years of IT Software QA experience with digital marketing. I bring technical precision and a systematic 'bug-hunting' mindset to your Google Ads strategy.",
+      keywords: 'About Tina, Google Ads Expert Toronto, QA Engineer, PPC Specialist, Digital Marketing Consultant',
     },
     contactUs: {
-      description: 'Contact Aivio Digital for Google Ads Audit and Management services. Get expert help to improve your ad performance and ROI.',
-      keywords: 'Contact Aivio Digital, Google Ads Consultation, PPC Services, Get Google Ads Help',
+      description: "Ready to optimize your digital marketing? Contact Tina today for a professional Google Ads audit or to discuss your GEO and SEO strategy. Let's build a conversion system that works for your business.",
+      keywords: 'Contact Aivio Digital, Google Ads Consultation, PPC Services, Get Google Ads Help, Free Strategy Call',
     },
     blogs: {
-      description: 'Latest insights, tips, and strategies for digital marketing, Google Ads, SEO, and business growth from Aivio Digital experts.',
-      keywords: 'Digital Marketing Blog, Google Ads Tips, SEO Strategies, Marketing Insights, Business Growth',
+      description: "Stay ahead with the latest in Google Ads, GEO optimization, and local SEO. Real-world case studies and actionable advice for Toronto business owners looking to improve their digital footprint.",
+      keywords: 'Digital Marketing Blog, Google Ads Tips, SEO Strategies, Marketing Insights, Business Growth, B2B Marketing',
     },
   },
   pageTitle: {
-    home: 'Home | Aivio Digital',
-    blogs: 'Blogs | Aivio Digital',
-    googleAdsAudit: 'Google Ads Audit | Aivio Digital',
-    googleAdsManagement: 'Google Ads Management | Aivio Digital',
+    home: 'Google Ads Consultant Toronto | ROI-Driven Ad Audits & Management',
+    blogs: "Google Ads Tips & B2B Marketing Insights | Tina's Blog",
+    googleAdsAudit: 'Free Google Ads Audit Toronto | Find "Bugs" in Your Ad Spend',
+    googleAdsManagement: 'Google Ads Management Toronto | Scalable B2B Lead Generation',
     caseStudy: 'Case Study | Aivio Digital',
-    aboutUs: 'About Us | Aivio Digital',
-    contactUs: 'Contact Us | Aivio Digital',
+    aboutUs: 'About Tina | 10+ Years QA Engineer & Google Ads Specialist',
+    contactUs: 'Contact Your Toronto Google Ads Expert | Free Strategy Call',
   },
   nav: {
     home: 'Home',

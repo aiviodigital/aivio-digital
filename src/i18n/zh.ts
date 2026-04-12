@@ -1,42 +1,42 @@
 export const zh = {
   pageMeta: {
     home: {
-      description: 'Aivio Digital 帮助中小企业通过专业的 Google 广告管理和审计服务实现增长。获取更多合格潜在客户，提高投资回报率。',
-      keywords: 'Google 广告, Google 广告管理, Google 广告审计, 多伦多 Google 广告专家, PPC 管理, 中小企业营销',
+      description: '多伦多高精度 Google 广告审计和管理服务。我采用 QA 驱动的方法来消除浪费的支出，为 B2B 和本地企业扩大高质量潜在客户。',
+      keywords: 'Google 广告, Google 广告管理, Google 广告审计, 多伦多 Google 广告专家, PPC 管理, 中小企业营销, B2B 潜在客户',
     },
     googleAdsAudit: {
-      description: '专业的 Google 广告审计服务。发现浪费的支出，修复跟踪问题，优化您的广告活动以获得更好的性能和投资回报率。',
-      keywords: 'Google 广告审计, PPC 审计, Google 广告优化, 广告活动审计, 广告效果评估',
+      description: '不要再为无关点击浪费钱了。我的深度 Google 广告审计应用软件测试逻辑到您的账户结构、跟踪和关键词，准确找出您的预算在哪里泄漏。',
+      keywords: 'Google 广告审计, PPC 审计, Google 广告优化, 广告活动审计, 广告效果评估, 发现浪费支出',
     },
     googleAdsManagement: {
-      description: '为中小企业提供专家级 Google 广告管理服务。通过透明报告和数据驱动策略，将广告预算转化为合格的潜在客户。',
-      keywords: 'Google 广告管理, PPC 管理, Google 广告专家, 广告活动管理, 数字广告',
+      description: '专为多伦多中小企业量身定制的专家级 PMax 和搜索广告管理。我们专注于潜在客户质量和转化跟踪，确保您的 Google 广告系统为长期增长和可衡量结果而构建。',
+      keywords: 'Google 广告管理, PPC 管理, Google 广告专家, 广告活动管理, 数字广告, B2B 潜在客户生成',
     },
     caseStudy: {
       description: '了解 Aivio Digital 如何帮助多伦多一家包装公司通过 Google 广告优化将潜在客户质量提高了40%。',
       keywords: 'Google 广告案例, PPC 成功案例, 潜在客户生成案例, Google 广告优化结果',
     },
     aboutUs: {
-      description: '了解 Aivio Digital - 帮助多伦多中小企业通过透明、数据驱动的广告策略增长的 Google 广告专家。',
-      keywords: '关于 Aivio Digital, 多伦多 Google 广告代理, PPC 专家, 数字营销代理',
+      description: '认识 Tina，多伦多顾问，将 10 多年的 IT 软件 QA 经验与数字营销相结合。我为您的 Google 广告策略带来技术精度和系统的"漏洞追踪"思维。',
+      keywords: '关于 Tina, 多伦多 Google 广告专家, QA 工程师, PPC 专员, 数字营销顾问',
     },
     contactUs: {
-      description: '联系 Aivio Digital 获取 Google 广告审计和管理服务。获得专家帮助，提高广告效果和投资回报率。',
-      keywords: '联系 Aivio Digital, Google 广告咨询, PPC 服务, 获取 Google 广告帮助',
+      description: '准备好优化您的数字营销了吗？今天联系 Tina，获取专业 Google 广告审计或讨论您的 GEO 和 SEO 策略。让我们构建一个为您的业务服务的转化系统。',
+      keywords: '联系 Aivio Digital, Google 广告咨询, PPC 服务, 获取 Google 广告帮助, 免费策略咨询',
     },
     blogs: {
-      description: '来自 Aivio Digital 专家的最新见解、技巧和策略，涵盖数字营销、Google 广告、SEO 和业务增长。',
-      keywords: '数字营销博客, Google 广告技巧, SEO 策略, 营销见解, 业务增长',
+      description: '通过最新的 Google 广告、GEO 优化和本地 SEO 保持领先。面向希望改善数字足迹的多伦多企业主的真实案例研究和可行建议。',
+      keywords: '数字营销博客, Google 广告技巧, SEO 策略, 营销见解, 业务增长, B2B 营销',
     },
   },
   pageTitle: {
-    home: '首页 | Aivio Digital',
-    blogs: '博客 | Aivio Digital',
-    googleAdsAudit: 'Google 广告审计 | Aivio Digital',
-    googleAdsManagement: 'Google 广告管理 | Aivio Digital',
+    home: '多伦多 Google 广告顾问 | 投资回报驱动的广告审计与管理',
+    blogs: 'Google 广告技巧和 B2B 营销见解 | Tina 的博客',
+    googleAdsAudit: '多伦多免费 Google 广告审计 | 发现广告支出中的"漏洞"',
+    googleAdsManagement: '多伦多 Google 广告管理 | 可扩展的 B2B 潜在客户生成',
     caseStudy: '案例分析 | Aivio Digital',
-    aboutUs: '关于我们 | Aivio Digital',
-    contactUs: '联系我们 | Aivio Digital',
+    aboutUs: '关于 Tina | 10年以上 QA 工程师和 Google 广告专家',
+    contactUs: '联系您的多伦多 Google 广告专家 | 免费策略咨询',
   },
   nav: {
     home: '首页',

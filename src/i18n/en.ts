@@ -47,7 +47,7 @@ export const en = {
     caseStudy: 'Case Study',
     aboutUs: 'About Us',
     contactUs: 'Contact Us',
-    getAudit: 'Get a Google Ads Account Audit',
+    getAudit: 'Request a Google Ads Account Audit',
   },
   hero: {
     title: 'Precision-Engineered Google Ads for Toronto SMBs & Global Manufacturers',
@@ -113,7 +113,7 @@ export const en = {
     badge: 'Get Started with Aivio Today',
     title: 'Get a Precise Google Ads Audit Today',
     description: 'Contact Aivio Digital Marketing Agency to schedule a detailed Google Ads consultation or audit. Let data-driven strategy, execution, and optimized results move your business forward in North America.',
-    button: 'Get Google Ads Account Audit',
+    button: 'Request Google Ads Account Audit',
     alt: 'Get Started Today',
   },
   finalCta: {

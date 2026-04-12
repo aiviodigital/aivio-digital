@@ -47,7 +47,7 @@ export const en = {
     caseStudy: 'Case Study',
     aboutUs: 'About Us',
     contactUs: 'Contact Us',
-    getAudit: 'Request a Google Ads Account Audit',
+    getAudit: 'Book Google Ads Audit',
   },
   hero: {
     title: 'Precision-Engineered Google Ads for Toronto SMBs & Global Manufacturers',

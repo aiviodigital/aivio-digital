@@ -13,7 +13,7 @@ export function getMenuItems(currentLang: string): MenuItem[] {
     { key: 'googleAdsFaq', href: getMenuLink('google-ads-faq', currentLang) },
     { key: 'caseStudy', href: getMenuLink('case-study', currentLang) },
     { key: 'aboutUs', href: getMenuLink('about-us', currentLang) },
-    // { key: 'blogs', href: getMenuLink('blogs', currentLang) },
+    { key: 'blogs', href: getMenuLink('blogs', currentLang) },
     { key: 'contactUs', href: getMenuLink('contact', currentLang) },
   ];
 }

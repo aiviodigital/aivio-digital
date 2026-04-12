@@ -201,6 +201,7 @@ export const en = {
     email: 'Email',
     phone: 'Phone',
     copyright: '© {year} Aivio Digital. All rights reserved.',
+    followUs: 'Follow Us',
   },
   caseStudy: {
     hero: {

@@ -201,6 +201,7 @@ export const zh = {
     email: '邮箱',
     phone: '电话',
     copyright: '© {year} Aivio Digital. 版权所有。',
+    followUs: '关注我们',
   },
   caseStudy: {
     hero: {

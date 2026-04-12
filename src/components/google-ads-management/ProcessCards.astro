@@ -1,4 +1,6 @@
 ---
+import Icon from '../common/Icon.astro';
+
 interface Props {
   items: Array<{
     icon: string;
@@ -27,12 +29,13 @@ const { items, title, subtitle } = Astro.props;
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       {items.map((item) => (
         <div class="bg-white p-8 rounded shadow-md hover:shadow-xl transition-all duration-300">
-          <div class="w-12 h-12 bg-secondaryDark rounded-lg flex items-center justify-center mb-6">
+          <Icon><path d={item.icon} /></Icon>
+          {/* <div class="w-12 h-12 bg-secondaryDark rounded-lg flex items-center justify-center mb-6">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon}></path>
             </svg>
-          </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-3">
+          </div> */}
+          <h3 class="text-lg font-bold text-gray-900 mt-6 mb-3">
             {item.title}
           </h3>
           <p class="text-gray-600 leading-relaxed">

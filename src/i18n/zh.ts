@@ -323,8 +323,8 @@ export const zh = {
     list: [
       {
         slug: 'toronto-packaging-company',
-        industry: '定制包装（B2B）',
-        location: '加拿大多伦多',
+        image: '/assets/case/case-1.png',
+        date: '2025年3月',
         title: '多伦多定制包装公司的 Google 广告优化',
         summary: '通过战略性的着陆页优化和广告活动一致性，将不一致的线索转化为更高质量的咨询，月预算仅 CA$500。',
         results: ['326% 投资回报率增长', '45% 更低获客成本', '更高质量线索'],
@@ -332,8 +332,8 @@ export const zh = {
       },
       {
         slug: 'ai-trust-gap-welding',
-        industry: '专业焊接与金属制造',
-        location: '大多伦多地区',
+        image: '/assets/case/case-7.png',
+        date: '2026年2月',
         title: '为本地服务领导者弥合 AI 信任差距',
         summary: '我们如何通过 GEO 优化和实体权威建设，帮助一家拥有 370+ 5星评价的焊接公司在 AI 搜索引擎中获得可见性。',
         results: ['5周内 AI 可见', '出现在 AI 概览中', '提高线索质量'],

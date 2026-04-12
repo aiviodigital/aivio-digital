@@ -1,0 +1,57 @@
+---
+import AivioImage from '@/components/common/AivioImage.astro';
+
+interface CaseStudy {
+  slug: string;
+  image: string;
+  title: string;
+  summary: string;
+  date: string;
+}
+
+interface Props {
+  caseStudies: CaseStudy[];
+  viewDetails: string;
+  currentLang: string;
+}
+
+const { caseStudies, viewDetails, currentLang } = Astro.props;
+---
+
+<section class="py-20 px-4 bg-gray-50">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-8">
+      {caseStudies.map((caseStudy) => (
+        <a
+          href={`/${currentLang}/case-study/${caseStudy.slug}`}
+          class="bg-white shadow-sm hover:shadow-lg transition-shadow duration-300 group flex flex-col"
+        >
+          <div class="aspect-[16/10] overflow-hidden">
+            <AivioImage
+              src={caseStudy.image}
+              alt={caseStudy.title}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-8 flex-1 flex flex-col">
+            <h3 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">
+              {caseStudy.title}
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed flex-1 line-clamp-4">
+              {caseStudy.summary}
+            </p>
+            <span class="text-secondary text-sm font-semibold uppercase tracking-wide flex items-center gap-1 group-hover:gap-2 transition-all">
+              {viewDetails}
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </span>
+          </div>
+          <div class="px-8 py-4 border-t border-gray-100">
+            <span class="text-sm text-gray-500">{caseStudy.date}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

@@ -323,8 +323,8 @@ export const en = {
     list: [
       {
         slug: 'toronto-packaging-company',
-        industry: 'Custom Packaging (B2B)',
-        location: 'Toronto, Canada',
+        image: '/assets/case/case-1.png',
+        date: 'March 2025',
         title: 'Google Ads Optimization for a Toronto Custom Packaging Company',
         summary: 'How we transformed inconsistent leads into higher-quality inquiries with a limited budget of CA$500/month through strategic landing page optimization and campaign alignment.',
         results: ['326% ROI Increase', '45% Lower CPA', 'Higher Quality Leads'],
@@ -332,8 +332,8 @@ export const en = {
       },
       {
         slug: 'ai-trust-gap-welding',
-        industry: 'Specialized Welding & Metal Fabrication',
-        location: 'Greater Toronto Area',
+        image: '/assets/case/case-7.png',
+        date: 'February 2026',
         title: 'Bridge the AI Trust Gap for a Local Service Leader',
         summary: 'How we helped a 370+ 5-star welding company become visible to AI search engines through GEO optimization and entity authority building.',
         results: ['AI Visibility in 5 Weeks', 'Featured in AI Overviews', 'Improved Lead Quality'],

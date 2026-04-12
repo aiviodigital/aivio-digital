@@ -1,4 +1,6 @@
 ---
+import Icon from '../common/Icon.astro';
+
 interface Props {
   content: {
     systemCheck: {
@@ -130,11 +132,12 @@ const secondRow = steps.slice(2, 4);
                 </div>
                 <!-- Icon overlay -->
                 <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center">
+                  <Icon><path d={stepIcons[step.icon as keyof typeof stepIcons] || stepIcons['check-circle']} /></Icon>
+                  {/* <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center">
                     <svg class="w-7 h-7 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={stepIcons[step.icon as keyof typeof stepIcons] || stepIcons['check-circle']}></path>
                     </svg>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -179,11 +182,12 @@ const secondRow = steps.slice(2, 4);
                 </div>
                 <!-- Icon overlay -->
                 <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center">
+                  <Icon><path d={stepIcons[step.icon as keyof typeof stepIcons] || stepIcons['check-circle']} /></Icon>
+                  {/* <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center">
                     <svg class="w-7 h-7 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={stepIcons[step.icon as keyof typeof stepIcons] || stepIcons['check-circle']}></path>
                     </svg>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

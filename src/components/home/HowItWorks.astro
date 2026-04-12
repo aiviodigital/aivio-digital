@@ -1,6 +1,7 @@
 ---
 import { translations } from '../../i18n/index';
 import AivioImage from '@/components/common/AivioImage.astro';
+import Icon from '../common/Icon.astro';
 
 interface Props {
   currentLang: string;
@@ -29,11 +30,12 @@ const steps = [
         {steps.map((step, index) => (
           <div class="flex gap-6 items-start bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
             <div class="flex-shrink-0">
-              <div class="w-14 h-14 bg-primary rounded-lg flex items-center justify-center">
+              <Icon><path d={step.icon} /></Icon>
+              {/* <div class="w-14 h-14 bg-primary rounded-lg flex items-center justify-center">
                 <svg class="w-9 h-9 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={step.icon}></path>
                 </svg>
-              </div>
+              </div> */}
             </div>
             <div class="flex-1">
               <div class="flex items-center gap-3 mb-2">

@@ -1,9 +1,9 @@
 import { defineConfig } from 'astro/config';
-import netlify from '@astrojs/netlify/functions';
+import netlify from '@astrojs/netlify';
 
 export default defineConfig({
   integrations: [],
-  output: 'hybrid',
+  output: 'server',
   adapter: netlify(),
   i18n: {
     defaultLocale: 'en',

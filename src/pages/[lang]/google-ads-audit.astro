@@ -37,7 +37,7 @@ export function getStaticPaths() {
     <Hero
       title={content.hero.title}
       subtitle={content.hero.subtitle}
-      image="/assets/audit/audit-hero.png"
+      image="/assets/audit/Audit-2.png"
     />
 
     <!-- The Problem (Agitation) Section -->
@@ -66,10 +66,9 @@ export function getStaticPaths() {
     <SystemCheckSection content={content} badge={content.systemCheck.badge} lang={currentLang} />
 
     <!-- Dark Green Section with Images -->
-    <section class="bg-secondary py-16 px-4">
+    <!-- <section class="bg-secondary py-16 px-4">
       <div class="max-w-7xl mx-auto">
         <div class="grid md:grid-cols-3 gap-6">
-          <!-- Image 1 -->
           <div class="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
             <AivioImage
               src="/assets/audit/Audit-1.png"
@@ -78,7 +77,6 @@ export function getStaticPaths() {
             />
           </div>
 
-          <!-- Image 2 -->
           <div class="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
             <AivioImage
               src="/assets/audit/Audit-2.png"
@@ -87,7 +85,6 @@ export function getStaticPaths() {
             />
           </div>
 
-          <!-- Image 3 -->
           <div class="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
             <AivioImage
               src="/assets/audit/Audit-3.png"
@@ -97,7 +94,7 @@ export function getStaticPaths() {
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
      <!-- What Happens After -->
     <StepsSection
@@ -124,7 +121,7 @@ export function getStaticPaths() {
     />
 
     <!-- Need More Answers Section -->
-    <section class="py-20 px-4 bg-gray-50">
+    <!-- <section class="py-20 px-4 bg-gray-50">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
           {content.contact.title}
@@ -140,7 +137,7 @@ export function getStaticPaths() {
           {content.contact.button}
         </Button>
       </div>
-    </section>
+    </section> -->
   </main>
 </Layout>
 

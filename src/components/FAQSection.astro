@@ -29,7 +29,7 @@ const cardClass = variant === 'gradient'
     <div class="space-y-4">
       {items.map((item) => (
 <details class="{cardClass} group border-b border-gray-200">
-  <summary class="p-6 cursor-pointer text-secondary font-semibold flex justify-between items-center transition-all duration-300 ease-in-out hover:translate-x-1">
+  <summary class="p-6 cursor-pointer text-secondary font-semibold flex justify-between items-center transition-all duration-300 ease-in-out">
     {item.question}
     <svg class="w-5 h-5 text-secondary flex-shrink-0 ml-4 transform transition-transform duration-300 ease-out group-open:rotate-180 group-open:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12M6 12h12" class="group-open:hidden"></path>
@@ -80,7 +80,6 @@ const cardClass = variant === 'gradient'
   }
 
   details.bg-gradient-to-r:hover {
-    transform: translateY(-2px);
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
   }
 
@@ -90,7 +89,6 @@ const cardClass = variant === 'gradient'
   }
 
   details.group:hover {
-    transform: translateY(-2px);
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
   }
 </style>

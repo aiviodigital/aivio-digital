@@ -195,7 +195,7 @@ export const en = {
   },
   footer: {
     about: 'About',
-    aboutText: 'Helping small businesses grow with Google Ads optimization and management.',
+    aboutText: '  Helping businesses eliminate "bugs" in their ad spend through data-driven Google Ads audits and ROI-focused growth strategies.',
     quickLinks: 'Quick Links',
     contact: 'Contact',
     email: 'Email',
@@ -541,7 +541,7 @@ export const en = {
     page: {
       hero: {
         title: 'Google Ads Audit Overview',
-        subtitle: 'A comprehensive evaluation of your Google Ads campaigns focusing on key performance metrics and tailored strategic recommendations.',
+        subtitle: 'Most Google Ads accounts have silent bugs — wasted spend that looks like performance. Our QA-grade audit finds every defect in your account and gives you a clear roadmap to fix them.',
       },
       problem: {
         headline: 'Stop Guessing. Start Growing.',

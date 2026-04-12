@@ -12,9 +12,11 @@ import { EMAIL } from '../../constants/contact';
 const { title, subtitle, buttonText, bgColor = 'from-primary to-primaryDark' } = Astro.props;
 ---
 
-<section class={`py-20 px-4 bg-secondary bg-[url(/assets/audit/audit-hero.png)]`}>
-  <div class="max-w-3xl mx-auto text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">
+<section class="py-20 px-4 relative overflow-hidden">
+  <div class="absolute inset-0 bg-[url(/assets/audit/audit-hero.png)] bg-cover bg-center"></div>
+  <div class="absolute inset-0 bg-gray-300/50 backdrop-blur-sm"></div>
+  <div class="relative max-w-3xl mx-auto text-center z-10">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-secondary">
       {title}
     </h2>
     <p class="text-xl text-white mb-8">
@@ -22,7 +24,7 @@ const { title, subtitle, buttonText, bgColor = 'from-primary to-primaryDark' } =
     </p>
     <Button
       href={`mailto:${EMAIL}?subject=Google Ads Audit Request`}
-      variant="white"
+      variant="secondary"
       size="lg"
     >
       {buttonText}

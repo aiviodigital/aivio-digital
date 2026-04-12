@@ -246,84 +246,16 @@ export const en = {
       alt: 'Proven Google Ads Driving Business Growth',
       button: 'Request Consultation',
     },
-    title: 'Case Study: Google Ads Optimization for a Toronto Custom Packaging Company',
-    metadata: {
-      industry: 'Industry: Custom Packaging (B2B)',
-      location: 'Location: Toronto, Canada',
-      spend: 'Monthly Google Ads Spend: ~CA$500',
-      type: 'Campaign Type: Google Search Ads',
-    },
-    background: {
-      title: 'Background',
-      description: 'This Toronto-based custom packaging company provides made-to-order solutions for small and mid-sized businesses. Despite running Google Search ads, they weren\'t seeing consistent inquiry leads. The owner felt unsure whether budget was being used effectively.',
-    },
-    challenge: {
-      title: 'The Challenge',
-      point1: 'Ads were generating clicks, but inquiry volume was inconsistent.',
-      point2: 'Landing page content was minimal and didn\'t clearly explain process or value.',
-      point3: 'Visitors often left the page without submitting a form.',
-      point4: 'Limited visibility into why users weren\'t converting.',
-      point5: 'With a small budget, every click mattered, but the website wasn\'t optimized to support conversions.',
-    },
-    diagnosis: {
-      title: 'Diagnosis & Findings',
-      description: 'After reviewing the Google Ads account and landing page, key issues were identified:',
-      landingPage: {
-        title: '1. Landing Page Content Gap',
-        description: 'Lacked clear value proposition, order process, and target audience explanation.',
-      },
-      trust: {
-        title: '2. Trust & Clarity Issues',
-        description: 'No FAQs for minimum order quantities, timelines, or customization options.',
-      },
-      budget: {
-        title: '3. Budget Constraints',
-        description: 'With only CA$500/month, improving conversion quality was more important than expanding traffic.',
-      },
-    },
-    optimization: {
-      title: 'Optimization Strategy',
-      description: 'Focus was on improving post-click performance rather than increasing ad spend. Key actions included:',
-      landingPage: {
-        title: 'Landing Page Optimization',
-        point1: 'Rewrote key sections to clearly explain capabilities, target customers, and order process.',
-        point2: 'Improved headline clarity to match search intent.',
-      },
-      faq: {
-        title: 'Added FAQ Section',
-        description: 'Addressed top customer questions: minimum order, customization, timelines, and industry use cases.',
-      },
-      alignment: {
-        title: 'Improved Ad & Landing Page Alignment',
-        description: 'Ensured ad copy matched updated page content to reduce confusion and low-quality clicks.',
-      },
-    },
-    results: {
-      title: 'Results & Impact',
-      point1: 'Higher-quality inquiries without increasing ad spend.',
-      point2: 'Improved engagement on the landing page.',
-      point3: 'Fewer low-quality clicks and better ROI on a limited budget.',
-      point4: 'Business owner gained confidence and clear visibility into lead sources.',
-      point5: 'Most importantly, the account shifted from "running ads blindly" to having a controlled, intentional setup.',
-    },
-    takeaway: {
-      title: 'Key Takeaway',
-      description: 'For small-budget Google Ads accounts, clarity and conversion quality are more important than traffic volume. Optimizing landing page content and answering customer questions can turn limited traffic into meaningful inquiries.',
-    },
-    cta: {
-      title: 'Want to See If Your Google Ads Budget Is Being Used Effectively?',
-      description: 'If you\'re running Google Ads and not sure whether your budget is producing real business results, a structured account audit can help identify where improvements matter most.',
-      button: 'Start with a Google Ads Account Audit',
-    },
   },
   caseStudies: {
     listTitle: 'Our Case Studies',
     listSubtitle: 'Explore real results from our Google Ads and digital marketing campaigns',
     viewDetails: 'View Details',
+    backToList: 'Back to Case Studies',
     list: [
       {
         slug: 'toronto-packaging-company',
-        image: '/assets/case/case-1.png',
+        image: '/assets/case/toronto-packaging-company.png',
         date: 'March 2025',
         title: 'Google Ads Optimization for a Toronto Custom Packaging Company',
         summary: 'How we transformed inconsistent leads into higher-quality inquiries with a limited budget of CA$500/month through strategic landing page optimization and campaign alignment.',
@@ -332,7 +264,7 @@ export const en = {
       },
       {
         slug: 'ai-trust-gap-welding',
-        image: '/assets/case/case-7.png',
+        image: '/assets/case/ai-trust-gap-welding.png',
         date: 'February 2026',
         title: 'Bridge the AI Trust Gap for a Local Service Leader',
         summary: 'How we helped a 370+ 5-star welding company become visible to AI search engines through GEO optimization and entity authority building.',
@@ -340,7 +272,7 @@ export const en = {
         tags: ['GEO', 'AI Search', 'Local SEO'],
       },
     ],
-    welding: {
+    'ai-trust-gap-welding': {
       title: 'Case Study: Bridge the AI Trust Gap for a Local Service Leader',
       client: {
         title: 'The Client',
@@ -411,7 +343,92 @@ export const en = {
       cta: {
         title: 'Is Your Business Invisible to AI Search?',
         description: 'If you have strong reviews and a quality website but aren\'t being recommended by AI engines, you may have a data bridge problem. A structured GEO Audit can reveal the gaps.',
-        button: 'Request a GEO Audit',
+        button: 'Request Consultation',
+      },
+    },
+    'toronto-packaging-company': {
+      title: 'Case Study: Google Ads Optimization for a Toronto Custom Packaging Company',
+      metadata: {
+        industry: 'Industry: Custom Packaging (B2B)',
+        location: 'Location: Toronto, Canada',
+        spend: 'Monthly Google Ads Spend: ~CA$500',
+        type: 'Campaign Type: Google Search Ads',
+      },
+      background: {
+        title: 'Background',
+        description: 'This Toronto-based custom packaging company provides made-to-order solutions for small and mid-sized businesses. Despite running Google Search ads, they weren\'t seeing consistent inquiry leads. The owner felt unsure whether budget was being used effectively.',
+      },
+      challenge: {
+        title: 'The Challenge',
+        points: [
+          'Ads were generating clicks, but inquiry volume was inconsistent.',
+          'Landing page content was minimal and didn\'t clearly explain process or value.',
+          'Visitors often left the page without submitting a form.',
+          'Limited visibility into why users weren\'t converting.',
+          'With a small budget, every click mattered, but the website wasn\'t optimized to support conversions.',
+        ],
+      },
+      diagnosis: {
+        title: 'Diagnosis & Findings',
+        description: 'After reviewing the Google Ads account and landing page, key issues were identified:',
+        items: [
+          {
+            title: '1. Landing Page Content Gap',
+            description: 'Lacked clear value proposition, order process, and target audience explanation.',
+          },
+          {
+            title: '2. Trust & Clarity Issues',
+            description: 'No FAQs for minimum order quantities, timelines, or customization options.',
+          },
+          {
+            title: '3. Budget Constraints',
+            description: 'With only CA$500/month, improving conversion quality was more important than expanding traffic.',
+          },
+        ],
+      },
+      optimization: {
+        title: 'Optimization Strategy',
+        description: 'Focus was on improving post-click performance rather than increasing ad spend. Key actions included:',
+        items: [
+          {
+            title: 'Landing Page Optimization',
+            points: [
+              'Rewrote key sections to clearly explain capabilities, target customers, and order process.',
+              'Improved headline clarity to match search intent.',
+            ],
+          },
+          {
+            title: 'Added FAQ Section',
+            description: 'Addressed top customer questions: minimum order, customization, timelines, and industry use cases.',
+          },
+          {
+            title: 'Improved Ad & Landing Page Alignment',
+            description: 'Ensured ad copy matched updated page content to reduce confusion and low-quality clicks.',
+          },
+        ],
+      },
+      results: {
+        title: 'Results & Impact',
+        metrics: [
+          { value: '326%', label: 'ROI Increase' },
+          { value: '45%', label: 'Lower CPA' },
+        ],
+        points: [
+          'Higher-quality inquiries without increasing ad spend.',
+          'Improved engagement on the landing page.',
+          'Fewer low-quality clicks and better ROI on a limited budget.',
+          'Business owner gained confidence and clear visibility into lead sources.',
+          'Most importantly, the account shifted from "running ads blindly" to having a controlled, intentional setup.',
+        ],
+      },
+      takeaway: {
+        title: 'Key Takeaway',
+        description: 'For small-budget Google Ads accounts, clarity and conversion quality are more important than traffic volume. Optimizing landing page content and answering customer questions can turn limited traffic into meaningful inquiries.',
+      },
+      cta: {
+        title: 'Want to See If Your Google Ads Budget Is Being Used Effectively?',
+        description: 'If you\'re running Google Ads and not sure whether your budget is producing real business results, a structured account audit can help identify where improvements matter most.',
+        button: 'Request a Google Ads Account Audit',
       },
     },
   },

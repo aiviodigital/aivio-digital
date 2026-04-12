@@ -17,20 +17,19 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    const emailContent = `
-Name: ${fullName}
-Email: ${email}
-Phone: ${phone || 'Not provided'}
-Company: ${company || 'Not provided'}
+    if (!RESEND_API_KEY) {
+      return new Response(
+        JSON.stringify({ error: 'Missing Resend API key' }),
+        { status: 500, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
 
-Message:
-${message}
-    `.trim();
+    const emailContent = `Name: ${fullName}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\nCompany: ${company || 'Not provided'}\n\nMessage:\n${message}`;
 
     const resendResponse = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${RESEND_API_KEY}`,
+        Authorization: `Bearer ${RESEND_API_KEY}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -62,3 +61,4 @@ ${message}
     );
   }
 };
+

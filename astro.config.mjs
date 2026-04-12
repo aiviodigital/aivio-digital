@@ -1,25 +1,10 @@
 import { defineConfig } from 'astro/config';
 import netlify from '@astrojs/netlify/functions';
 
-const sanitizeName = (name) => name?.replace(/[^a-zA-Z0-9_-]/g, '_') ?? 'chunk';
-
 export default defineConfig({
   integrations: [],
-  output: 'server',
-  build: {
-    serverEntry: 'entry.mjs'
-  },
+  output: 'hybrid',
   adapter: netlify(),
-  vite: {
-    build: {
-      rollupOptions: {
-        output: {
-          entryFileNames: (chunkInfo) => `${sanitizeName(chunkInfo.name)}.mjs`,
-          chunkFileNames: (chunkInfo) => `chunks/${sanitizeName(chunkInfo.name)}-[hash].mjs`,
-        },
-      },
-    },
-  },
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'zh'],

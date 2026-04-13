@@ -5,7 +5,7 @@ export const en = {
       keywords: 'Google Ads, Google Ads Management, Google Ads Audit, Toronto Google Ads Expert, PPC Management, Small Business Marketing, B2B Leads',
     },
     googleAdsAudit: {
-      description: 'Stop wasting money on irrelevant clicks. My deep-dive Google Ads audit applies software testing logic to your account structure, tracking, and keywords to identify exactly where your budget is leaking.',
+      description: 'Stop wasting budget on irrelevant clicks. For $199, get a deep-dive audit applying software testing logic to your account to find "bugs" and identify exactly where your money is leaking.',
       keywords: 'Google Ads Audit, PPC Audit, Google Ads Optimization, Campaign Audit, Ad Performance Review, Find Wasted Spend',
     },
     googleAdsManagement: {
@@ -32,7 +32,7 @@ export const en = {
   pageTitle: {
     home: 'Google Ads Consultant Toronto | ROI-Driven Ad Audits & Management',
     blogs: "Google Ads Tips & B2B Marketing Insights | Tina's Blog",
-    googleAdsAudit: 'Free Google Ads Audit Toronto | Find "Bugs" in Your Ad Spend',
+    googleAdsAudit: 'Google Ads Professional Audit Toronto | Expert $199 Ad Diagnostic',
     googleAdsManagement: 'Google Ads Management Toronto | Scalable B2B Lead Generation',
     caseStudy: 'Case Study | Aivio Digital',
     aboutUs: 'About Tina | 10+ Years QA Engineer & Google Ads Specialist',

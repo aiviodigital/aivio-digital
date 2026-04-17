@@ -1,8 +1,7 @@
-import { EMAIL } from '@/constants/contact';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
-const RECIPIENT_EMAIL = EMAIL || 'weisen.li@hotmail.com';
+const RECIPIENT_EMAIL = 'info@aivio-digital.com';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   // Only allow POST requests

@@ -16,10 +16,10 @@ const { title, subtitle, label, titleHighlight, image='' } = Astro.props;
 const fullTitle = titleHighlight ? `${title} ${titleHighlight}` : title;
 ---
 
-<section class="grid md:grid-cols-2 min-h-[600px]">
+<section class="flex flex-col md:flex-row">
   <!-- Left Side - Text Content with Beige Background -->
-  <div class="bg-[#E8D5B7] flex items-center px-8 md:px-16 py-16 text-secondary">
-    <div class="max-w-3xl">
+  <div class="bg-[#E8D5B7] flex-1 flex items-center justify-center px-8 md:px-16 py-16 text-secondary">
+    <div class="">
       {label && (
         <p class="text-sm font-semibold mb-6 tracking-wider uppercase">
           {label}
@@ -39,7 +39,7 @@ const fullTitle = titleHighlight ? `${title} ${titleHighlight}` : title;
 
   <!-- Right Side - Hero Image -->
   {image && (
-    <div class="relative bg-gray-200 min-h-[400px] md:min-h-full">
+    <div class="relative flex-1 bg-gray-200 min-h-[400px] md:min-h-full">
       <AivioImage
         src={image}
         alt={title}

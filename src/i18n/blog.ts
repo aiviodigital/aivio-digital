@@ -11,14 +11,14 @@ export function getImageUrl(image: string): string {
 
 export const blogPosts = {
   en: [
-    {
-      id: 'responsive-web-design-bootstrap',
-      title: 'How to Create Responsive Web Design Using Bootstrap',
-      excerpt: 'Responsive web design allows your site to adapt to different screen sizes, providing an optimal user experience whether your audience is on a desktop, tablet, or smartphone. One of the most powerful tools for creating responsive designs is Bootstrap.',
-      date: 'August 14, 2024',
-      category: 'Web Development',
-      image: '/assets/blogs/responsive-design.png',
-    },
+    // {
+    //   id: 'responsive-web-design-bootstrap',
+    //   title: 'How to Create Responsive Web Design Using Bootstrap',
+    //   excerpt: 'Responsive web design allows your site to adapt to different screen sizes, providing an optimal user experience whether your audience is on a desktop, tablet, or smartphone. One of the most powerful tools for creating responsive designs is Bootstrap.',
+    //   date: 'August 14, 2024',
+    //   category: 'Web Development',
+    //   image: '/assets/blogs/responsive-design.png',
+    // },
     {
       id: 'customer-persona',
       title: 'What is Customer Persona in Digital Marketing',
@@ -85,14 +85,14 @@ export const blogPosts = {
     },
   ],
   zh: [
-    {
-      id: 'responsive-web-design-bootstrap',
-      title: '如何使用 Bootstrap 创建响应式网页设计',
-      excerpt: '响应式网页设计允许您的网站适应不同的屏幕尺寸，为桌面、平板电脑或智能手机上的用户提供最佳用户体验。',
-      date: '2024年8月14日',
-      category: 'Web 开发',
-      image: '/assets/blogs/responsive-design.png',
-    },
+    // {
+    //   id: 'responsive-web-design-bootstrap',
+    //   title: '如何使用 Bootstrap 创建响应式网页设计',
+    //   excerpt: '响应式网页设计允许您的网站适应不同的屏幕尺寸，为桌面、平板电脑或智能手机上的用户提供最佳用户体验。',
+    //   date: '2024年8月14日',
+    //   category: 'Web 开发',
+    //   image: '/assets/blogs/responsive-design.png',
+    // },
     {
       id: 'customer-persona',
       title: '数字营销中的客户画像是什么',

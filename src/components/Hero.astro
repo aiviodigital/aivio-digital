@@ -12,8 +12,6 @@ interface Props {
 }
 
 const { title, subtitle, label, titleHighlight, image='' } = Astro.props;
-
-const fullTitle = titleHighlight ? `${title} ${titleHighlight}` : title;
 ---
 
 <section class="flex flex-col md:flex-row">

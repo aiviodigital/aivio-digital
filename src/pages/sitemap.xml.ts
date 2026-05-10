@@ -32,7 +32,7 @@ export const GET: APIRoute = async () => {
     'ai-trust-gap-welding',
   ];
 
-  const urls: string[] = [];
+  const urls: string[] = [site];
 
   for (const lang of locales) {
     for (const page of staticPages) {

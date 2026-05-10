@@ -36,17 +36,17 @@ export const GET: APIRoute = async () => {
 
   for (const lang of locales) {
     for (const page of staticPages) {
-      const prefix = lang === 'en' ? '' : `/${lang}`;
+      const prefix = `/${lang}`;
       urls.push(`${site}${prefix}${page.url}`);
     }
 
     for (const slug of blogSlugs) {
-      const prefix = lang === 'en' ? '' : `/${lang}`;
+      const prefix = `/${lang}`;
       urls.push(`${site}${prefix}/blog/${slug}`);
     }
 
     for (const slug of caseStudySlugs) {
-      const prefix = lang === 'en' ? '' : `/${lang}`;
+      const prefix = `/${lang}`;
       urls.push(`${site}${prefix}/case-study/${slug}`);
     }
   }

@@ -1,0 +1,148 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { translations } from '@/i18n/index';
+import FAQSection from '@/components/FAQSection.astro';
+import CTASection from '@/components/google-ads-audit/CTASection.astro';
+import { EMAIL } from '@/constants/contact';
+
+const { lang } = Astro.params;
+const currentLang = (lang || 'en') as 'en' | 'zh';
+const currentPath = Astro.url.pathname;
+const t = translations[currentLang];
+const pageTitle = t.pageTitle.geo;
+const pageMeta = t.pageMeta.geo;
+const content = t.geo;
+
+const faqItems = [
+  {
+    question: content.faq.q1.question,
+    answer: content.faq.q1.answer
+  },
+  {
+    question: content.faq.q2.question,
+    answer: content.faq.q2.answer
+  },
+  {
+    question: content.faq.q3.question,
+    answer: content.faq.q3.answer
+  },
+  {
+    question: content.faq.q4.question,
+    answer: content.faq.q4.answer
+  }
+];
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+---
+
+<Layout title={pageTitle} description={pageMeta.description} keywords={pageMeta.keywords} lang={currentLang} currentLang={currentLang} currentPath={currentPath}>
+  <main>
+    <!-- Section 1: Hero -->
+    <section class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20 px-4">
+      <div class="max-w-6xl mx-auto text-center">
+        <p class="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-4">
+          {content.hero.label}
+        </p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          {content.hero.title}
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+          {content.hero.subtitle}
+        </p>
+        <a
+          href={`mailto:${EMAIL}?subject=GEO Audit Request`}
+          class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
+        >
+          {content.hero.cta}
+        </a>
+      </div>
+    </section>
+
+    <!-- Section 2: Why GEO -->
+    <section class="py-20 px-4 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            {content.whyGeo.title}
+          </h2>
+        </div>
+        <div class="max-w-4xl mx-auto">
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            {content.whyGeo.intro}
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            {content.whyGeo.description}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: GEO Process -->
+    <section class="py-20 px-4 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            {content.process.title}
+          </h2>
+        </div>
+        <div class="space-y-8">
+          {content.process.steps.map((step, index) => (
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-8 hover:shadow-md transition-shadow">
+              <div class="flex items-start gap-6">
+                <div class="flex-shrink-0">
+                  <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center">
+                    <span class="text-2xl font-bold text-blue-600">{step.step}</span>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                    {step.title}
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: FAQs -->
+    <FAQSection
+      items={faqItems}
+      title={content.faq.title}
+      backgroundColor="white"
+    />
+
+    <!-- Section 5: Final CTA -->
+    <section class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20 px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          {content.finalCta.title}
+        </h2>
+        <p class="text-lg text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          {content.finalCta.description}
+        </p>
+        <a
+          href={`mailto:${EMAIL}?subject=GEO Audit Request`}
+          class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
+        >
+          {content.finalCta.button}
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: 100%;
+  }
+</style>

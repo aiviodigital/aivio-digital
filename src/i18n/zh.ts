@@ -28,6 +28,10 @@ export const zh = {
       description: '通过最新的 Google 广告、GEO 优化和本地 SEO 保持领先。面向希望改善数字足迹的多伦多企业主的真实案例研究和可行建议。',
       keywords: '数字营销博客, Google 广告技巧, SEO 策略, 营销见解, 业务增长, B2B 营销',
     },
+    geo: {
+      description: 'AI 搜索优化（GEO）服务。在 ChatGPT、Gemini 和 Perplexity 的 AI 答案中保持可见。采用 IT 审计和 QA 方法论的系统化方法。',
+      keywords: 'GEO, 生成式引擎优化, AI 搜索, ChatGPT SEO, Gemini 优化, AI 可见性, Perplexity SEO',
+    },
   },
   pageTitle: {
     home: '多伦多 Google 广告顾问 | 投资回报驱动的广告审计与管理',
@@ -37,11 +41,13 @@ export const zh = {
     caseStudy: '案例分析 | Aivio Digital',
     aboutUs: '关于 Tina | 10年以上 QA 工程师和 Google 广告专家',
     contactUs: '联系您的多伦多 Google 广告专家 | 免费策略咨询',
+    geo: 'AI 搜索优化 (GEO) | 数字可见性的未来',
   },
   nav: {
     home: '首页',
     googleAdsAudit: 'Google 广告账户审计',
     googleAdsManagement: 'Google 广告账户管理',
+    geo: 'AI 搜索优化',
     googleAdsFaq: 'Google 广告常见问题',
     blogs: '博客',
     caseStudy: '案例分析',
@@ -1007,5 +1013,67 @@ export const zh = {
       messageLabel: '消息',
       submitButton: '发送消息',
     },
+  },
+  geo: {
+    hero: {
+      label: 'AI 搜索优化',
+      title: '您的企业在 AI 搜索结果中存在吗？',
+      subtitle: '随着搜索从链接列表演变为直接的 AI 答案，保持可见性需要一个新的框架。在 Aivio Digital，我们运用高级软件 QA 和 IT 审计的视角，为 Gemini、ChatGPT 和 Perplexity 时代打造您的数字足迹。',
+      cta: '预约 GEO 审计',
+    },
+    whyGeo: {
+      title: '超越 SEO：为什么您需要 GEO',
+      intro: '传统的 SEO 已不再足够。如今，您的客户不仅仅是点击链接；他们正在向 AI 寻求推荐。如果您的企业不在"AI 答案"中，您就是隐形。',
+      description: '在 Aivio Digital，我们将 10 多年的高级软件 QA 和 IT 审计经验应用于生成式引擎优化（GEO）领域。我们不只是"优化内容"——我们调试您的数字足迹，确保 AI 模型将您视为行业内高权威性、可信赖的选择。',
+    },
+    process: {
+      title: '我们的系统化 GEO 流程：',
+      steps: [
+        {
+          step: '1',
+          title: 'AI 足迹审计',
+          description: '我们分析 AI 目前如何感知您的品牌。数据缺口在哪里？为什么竞争对手被引用而不是您？我们找出您当前可见性中的"漏洞"。'
+        },
+        {
+          step: '2',
+          title: '权威性工程',
+          description: '使用结构化数据、专家引用和"图书馆逻辑"内容，我们构建 AI 模型用来验证您的专业性和可靠性的技术信号。'
+        },
+        {
+          step: '3',
+          title: '意图对齐',
+          description: '我们将您网站的信息架构与高意图 B2B 和本地查询对齐，确保您在最重要的时候出现——在决策阶段。'
+        },
+        {
+          step: '4',
+          title: '持续优化',
+          description: 'AI 模型不断更新。我们提供持续的监控和调整，以保持您作为首选引用的地位。'
+        }
+      ]
+    },
+    faq: {
+      title: '常见问题',
+      q1: {
+        question: '什么是 GEO，它与 SEO 有什么不同？',
+        answer: 'SEO（搜索引擎优化）专注于在网页链接列表中排名。GEO（生成式引擎优化）专注于在 AI 搜索引擎（如 Google Gemini 和 ChatGPT）提供的叙述性答案中让您的品牌被引用和推荐。'
+      },
+      q2: {
+        question: '为什么软件 QA 背景对 AI 搜索很重要？',
+        answer: 'AI 搜索受复杂数据系统和逻辑的支配。凭借 IT 审计和软件测试背景，我们将 GEO 作为需要优化的技术系统来处理，确保您的数据干净、结构化，并且对 AI 爬虫来说是"索引就绪"的。'
+      },
+      q3: {
+        question: '需要多长时间才能看到结果？',
+        answer: '与传统 SEO 类似，GEO 是一种中长期策略。然而，因为我们专注于高权威性技术信号，许多客户在 3 到 6 个月内就能看到 AI"引用"和品牌提及的变化。'
+      },
+      q4: {
+        question: '这会取代我的 Google 广告吗？',
+        answer: '不会。GEO 和 Google 广告协同工作。当广告捕获即时点击时，GEO 在 AI 驱动的搜索未来中建立长期有机权威性。'
+      }
+    },
+    finalCta: {
+      title: '不要让您的竞争对手拥有 AI 答案。',
+      description: '向 AI 搜索的过渡正在发生。通过由技术专家设计的系统化 GEO 策略，确保您作为行业领导者的地位。',
+      button: '预约 GEO 审计'
+    }
   },
 };

@@ -28,6 +28,10 @@ export const en = {
       description: "Stay ahead with the latest in Google Ads, GEO optimization, and local SEO. Real-world case studies and actionable advice for Toronto business owners looking to improve their digital footprint.",
       keywords: 'Digital Marketing Blog, Google Ads Tips, SEO Strategies, Marketing Insights, Business Growth, B2B Marketing',
     },
+    geo: {
+      description: 'AI Search Optimization (GEO) services. Stay visible in AI answers from ChatGPT, Gemini, and Perplexity. Systematic approach using IT auditing and QA methodology.',
+      keywords: 'GEO, Generative Engine Optimization, AI Search, ChatGPT SEO, Gemini Optimization, AI Visibility, Perplexity SEO',
+    },
   },
   pageTitle: {
     home: 'Google Ads Consultant Toronto | ROI-Driven Ad Audits & Management',
@@ -37,11 +41,13 @@ export const en = {
     caseStudy: 'Case Study | Aivio Digital',
     aboutUs: 'About Tina | 10+ Years QA Engineer & Google Ads Specialist',
     contactUs: 'Contact Your Toronto Google Ads Expert | Free Strategy Call',
+    geo: 'AI Search Optimization (GEO) | The Future of Digital Visibility',
   },
   nav: {
     home: 'Home',
     googleAdsAudit: 'Google Ads Audit',
     googleAdsManagement: 'Google Ads Management',
+    geo: 'AI Search Optimization',
     googleAdsFaq: 'Google Ads FAQ',
     blogs: 'Blog',
     caseStudy: 'Case Study',
@@ -1007,5 +1013,67 @@ export const en = {
       messageLabel: 'Message',
       submitButton: 'Send Message',
     },
+  },
+  geo: {
+    hero: {
+      label: 'AI SEARCH OPTIMIZATION',
+      title: 'Is Your Business Present in AI Search Results?',
+      subtitle: 'As search evolves from a list of links to direct AI answers, staying visible requires a new framework. At Aivio Digital, we apply a Senior Software QA and IT Auditing lens to engineer your digital footprint for the age of Gemini, ChatGPT, and Perplexity.',
+      cta: 'Book a GEO Audit',
+    },
+    whyGeo: {
+      title: 'Beyond SEO: Why You Need GEO',
+      intro: 'Traditional SEO is no longer enough. Today, your customers aren\'t just clicking links; they are asking AI for recommendations. If your business isn\'t part of the "AI Answer," you\'re invisible.',
+      description: 'At Aivio Digital, we apply 10+ years of Senior Software QA and IT Auditing experience to the world of Generative Engine Optimization (GEO). We don\'t just "optimize content"—we debug your digital footprint to ensure AI models recognize you as the high-authority, trustworthy choice for your industry.',
+    },
+    process: {
+      title: 'Our Systematic GEO Process:',
+      steps: [
+        {
+          step: '1',
+          title: 'AI Footprint Audit',
+          description: 'We analyze how AI currently perceives your brand. Where are the data gaps? Why are competitors being cited instead of you? We find the "bugs" in your current visibility.'
+        },
+        {
+          step: '2',
+          title: 'Authority Engineering',
+          description: 'Using structured data, expert citations, and "library-logic" content, we build the technical signals that AI models use to verify your expertise and reliability.'
+        },
+        {
+          step: '3',
+          title: 'Intent Alignment',
+          description: 'We align your website\'s information architecture with high-intent B2B and local queries, ensuring you appear when it matters most—during the decision-making phase.'
+        },
+        {
+          step: '4',
+          title: 'Continuous Optimization',
+          description: 'AI models update constantly. We provide ongoing monitoring and adjustments to maintain your position as a top-cited recommendation.'
+        }
+      ]
+    },
+    faq: {
+      title: 'Frequently Asked Questions',
+      q1: {
+        question: 'What is GEO and how is it different from SEO?',
+        answer: 'SEO (Search Engine Optimization) focuses on ranking in a list of web links. GEO (Generative Engine Optimization) focuses on getting your brand cited and recommended within the narrative answers provided by AI search engines like Google Gemini and ChatGPT.'
+      },
+      q2: {
+        question: 'Why does a Software QA background matter for AI Search?',
+        answer: 'AI search is governed by complex data systems and logic. With a background in IT Auditing and Software Testing, we approach GEO as a technical system to be optimized, ensuring your data is clean, structured, and "index-ready" for AI crawlers.'
+      },
+      q3: {
+        question: 'How long does it take to see results?',
+        answer: 'Much like traditional SEO, GEO is a medium-to-long-term strategy. However, because we focus on high-authority technical signals, many clients see shifts in AI "citations" and brand mentions within 3 to 6 months.'
+      },
+      q4: {
+        question: 'Does this replace my Google Ads?',
+        answer: 'No. GEO and Google Ads work together. While Ads capture immediate clicks, GEO builds long-term organic authority in the AI-driven future of search.'
+      }
+    },
+    finalCta: {
+      title: 'Don\'t Let Your Competitors Own the AI Answer.',
+      description: 'The transition to AI search is happening now. Secure your place as the industry leader with a systematic GEO strategy designed by a technical expert.',
+      button: 'Book a GEO Audit'
+    }
   },
 };

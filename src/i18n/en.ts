@@ -1,8 +1,8 @@
 export const en = {
   pageMeta: {
     home: {
-      description: 'High-precision Google Ads audit and management in Toronto. I apply a QA-driven approach to eliminate wasted spend and scale high-quality leads for B2B and local businesses.',
-      keywords: 'Google Ads, Google Ads Management, Google Ads Audit, Toronto Google Ads Expert, PPC Management, Small Business Marketing, B2B Leads',
+      description: 'Aivio Digital applies technical precision to Google Ads and GEO. We debug your marketing systems to dominate search and AI recommendations.',
+      keywords: 'Google Ads, Google Ads Management, Google Ads Audit, Toronto Google Ads Expert, PPC Management, Small Business Marketing, B2B Leads, GEO, AI Search Optimization',
     },
     googleAdsAudit: {
       description: 'Stop wasting budget on irrelevant clicks. For $199, get a deep-dive audit applying software testing logic to your account to find "bugs" and identify exactly where your money is leaking.',
@@ -29,19 +29,19 @@ export const en = {
       keywords: 'Digital Marketing Blog, Google Ads Tips, SEO Strategies, Marketing Insights, Business Growth, B2B Marketing',
     },
     geo: {
-      description: 'AI Search Optimization (GEO) services. Stay visible in AI answers from ChatGPT, Gemini, and Perplexity. Systematic approach using IT auditing and QA methodology.',
+      description: "Don't just rank—get cited. Our GEO service engineers your digital footprint so AI models recommend your business.",
       keywords: 'GEO, Generative Engine Optimization, AI Search, ChatGPT SEO, Gemini Optimization, AI Visibility, Perplexity SEO',
     },
   },
   pageTitle: {
-    home: 'Google Ads Consultant Toronto | ROI-Driven Ad Audits & Management',
+    home: 'Aivio Digital | Google Ads & AI Search Optimization for B2B',
     blogs: "Google Ads Tips & B2B Marketing Insights | Tina's Blog",
     googleAdsAudit: 'Google Ads Professional Audit Toronto | Expert $199 Ad Diagnostic',
     googleAdsManagement: 'Google Ads Management Toronto | Scalable B2B Lead Generation',
     caseStudy: 'Case Study | Aivio Digital',
     aboutUs: 'About Tina | 10+ Years QA Engineer & Google Ads Specialist',
     contactUs: 'Contact Your Toronto Google Ads Expert | Free Strategy Call',
-    geo: 'AI Search Optimization (GEO) | The Future of Digital Visibility',
+    geo: 'AI Search Optimization (GEO) | Engineering Your Brand for Gemini & ChatGPT',
   },
   nav: {
     home: 'Home',

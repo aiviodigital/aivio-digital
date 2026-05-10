@@ -1,8 +1,8 @@
 export const zh = {
   pageMeta: {
     home: {
-      description: '多伦多高精度 Google 广告审计和管理服务。我采用 QA 驱动的方法来消除浪费的支出，为 B2B 和本地企业扩大高质量潜在客户。',
-      keywords: 'Google 广告, Google 广告管理, Google 广告审计, 多伦多 Google 广告专家, PPC 管理, 中小企业营销, B2B 潜在客户',
+      description: 'Aivio Digital 将技术精准应用于 Google 广告和 GEO。我们调试您的营销系统，以主导搜索和 AI 推荐。',
+      keywords: 'Google 广告, Google 广告管理, Google 广告审计, 多伦多 Google 广告专家, PPC 管理, 中小企业营销, B2B 潜在客户, GEO, AI 搜索优化',
     },
     googleAdsAudit: {
       description: '不要再为无关点击浪费钱了。我的深度 Google 广告审计应用软件测试逻辑到您的账户结构、跟踪和关键词，准确找出您的预算在哪里泄漏。',
@@ -29,19 +29,19 @@ export const zh = {
       keywords: '数字营销博客, Google 广告技巧, SEO 策略, 营销见解, 业务增长, B2B 营销',
     },
     geo: {
-      description: 'AI 搜索优化（GEO）服务。在 ChatGPT、Gemini 和 Perplexity 的 AI 答案中保持可见。采用 IT 审计和 QA 方法论的系统化方法。',
+      description: '不仅仅要排名——更要被引用。我们的 GEO 服务为您的数字足迹进行工程设计，让 AI 模型推荐您的业务。',
       keywords: 'GEO, 生成式引擎优化, AI 搜索, ChatGPT SEO, Gemini 优化, AI 可见性, Perplexity SEO',
     },
   },
   pageTitle: {
-    home: '多伦多 Google 广告顾问 | 投资回报驱动的广告审计与管理',
+    home: 'Aivio Digital | B2B 的 Google 广告和 AI 搜索优化服务',
     blogs: 'Google 广告技巧和 B2B 营销见解 | Tina 的博客',
     googleAdsAudit: '多伦多免费 Google 广告审计 | 发现广告支出中的"漏洞"',
     googleAdsManagement: '多伦多 Google 广告管理 | 可扩展的 B2B 潜在客户生成',
     caseStudy: '案例分析 | Aivio Digital',
     aboutUs: '关于 Tina | 10年以上 QA 工程师和 Google 广告专家',
     contactUs: '联系您的多伦多 Google 广告专家 | 免费策略咨询',
-    geo: 'AI 搜索优化 (GEO) | 数字可见性的未来',
+    geo: 'AI 搜索优化 (GEO) | 为 Gemini 和 ChatGPT 打造品牌',
   },
   nav: {
     home: '首页',

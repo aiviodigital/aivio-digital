@@ -1,0 +1,15 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HomePageContentZh from '../../components/home/HomePageContentZh.astro';
+import { translations } from '../../i18n';
+
+const currentLang = 'zh' as const;
+const currentPath = Astro.url.pathname;
+const t = translations[currentLang];
+const pageTitle = t.pageTitle.home;
+const pageMeta = t.pageMeta.home;
+---
+
+<Layout title={pageTitle} description={pageMeta.description} keywords={pageMeta.keywords} lang={currentLang} currentLang={currentLang} currentPath={currentPath}>
+  <HomePageContentZh currentLang={currentLang} />
+</Layout>

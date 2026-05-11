@@ -1,7 +1,7 @@
 export const zh = {
   pageMeta: {
     home: {
-      description: 'Aivio Digital 将技术精准应用于 Google 广告和 GEO。我们调试您的营销系统，以主导搜索和 AI 推荐。',
+      description: '想知道广告费花哪了吗？Aivio Digital 专注广告深度审计与 AI 搜索优化（GEO），精准锁定预算漏洞并布局 AI 推荐位，助您的企业在北美市场赢取高质量线索。',
       keywords: 'Google 广告, Google 广告管理, Google 广告审计, 多伦多 Google 广告专家, PPC 管理, 中小企业营销, B2B 潜在客户, GEO, AI 搜索优化',
     },
     googleAdsAudit: {
@@ -34,7 +34,7 @@ export const zh = {
     },
   },
   pageTitle: {
-    home: 'Aivio Digital | B2B 的 Google 广告和 AI 搜索优化服务',
+    home: 'Aivio Digital | 多伦多 Google Ads 审计与 AI 搜索优化 (GEO) - 资深 IT 审计师领跑',
     blogs: 'Google 广告技巧和 B2B 营销见解 | Tina 的博客',
     googleAdsAudit: '多伦多免费 Google 广告审计 | 发现广告支出中的"漏洞"',
     googleAdsManagement: '多伦多 Google 广告管理 | 可扩展的 B2B 潜在客户生成',
@@ -53,7 +53,7 @@ export const zh = {
     caseStudy: '案例分析',
     aboutUs: '关于我们',
     contactUs: '联系我们',
-    getAudit: '预约 Google Ads 审计服务',
+    getAudit: '预约广告与 AI 审计',
   },
   hero: {
     title: '主导搜索和 AI 推荐的系统',

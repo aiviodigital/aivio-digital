@@ -1,0 +1,369 @@
+---
+import FAQSection from '../FAQSection.astro';
+import Button from '../Button.astro';
+
+interface Props {
+  currentLang: 'en' | 'zh';
+}
+
+const { currentLang } = Astro.props;
+---
+
+<!-- Hero Section -->
+<section class="bg-[#E8D5B7] py-16 md:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary mb-8 leading-tight">
+        关于 Aivio Digital：用 IT 审计逻辑，驱动 AI 时代增长
+      </h1>
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+        Aivio Digital 是一家专注于 Google Ads 技术审计与 AI 搜索优化（GEO）的咨询机构。我们以 10+ 年 IT 软件质量保证（QA）的专业精神，为客户"调试"营销系统，解决流量浪费与数据失真问题。依托于在门锁五金、建筑建材等 B2B 领域的实战经验，我们协助客户在生成式 AI 时代重塑数字权威，实现从传统搜索到 AI 推荐的跨代升级。
+      </p>
+      <div class="inline-flex flex-wrap justify-center gap-3 text-sm md:text-base text-secondary/80">
+        <span class="bg-white/60 px-4 py-2 rounded-full">技术审计思维</span>
+        <span class="bg-white/60 px-4 py-2 rounded-full">AI 推荐逻辑</span>
+        <span class="bg-white/60 px-4 py-2 rounded-full">国际贸易洞察</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service Request Form -->
+<section class="py-16 px-4 bg-white">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="text-2xl md:text-3xl font-bold text-secondary mb-4">
+      服务预约
+    </h2>
+    <p class="text-gray-600 mb-8">
+      请填写下方表格，我们将在 24 小时内与您联系。
+    </p>
+    <Button href={`/${currentLang}/contact`} variant="secondary" size="lg">
+      服务预约
+    </Button>
+  </div>
+</section>
+
+<!-- Core Services -->
+<section class="py-16 px-4 bg-gray-50">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-secondary text-center mb-12">
+      核心服务
+    </h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Google Ads Audit -->
+      <div class="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300">
+        <div class="w-16 h-16 bg-secondary/10 rounded-lg flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">谷歌广告技术审计</h3>
+        <p class="text-sm text-secondary mb-4">Google Ads Audit</p>
+        <p class="text-gray-600 mb-4 leading-relaxed">像代码审查一样诊断您的广告账户，捕捉浪费预算的"Bug"。</p>
+        <p class="text-lg font-semibold text-secondary">$199</p>
+        <p class="text-sm text-gray-500">单次付费</p>
+      </div>
+
+      <!-- Ads Management -->
+      <div class="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300">
+        <div class="w-16 h-16 bg-secondary/10 rounded-lg flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">谷歌广告代运营</h3>
+        <p class="text-sm text-secondary mb-4">Ads Management</p>
+        <p class="text-gray-600 mb-4 leading-relaxed">专注于 B2B 获客与 ROI。基于数据逻辑持续优化，提升线索质量。</p>
+        <p class="text-lg font-semibold text-secondary">$500/月起</p>
+      </div>
+
+      <!-- GEO -->
+      <div class="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300">
+        <div class="w-16 h-16 bg-secondary/10 rounded-lg flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">AI 搜索优化</h3>
+        <p class="text-sm text-secondary mb-4">GEO</p>
+        <p class="text-gray-600 mb-4 leading-relaxed">针对生成式 AI 时代的技术工程，确保品牌在 AI 回答中获得权威引用。</p>
+        <p class="text-lg font-semibold text-secondary">根据项目规模定制报价</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Growth Steps -->
+<section class="py-16 px-4 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-secondary text-center mb-12">
+      Aivio 增长四部曲：从"Debug"到规模化盈利
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Step 1 -->
+      <div class="flex gap-6 bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+        <div class="flex-shrink-0">
+          <div class="w-14 h-14 bg-secondary text-white rounded-lg flex items-center justify-center text-2xl font-bold">1</div>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-gray-900 mb-1">系统诊断 (Audit)</h3>
+          <p class="text-secondary font-semibold mb-3">揪出预算黑洞</p>
+          <p class="text-gray-600 leading-relaxed">以 IT 审计思维深度扫描账户逻辑，精准定位流失预算的设置漏洞，确保资金投入在最高效的环节。</p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="flex gap-6 bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+        <div class="flex-shrink-0">
+          <div class="w-14 h-14 bg-secondary text-white rounded-lg flex items-center justify-center text-2xl font-bold">2</div>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-gray-900 mb-1">架构重构 (Rebuild)</h3>
+          <p class="text-secondary font-semibold mb-3">重建数据链路</p>
+          <p class="text-gray-600 leading-relaxed">应用 QA 严谨框架重组广告架构，配置 100% 精准的转化追踪，让每一分投入都有据可查，告别盲目投放。</p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="flex gap-6 bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+        <div class="flex-shrink-0">
+          <div class="w-14 h-14 bg-secondary text-white rounded-lg flex items-center justify-center text-2xl font-bold">3</div>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-gray-900 mb-1">AI 足迹工程 (Engineering)</h3>
+          <p class="text-secondary font-semibold mb-3">赢得 AI 推荐</p>
+          <p class="text-gray-600 leading-relaxed">优化网站底层逻辑，提升品牌在数字空间的"信用分"，确保在 Gemini 和 ChatGPT 的 AI 回答中获得权威引用。</p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="flex gap-6 bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+        <div class="flex-shrink-0">
+          <div class="w-14 h-14 bg-secondary text-white rounded-lg flex items-center justify-center text-2xl font-bold">4</div>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-gray-900 mb-1">持续迭代 (Optimization)</h3>
+          <p class="text-secondary font-semibold mb-3">科学驱动 ROI</p>
+          <p class="text-gray-600 leading-relaxed">坚持以"假设检验"进行数据实验，通过系统性测试不断突破转化瓶颈，实现长期增长。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-16 px-4 bg-[#E8D5B7]">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-secondary text-center mb-12">
+      客户评价
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Susanna -->
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <div class="flex items-center gap-1 mb-4">
+          {[1,2,3,4,5].map(() => (
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+            </svg>
+          ))}
+        </div>
+        <p class="text-gray-700 mb-6 leading-relaxed">"在与 Aivio Digital 合作之前，我们在谷歌广告上投入了大量资金，却始终看不到理想的回报。他们深度审计了我们的广告系列，修复了追踪漏洞，并优化了定位策略。仅仅两个月内，我们的线索质量就有了显著提升，每个潜在客户的获取成本（CPL）降低了 30% 以上！强烈推荐他们专业的方法和清晰的指导。"</p>
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-secondary/10 rounded flex items-center justify-center">
+            <span class="text-secondary font-bold text-lg">S</span>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900">Susanna</p>
+            <p class="text-sm text-gray-600">定制包装公司负责人</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jason -->
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <div class="flex items-center gap-1 mb-4">
+          {[1,2,3,4,5].map(() => (
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+            </svg>
+          ))}
+        </div>
+        <p class="text-gray-700 mb-6 leading-relaxed">"以前投广告就像把钱扔进黑洞。Aivio Digital 从零开始为我们搭建了谷歌广告账户，包括撰写所有的广告文案和优化受众定位。现在，我们能够持续收到意向客户的咨询，而且报告非常透明，让我们清楚地知道每一分钱的去向。他们的服务绝对是顶尖水平。"</p>
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-secondary/10 rounded flex items-center justify-center">
+            <span class="text-secondary font-bold text-lg">J</span>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900">Jason</p>
+            <p class="text-sm text-gray-600">定制印刷服务公司负责人</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-20 px-4 bg-white">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-secondary">常见问题</h2>
+    </div>
+    <div class="space-y-4">
+      <details class="bg-white rounded shadow-md group border-b border-gray-200">
+        <summary class="p-6 cursor-pointer text-secondary font-semibold flex justify-between items-center transition-all duration-300 ease-in-out">
+          为什么我需要 $199 的审计而不是直接开始投放？
+          <svg class="w-5 h-5 text-secondary flex-shrink-0 ml-4 transform transition-transform duration-300 ease-out group-open:rotate-180 group-open:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12M6 12h12"></path>
+          </svg>
+        </summary>
+        <div class="grid-wrapper">
+          <div class="px-6 pb-6 text-black font-normal leading-relaxed">
+            就像运行程序前需要 Debug 一样，审计能确保您的资金不被浪费在错误的逻辑上。
+          </div>
+        </div>
+      </details>
+
+      <details class="bg-white rounded shadow-md group border-b border-gray-200">
+        <summary class="p-6 cursor-pointer text-secondary font-semibold flex justify-between items-center transition-all duration-300 ease-in-out">
+          什么是 GEO？它和传统 SEO 有什么区别？
+          <svg class="w-5 h-5 text-secondary flex-shrink-0 ml-4 transform transition-transform duration-300 ease-out group-open:rotate-180 group-open:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12M6 12h12"></path>
+          </svg>
+        </summary>
+        <div class="grid-wrapper">
+          <div class="px-6 pb-6 text-black font-normal leading-relaxed">
+            SEO 是为了排在链接前列，GEO 是为了让 AI（如 ChatGPT）在回答问题时把你作为权威来源引用。
+          </div>
+        </div>
+      </details>
+
+      <details class="bg-white rounded shadow-md group border-b border-gray-200">
+        <summary class="p-6 cursor-pointer text-secondary font-semibold flex justify-between items-center transition-all duration-300 ease-in-out">
+          你们懂制造业和 B2B 吗？
+          <svg class="w-5 h-5 text-secondary flex-shrink-0 ml-4 transform transition-transform duration-300 ease-out group-open:rotate-180 group-open:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12M6 12h12"></path>
+          </svg>
+        </summary>
+        <div class="grid-wrapper">
+          <div class="px-6 pb-6 text-black font-normal leading-relaxed">
+            我们拥有多年门锁五金、建筑五金及跨境贸易经验，能精准理解 B2B 决策逻辑。
+          </div>
+        </div>
+      </details>
+
+      <details class="bg-white rounded shadow-md group border-b border-gray-200">
+        <summary class="p-6 cursor-pointer text-secondary font-semibold flex justify-between items-center transition-all duration-300 ease-in-out">
+          我已经有广告代理商或自己在投广告了，为什么还需要 Aivio 的审计服务？
+          <svg class="w-5 h-5 text-secondary flex-shrink-0 ml-4 transform transition-transform duration-300 ease-out group-open:rotate-180 group-open:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12M6 12h12"></path>
+          </svg>
+        </summary>
+        <div class="grid-wrapper">
+          <div class="px-6 pb-6 text-black font-normal leading-relaxed">
+            很多广告账户看似在运行，实则存在数据追踪失效或逻辑重叠等"Bug"。作为资深 IT 审计师，我们会以第三方视角进行"代码级"的深度扫描，帮您找出被现有团队忽视的预算浪费点，确保您的营销决策建立在 100% 准确的数据之上。
+          </div>
+        </div>
+      </details>
+
+      <details class="bg-white rounded shadow-md group border-b border-gray-200">
+        <summary class="p-6 cursor-pointer text-secondary font-semibold flex justify-between items-center transition-all duration-300 ease-in-out">
+          我的预算并不多，现在布局 GEO（AI 搜索优化）是否太早？
+          <svg class="w-5 h-5 text-secondary flex-shrink-0 ml-4 transform transition-transform duration-300 ease-out group-open:rotate-180 group-open:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12M6 12h12"></path>
+          </svg>
+        </summary>
+        <div class="grid-wrapper">
+          <div class="px-6 pb-6 text-black font-normal leading-relaxed">
+            恰恰相反，越早布局成本越低。搜索流量的逻辑正在发生跨代更替，AI 引用已成为 B2B 品牌建立权威的关键。通过 GEO 技术工程，我们能让您的企业在 AI 回答中抢占先机，这种数字资产的长期增值效应远超单纯的点击付费。
+          </div>
+        </div>
+      </details>
+
+      <details class="bg-white rounded shadow-md group border-b border-gray-200">
+        <summary class="p-6 cursor-pointer text-secondary font-semibold flex justify-between items-center transition-all duration-300 ease-in-out">
+          你们对 B2B 制造业和跨境贸易了解多少？
+          <svg class="w-5 h-5 text-secondary flex-shrink-0 ml-4 transform transition-transform duration-300 ease-out group-open:rotate-180 group-open:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12M6 12h12"></path>
+          </svg>
+        </summary>
+        <div class="grid-wrapper">
+          <div class="px-6 pb-6 text-black font-normal leading-relaxed">
+            我们拥有超过 10 年的国际贸易与进出口行业背景，深耕门锁五金、建筑五金及家具物流等领域。我们不仅懂技术，更懂北美 B2B 决策链的特殊性，能够精准翻译您的产品价值，协助全球制造商消除文化与市场的双重隔阂。
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="py-20 px-4 bg-secondary text-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+      别只盯着排名，被客户选上才是真增长
+    </h2>
+    <p class="text-xl text-white/90 mb-8">
+      你的广告和 AI 搜索，准备好接受审计了吗？
+    </p>
+    
+    <div class="bg-white/10 backdrop-blur rounded-xl p-8 mb-8 text-left">
+      <p class="text-lg mb-4">联系我们，帮您解决：</p>
+      <ul class="space-y-3">
+        <li class="flex items-start gap-3">
+          <svg class="w-6 h-6 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span>揪出预算黑洞：像审计代码一样定位设置漏洞，停止浪费每一分广告费。</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-6 h-6 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span>抢占 AI 推荐：优化数字足迹，让品牌成为 Gemini 和 ChatGPT 的首选引用来源。</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-6 h-6 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span>打通北美市场：利用 10 年 IT 审计与跨境贸易背景，精准对接北美买家需求。</span>
+        </li>
+      </ul>
+    </div>
+    
+    <Button href={`/${currentLang}/contact`} variant="primary" size="lg" class="bg-white text-secondary hover:bg-gray-100">
+      预约广告与 AI 审计
+    </Button>
+    
+    <p class="mt-8 text-white/80 text-sm">
+      多伦多专业顾问 Tina，提供中、英、粤三语支持
+    </p>
+  </div>
+</section>
+
+<style>
+  details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  details .grid-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-out;
+  }
+  details[open] .grid-wrapper {
+    grid-template-rows: 1fr;
+    transition: grid-template-rows 0.5s ease-in-out;
+  }
+  details .grid-wrapper > div {
+    overflow: hidden;
+  }
+  details.group {
+    transition: all 0.3s ease;
+  }
+  details.group:hover {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+</style>

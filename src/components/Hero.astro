@@ -5,30 +5,24 @@ interface Props {
   title?: string;
   subtitle?: string;
   description?: string;
-  label?: string;
   titleHighlight?: string;
   currentLang?: 'en' | 'zh';
   image?: string;
 }
 
-const { title, subtitle, label, titleHighlight, image='' } = Astro.props;
+const { title, subtitle, titleHighlight, image='' } = Astro.props;
 ---
 
 <section class="flex flex-col md:flex-row">
   <!-- Left Side - Text Content with Beige Background -->
   <div class="bg-[#E8D5B7] flex-1 flex items-center justify-center px-8 md:px-16 py-16 text-secondary">
     <div class="">
-      {label && (
-        <p class="text-sm font-semibold mb-6 tracking-wider uppercase">
-          {label}
-        </p>
-      )}
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
         {title}
         {titleHighlight && <span class="">{titleHighlight}</span>}
       </h1>
       {subtitle && (
-        <p class="text-sm capitalize text-black tracking-wider mb-6 font-medium">
+        <p class="text-lg text-gray-700 leading-relaxed mb-8 max-w-2xl">
           {subtitle}
         </p>
       )}

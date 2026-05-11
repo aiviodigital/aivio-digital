@@ -2,8 +2,8 @@
 import Layout from '@/layouts/Layout.astro';
 import { translations } from '@/i18n/index';
 import FAQSection from '@/components/FAQSection.astro';
-import CTASection from '@/components/google-ads-audit/CTASection.astro';
 import { EMAIL } from '@/constants/contact';
+import Button from '../../components/Button.astro';
 
 const { lang } = Astro.params;
 const currentLang = (lang || 'en') as 'en' | 'zh';
@@ -43,23 +43,20 @@ export function getStaticPaths() {
 <Layout title={pageTitle} description={pageMeta.description} keywords={pageMeta.keywords} lang={currentLang} currentLang={currentLang} currentPath={currentPath}>
   <main>
     <!-- Section 1: Hero -->
-    <section class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20 px-4">
+    <section class="bg-primary text-secondary py-20 px-4">
       <div class="max-w-6xl mx-auto text-center">
-        <p class="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-4">
-          {content.hero.label}
-        </p>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
           {content.hero.title}
         </h1>
-        <p class="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+        <p class="text-lg md:text-xl max-w-4xl mx-auto mb-8 leading-relaxed">
           {content.hero.subtitle}
         </p>
-        <a
+        <Button
           href={`mailto:${EMAIL}?subject=GEO Audit Request`}
-          class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
+          variant="secondary"
         >
           {content.hero.cta}
-        </a>
+        </Button>
       </div>
     </section>
 

@@ -47,7 +47,7 @@ export const en = {
     home: 'Home',
     googleAdsAudit: 'Google Ads Audit',
     googleAdsManagement: 'Google Ads Management',
-    geo: 'AI Search Optimization',
+    geo: 'AI Search Optimization(GEO)',
     googleAdsFaq: 'Google Ads FAQ',
     blogs: 'Blog',
     caseStudy: 'Case Study',

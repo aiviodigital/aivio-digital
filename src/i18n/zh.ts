@@ -47,7 +47,7 @@ export const zh = {
     home: '首页',
     googleAdsAudit: 'Google 广告账户审计',
     googleAdsManagement: 'Google 广告账户管理',
-    geo: 'AI 搜索优化',
+    geo: 'AI 搜索优化(GEO)',
     googleAdsFaq: 'Google 广告常见问题',
     blogs: '博客',
     caseStudy: '案例分析',

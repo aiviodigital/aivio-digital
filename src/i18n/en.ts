@@ -261,7 +261,7 @@ export const en = {
     bottomSection: {
       title: 'Proven Google Ads Driving Business Growth',
       alt: 'Proven Google Ads Driving Business Growth',
-      button: 'Request Consultation',
+      button: 'Get My Ads & AI Visibility Audit',
     },
   },
   caseStudies: {
@@ -360,7 +360,7 @@ export const en = {
       cta: {
         title: 'Is Your Business Invisible to AI Search?',
         description: 'If you have strong reviews and a quality website but aren\'t being recommended by AI engines, you may have a data bridge problem. A structured GEO Audit can reveal the gaps.',
-        button: 'Request Consultation',
+        button: 'Get My Ads & AI Visibility Audit',
       },
     },
     'toronto-packaging-company': {
@@ -572,7 +572,7 @@ export const en = {
     cta: {
       title: 'Let\'s Talk About Your Growth',
       subtitle: 'Whether you\'re a local Toronto business or a global manufacturer, we\'d love to learn about your goals.',
-      button: 'Request Consultation',
+      button: 'Get My Ads & AI Visibility Audit',
       note: 'user use green background',
     },
   },
@@ -834,7 +834,7 @@ export const en = {
       cta: {
         title: 'Start Optimizing Your Google Ads Campaign Today',
         alt: 'Start optimizing',
-        button: 'Request Consultation',
+        button: 'Get My Ads & AI Visibility Audit',
       },
       howWeManage: {
         title: 'How We Manage Google Ads',
@@ -993,7 +993,7 @@ export const en = {
     helpSection: {
       title: 'Questions? We\'re Here to Help',
       description: 'If you have additional inquiries or need personalized guidance on Google Ads, our team is ready to provide precise answers and strategic guidance tailored to your business needs.',
-      button: 'Request Consultation',
+      button: 'Get My Ads & AI Visibility Audit',
     },
     benefits: [
       {

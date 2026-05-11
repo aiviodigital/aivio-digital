@@ -53,13 +53,13 @@ export const en = {
     caseStudy: 'Case Study',
     aboutUs: 'About Us',
     contactUs: 'Contact Us',
-    getAudit: 'Get My Ads & AI Audit',
+    getAudit: 'Get My Ads & AI Visibility Audit',
   },
   hero: {
     title: 'The System for Dominating Search and AI Recommendations',
     tagline: 'Optimized Google Ads with Precision for Measurable Growth',
     subtitle: 'As search shifts from links to AI answers, we engineer your digital authority. Led by a Senior Software QA & IT Auditor, we debug your Google Ads and GEO strategy to ensure you win the click and the citation.',
-    cta: 'Get My Ads & AI Audit',
+    cta: 'Get My Ads & AI Visibility Audit',
     alt: {
       dashboard: 'Google Ads Dashboard',
       analytics: 'Analytics Review',
@@ -130,7 +130,7 @@ export const en = {
     badge: 'Get Started with Aivio Today',
     title: "Don't Just Rank—Get Chosen.",
     description: 'Get a comprehensive review of your Google Ads and AI Search visibility. We find the gaps in your strategy so your brand becomes the top recommendation for North American buyers.',
-    button: 'Get My Ads & AI Audit',
+    button: 'Get My Ads & AI Visibility Audit',
     alt: 'Get Started Today',
   },
   finalCta: {

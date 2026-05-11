@@ -116,7 +116,7 @@ export function getStaticPaths() {
     />
 
     <!-- Section 5: Final CTA -->
-    <section class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20 px-4">
+    <section class="bg-secondary text-white py-20 px-4">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-6">
           {content.finalCta.title}
@@ -124,12 +124,12 @@ export function getStaticPaths() {
         <p class="text-lg text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
           {content.finalCta.description}
         </p>
-        <a
+        <Button
           href={`mailto:${EMAIL}?subject=GEO Audit Request`}
-          class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
+          variant='secondary'
         >
           {content.finalCta.button}
-        </a>
+        </Button>
       </div>
     </section>
   </main>

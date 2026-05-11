@@ -15,6 +15,13 @@ const SERVICES_IMAGES:{[key:string]:string} = {
   'geo': '/assets/geo/ai-search-optimization.png',
 }
 
+
+const SERVICES_IMAGES_SECOND:{[key:string]:string} = {
+  'google-ads-management': '/assets/home/H-7.png',
+  'data-driven': '/assets/home/H-6.png',
+  'transparent-reporting':'/assets/mgmt/mgmt-hero.png'
+}
+
 ---
 
 <section class="py-16 px-4 bg-white">
@@ -45,7 +52,7 @@ const SERVICES_IMAGES:{[key:string]:string} = {
     <div class="grid md:grid-cols-3 gap-6 mt-6">
       {t.services.secondRow.map((card, index) => (
         <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-          <AivioImage src={`/assets/home/H-${7 + index}.png`} alt={card.alt} className="w-full h-48 object-cover" />
+          <AivioImage src={SERVICES_IMAGES_SECOND[card.url]} alt={card.alt} className="w-full h-48 object-cover" />
           <div class="p-6 text-center">
             <h3 class="text-xl font-bold text-secondary mb-3">{card.title}</h3>
             <p class="text-gray-600 mb-4 leading-relaxed">

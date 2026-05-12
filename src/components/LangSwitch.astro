@@ -9,31 +9,33 @@ import { languages } from '../i18n/index';
 const { currentLang, variant = 'desktop' } = Astro.props;
 
 const baseClasses = 'flex gap-1 items-center bg-gray-100 rounded-md p-1';
-const buttonBaseClasses = 'whitespace-nowrap px-3 py-1 rounded text-sm font-medium transition';
+const buttonBaseClasses = 'whitespace-nowrap px-2 py-1 rounded text-sm font-medium transition';
 
 const containerClasses = variant === 'desktop' 
   ? baseClasses
-  : `${baseClasses} w-full`;
+  : `${baseClasses} `;
 
 const buttonClasses = (code: string) =>
   variant === 'desktop'
     ? `${buttonBaseClasses} ${currentLang === code ? 'bg-white text-secondary shadow-sm' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200 transition-all duration-200'}`
     : `${buttonBaseClasses} flex-1 py-2 ${currentLang === code ? 'bg-white text-secondary shadow-sm' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200 transition-all duration-200'}`;
+
+const otherLanguage = currentLang === 'en'
+  ? { code: 'zh', name: languages.zh }
+  : { code: 'en', name: languages.en };
 ---
 
 <div class={containerClasses}>
-  {Object.entries(languages).map(([code, name]) => (
-    <button
-      data-lang={code}
-      class={`${buttonClasses(code)} ${variant === 'mobile' ? 'mobile-lang-switch-btn' : 'lang-switch-btn'}`}
-    >
-      {name}
-    </button>
-  ))}
+  <button
+    data-lang={otherLanguage.code}
+    class={`${buttonClasses(otherLanguage.code)} ${variant === 'mobile' ? 'mobile-lang-switch-btn' : 'lang-switch-btn'}`}
+  >
+    {otherLanguage.name}
+  </button>
 </div>
 
-<script define:vars={{ currentPath: '' }}>
-  function switchLanguage(lang) {
+<script>
+  function switchLanguage(lang:string) {
     localStorage.setItem('lang', lang);
 
     // Get current path without language prefix

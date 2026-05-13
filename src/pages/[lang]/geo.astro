@@ -52,12 +52,6 @@ export function getStaticPaths() {
         <p class="text-lg md:text-xl max-w-4xl mx-auto mb-8 leading-relaxed">
           {content.hero.subtitle}
         </p>
-        <Button
-          href={`mailto:${EMAIL}?subject=GEO Audit Request`}
-          variant="secondary"
-        >
-          {content.hero.cta}
-        </Button>
       </div>
     </section>
 
@@ -125,7 +119,7 @@ export function getStaticPaths() {
           {content.finalCta.description}
         </p>
         <Button
-          href={`mailto:${EMAIL}?subject=GEO Audit Request`}
+          href={`/${lang}/contact`}
           variant='secondary'
         >
           {content.finalCta.button}

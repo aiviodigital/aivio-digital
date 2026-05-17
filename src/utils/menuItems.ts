@@ -1,5 +1,5 @@
 export interface MenuItem {
-  key: 'googleAdsAudit' | 'googleAdsManagement' | 'geo' | 'googleAdsFaq' | 'caseStudy' | 'aboutUs' | 'blogs' | 'contactUs';
+  key: string;
   href: string;
 }
 export const getMenuLink = (key: string, currentLang: string): string => {
